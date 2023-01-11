@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class Skjuta : MonoBehaviour
+public class skott : MonoBehaviour
 {
-    [SerializeField]
-    GameObject skott;
-    
+    Vector2 dir = new Vector2(0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +14,7 @@ public class Skjuta : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            Instantiate(skott);
-        }
-        
+        dir = new Vector2(2,0);
+        transform.position = dir * Time.deltaTime;
     }
 }
