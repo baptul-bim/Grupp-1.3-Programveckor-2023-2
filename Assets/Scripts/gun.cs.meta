@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 8baaff2e271bc39428f33917ab3abf1b
+guid: 4b7e302ada0f4484faf6caf7b4cb2a7d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - skott: {fileID: 3217812199234274960, guid: feb22fcaef46f5a4f95265249f9f0564, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
