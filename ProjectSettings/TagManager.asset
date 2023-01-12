@@ -8,6 +8,8 @@ TagManager:
   - bullet
   - player
   - object
+  - dmgtrigger1
+  - dmgtrigger2
   layers:
   - Default
   - TransparentFX
