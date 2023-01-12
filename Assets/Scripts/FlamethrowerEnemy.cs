@@ -14,6 +14,7 @@ public class FlamethrowerEnemy : MonoBehaviour
 
     public GameObject player1;
     public Transform target;
+    public ParticleSystem flames;
 
     [SerializeField]
     float enemySpeed;
@@ -50,6 +51,9 @@ public class FlamethrowerEnemy : MonoBehaviour
             timer = timer + Time.deltaTime;
             if (timer >= 1 && flamesActive == false)
             {
+                timer = 0;
+                flamesActive = true;
+                flames.Play();
 
 
 
