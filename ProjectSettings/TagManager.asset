@@ -10,6 +10,7 @@ TagManager:
   - object
   - dmgtrigger1
   - dmgtrigger2
+  - Ground
   layers:
   - Default
   - TransparentFX

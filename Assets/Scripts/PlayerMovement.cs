@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
-    private Rigidbody2D rb;
     public float jump;
+    
+    private Rigidbody2D rb;
+    private bool isJumping;
    
 
     // Start is called before the first frame update
@@ -27,9 +29,18 @@ public class PlayerMovement : MonoBehaviour
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
 
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && !isJumping)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            isJumping = true;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
         }
     }
 }
