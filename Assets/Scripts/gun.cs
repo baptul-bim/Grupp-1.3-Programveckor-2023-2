@@ -6,7 +6,7 @@ public class gun : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletprefab;
-    public float cooldown=3;
+    public float cooldown=1;
     bool canshoot;
 
     
