@@ -5,6 +5,8 @@ using UnityEngine;
 public class FlamethrowerEnemy : MonoBehaviour
 {
 
+    float timer;
+
     [SerializeField]
     ParticleSystem flameParticles;
 
@@ -12,6 +14,7 @@ public class FlamethrowerEnemy : MonoBehaviour
 
     public GameObject player1;
     public Transform target;
+    public ParticleSystem flames;
 
     [SerializeField]
     float enemySpeed;
@@ -43,13 +46,18 @@ public class FlamethrowerEnemy : MonoBehaviour
 
             }
         }
-        else if ((Vector3.Distance(target.position, transform.position) > 5f) && (flamesActive == false))
+        else
         {
-            //Starts attack
-            ParticleSystem ps = GetComponent<ParticleSystem>();
-            ps.Play();
+            timer = timer + Time.deltaTime;
+            if (timer >= 1 && flamesActive == false)
+            {
+                timer = 0;
+                flamesActive = true;
+                flames.Play();
 
-            flamesActive = true;
+
+
+            }
 
         }
 
