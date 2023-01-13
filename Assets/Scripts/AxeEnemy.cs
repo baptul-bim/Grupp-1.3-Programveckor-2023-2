@@ -8,6 +8,8 @@ public class AxeEnemy : MonoBehaviour
     [SerializeField]
     float enemySpeed;
 
+    public GameObject axe;
+
     public Vector2 direction;
 
 
@@ -22,6 +24,9 @@ public class AxeEnemy : MonoBehaviour
     void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, direction);
+
+
+        
 
         if (hit.collider != null)
         {
