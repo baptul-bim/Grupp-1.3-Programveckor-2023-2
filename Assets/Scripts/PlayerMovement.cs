@@ -6,15 +6,19 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
     public float jump;
+
     
     private Rigidbody2D rb;
     private bool isJumping;
+    private SpriteRenderer sp;
    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -23,13 +27,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D) == true)
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            sp.flipX = false;
         }
         if (Input.GetKey(KeyCode.A) == true)
         {
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+            sp.flipX = true;
         }
 
-        if(Input.GetButtonDown("Jump") && !isJumping)
+        if(Input.GetButton("Jump") && !isJumping)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
