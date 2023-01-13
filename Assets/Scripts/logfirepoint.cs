@@ -34,7 +34,7 @@ public class logfirepoint : MonoBehaviour
     {
         if (collision.gameObject.tag=="player")
         {
-            print("kill");
+            print("logkill");
         }
     }
 }

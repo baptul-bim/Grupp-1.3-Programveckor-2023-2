@@ -49,7 +49,7 @@ public class jumpdmg : MonoBehaviour
             {
                 if (collision.gameObject.tag == "player")
                 {
-                    print("kill");
+                    print("jumpkill");
                     dmg = false;
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;

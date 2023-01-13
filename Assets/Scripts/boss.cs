@@ -51,6 +51,12 @@ public class boss : MonoBehaviour
         jumpdmg.jump = true;
         rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag=="bullet")
+        {
+            bosshealth -= 1;
+        }
+    }
 
-   
 }
