@@ -3,18 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - enemy
-  - bullet
-  - player
-  - object
-  - dmgtrigger1
-  - dmgtrigger2
-<<<<<<< HEAD
-  - nodmg
-=======
->>>>>>> 6f4b4e5d642523ee85c27cca34d4a85aac2a2bc2
-  - Ground
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -22,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Background
+  - 
   - 
   - 
   - 
