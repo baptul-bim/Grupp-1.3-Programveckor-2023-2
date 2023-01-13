@@ -8,25 +8,29 @@ public class AxeEnemy : MonoBehaviour
     [SerializeField]
     float enemySpeed;
 
+    public Vector2 direction;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, transform.right);
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.right);
+        RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, direction);
 
-        if (Physics2D.Raycast(transform.position, -Vector2.right))
+        if (hit.collider != null)
         {
-            Debug.DrawRay(transform.position, -Vector2.right, Color.green);
-            Debug.Log("goofy attack");
+            if (hit.distance <= 1f && hit.transform.tag == ("Player"))
+            {
+                Debug.DrawRay(this.gameObject.transform.position, direction);
+                Debug.Log("attack haaha");
 
+            }
         }
-
     }
 }
