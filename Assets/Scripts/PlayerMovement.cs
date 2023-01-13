@@ -29,8 +29,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
 
-
-        if(Input.GetButton("Jump") && !isJumping)
+        if(Input.GetButtonDown("Jump") && !isJumping)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
