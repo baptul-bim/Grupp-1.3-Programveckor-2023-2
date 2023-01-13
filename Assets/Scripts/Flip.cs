@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
-    private SpriteRenderer sp;
+    //private SpriteRenderer sp;
 
     // Start is called before the first frame update
     void Start()
     {
-        sp = GetComponent<SpriteRenderer>();
+        //sp = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -17,11 +17,13 @@ public class Flip : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) == true)
         {
-            sp.flipX = false;
+            //sp.flipX = false;
+            transform.localScale = new Vector3(1, 1, 1);
         }
         if (Input.GetKey(KeyCode.A) == true)
         {
-            sp.flipX = true;
+            //sp.flipX = true;
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 }
