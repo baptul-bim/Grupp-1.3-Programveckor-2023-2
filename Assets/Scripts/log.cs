@@ -16,6 +16,7 @@ public class log : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, 3);
+        print("nologkill");
     }
   
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,10 +24,11 @@ public class log : MonoBehaviour
         if (collision.gameObject.tag == "player" || collision.gameObject.tag == "object")
         {
             Destroy(gameObject);
+            print("nologkill");
         }
         if (collision.gameObject.tag=="player")
         {
-            print("kill");
+            print("logkill");
         }
     }
 }

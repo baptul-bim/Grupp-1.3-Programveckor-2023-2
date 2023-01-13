@@ -30,11 +30,5 @@ public class logfirepoint : MonoBehaviour
         Instantiate(logprefab, firepoint.position, firepoint.rotation);
         shoot = false;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag=="player")
-        {
-            print("logkill");
-        }
-    }
+    
 }

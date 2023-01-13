@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.UI;
 
 public class boss : MonoBehaviour
 {
-    public Slider slider;
     logfirepoint logfirepoint;
     jumpdmg jumpdmg;
+    public bosshealth bosshealth;
 
     public float jumpforce;
     Rigidbody2D rb;
     //public float movetimer
     public float move;
-    public float bosshealth;
+    public float maxbosshealth = 40;
+    public float currentbosshealth;
 
    
     void Start()
@@ -22,11 +22,16 @@ public class boss : MonoBehaviour
         logfirepoint = FindObjectOfType<logfirepoint>();
         jumpdmg = FindObjectOfType<jumpdmg>();
         rb = GetComponent<Rigidbody2D>();
+        currentbosshealth = maxbosshealth;
+        bosshealth.SetMaxHealth(maxbosshealth);
     }
 
     void Update()
     {
-
+        if (currentbosshealth<=0)
+        {
+            bossdeath();
+        }
         //movetimer -= Time.deltaTime;
         //if (movetimer<=0)
         {
@@ -39,7 +44,7 @@ public class boss : MonoBehaviour
         {
             Shoot();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Jump();
         }
@@ -57,8 +62,16 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag=="bullet")
         {
-            bosshealth -= 0.25f;
+            TakeDamage(0.25f);
         }
     }
-
+    void TakeDamage(float damage)
+    {
+        currentbosshealth -= damage;
+        bosshealth.SetHealth(currentbosshealth);
+    }
+    void bossdeath()
+    {
+        Destroy(gameObject);
+    }
 }
