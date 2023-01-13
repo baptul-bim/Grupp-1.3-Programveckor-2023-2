@@ -8,7 +8,7 @@ public class jumpdmg : MonoBehaviour
     boss boss;
     public bool jump;
     bool dmg=false;
-    bool dmgtrigger1=false;
+    public bool dmgtrigger1=false;
     bool dmgtrigger2=false;
     // Start is called before the first frame update
     void Start()
@@ -53,12 +53,12 @@ public class jumpdmg : MonoBehaviour
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                 }
-                //else
+                else
                 {
-                    //print("nodmg");
-                    //dmg = false;
-                    //dmgtrigger1 = false;
-                    //dmgtrigger2 = false;
+                    print("nodmg");
+                    dmg = false;
+                    dmgtrigger1 = false;
+                    dmgtrigger2 = false;
                 }
             }
         }

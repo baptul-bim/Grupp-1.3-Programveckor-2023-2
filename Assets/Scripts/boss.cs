@@ -11,8 +11,6 @@ public class boss : MonoBehaviour
 
     public float jumpforce;
     Rigidbody2D rb;
-    //public float movetimer
-    public float move;
     public float maxbosshealth = 40;
     public float currentbosshealth;
 

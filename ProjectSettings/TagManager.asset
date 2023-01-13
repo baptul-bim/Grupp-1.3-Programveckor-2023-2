@@ -12,6 +12,7 @@ TagManager:
   - object
   - nodmg
   - enemy
+  - warningtrigger
   layers:
   - Default
   - TransparentFX
