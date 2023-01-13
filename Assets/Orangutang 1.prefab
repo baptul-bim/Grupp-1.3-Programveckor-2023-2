@@ -72,7 +72,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 0
+=======
+  m_SortingOrder: 12
+>>>>>>> 89d7a187cfc101c589ecbdc48caa0f384fab9fd2
   m_Sprite: {fileID: 21300000, guid: 76ea803800dd4814587a3d8ef8719682, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -235,7 +239,11 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
+<<<<<<< HEAD
   m_CollisionDetection: 0
+=======
+  m_CollisionDetection: 1
+>>>>>>> 89d7a187cfc101c589ecbdc48caa0f384fab9fd2
   m_Constraints: 0
 --- !u!114 &2594932941397965823
 MonoBehaviour:
@@ -250,7 +258,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 3876060604322783768}
+<<<<<<< HEAD
   bulletprefab: {fileID: 8550599228004992429, guid: a7bdf22c6737e8e4e85ec3ddea64507c, type: 3}
+=======
+  bulletprefab: {fileID: 0}
+>>>>>>> 89d7a187cfc101c589ecbdc48caa0f384fab9fd2
   cooldown: 1
 --- !u!1 &3876060604322783771
 GameObject:
