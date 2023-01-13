@@ -24,5 +24,9 @@ public class log : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag=="player")
+        {
+            print("kill");
+        }
     }
 }

@@ -1,25 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class boss : MonoBehaviour
 {
+    logfirepoint logfirepoint;
+    jumpdmg jumpdmg;
+
     public float jumpforce;
     Rigidbody2D rb;
     public float movetimer;
     public Transform firepoint;
     public GameObject logprefab;
-
-    bool bigJump;
+    public float move;
+    public float bosshealth;
 
     void Start()
     {
+        logfirepoint = FindObjectOfType<logfirepoint>();
+        jumpdmg = FindObjectOfType<jumpdmg>();
         rb = GetComponent<Rigidbody2D>();
-        bigJump = false;
     }
+
     void Update()
     {
         movetimer -= Time.deltaTime;
+        if (movetimer<=0)
+        {
+            movetimer = 3;
+        }
+        
+        
+
         if (Input.GetButtonDown("Fire2"))
         {
             Shoot();
@@ -31,24 +44,13 @@ public class boss : MonoBehaviour
     }
     void Shoot()
     {
-        Instantiate(logprefab, firepoint.position, firepoint.rotation);
+        logfirepoint.shoot = true;
     }
     void Jump()
     {
+        jumpdmg.jump = true;
         rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-        bigJump = true;
-
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.tag == ("dmgtrigger2") && bigJump == true)
-        {
-            Debug.Log("Collided");
-            collision.gameObject.GetComponent<test1>().Smashed();
-
-        }
-
-    }
+   
 }

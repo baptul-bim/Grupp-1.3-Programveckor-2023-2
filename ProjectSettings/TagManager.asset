@@ -10,6 +10,11 @@ TagManager:
   - object
   - dmgtrigger1
   - dmgtrigger2
+<<<<<<< HEAD
+  - nodmg
+=======
+>>>>>>> 6f4b4e5d642523ee85c27cca34d4a85aac2a2bc2
+  - Ground
   layers:
   - Default
   - TransparentFX
