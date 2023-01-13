@@ -10,11 +10,10 @@ public class boss : MonoBehaviour
 
     public float jumpforce;
     Rigidbody2D rb;
-    public float movetimer;
-    public Transform firepoint;
-    public GameObject logprefab;
+    //public float movetimer
     public float move;
-    public float bosshealth;
+    public float bosshealth1;
+    public float bosshealth2;
 
     void Start()
     {
@@ -25,10 +24,11 @@ public class boss : MonoBehaviour
 
     void Update()
     {
-        movetimer -= Time.deltaTime;
-        if (movetimer<=0)
+
+        //movetimer -= Time.deltaTime;
+        //if (movetimer<=0)
         {
-            movetimer = 3;
+            //movetimer = 3;
         }
         
         
@@ -55,7 +55,8 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag=="bullet")
         {
-            bosshealth -= 1;
+            bosshealth1 -= 1;
+            bosshealth2 -= 0.25f;
         }
     }
 
