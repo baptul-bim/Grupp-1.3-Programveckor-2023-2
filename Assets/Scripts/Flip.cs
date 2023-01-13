@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
+    public bool facer;
+    public bool facel; 
     //private SpriteRenderer sp;
 
     // Start is called before the first frame update
     void Start()
     {
         //sp = GetComponent<SpriteRenderer>();
+        facer = true;
+        facel = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) == true)
+        if (Input.GetKeyDown(KeyCode.D)&&facer==false)
         {
-            //sp.flipX = false;
-            transform.localScale = new Vector3(1, 1, 1);
+            Flip();
+            facer = true;
+            facel = false;
         }
-        if (Input.GetKey(KeyCode.A) == true)
+        if (Input.GetKeyDown(KeyCode.A) &&facel==false)
         {
-            //sp.flipX = true;
-            transform.localScale = new Vector3(-1, 1, 1);
+            Flip();
+            facel = true;
+            facer = false;
+        }
+        void Flip()
+        {
+            transform.Rotate(0, 180, 0);
         }
     }
 }
