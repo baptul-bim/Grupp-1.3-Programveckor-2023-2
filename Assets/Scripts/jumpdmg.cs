@@ -53,12 +53,12 @@ public class jumpdmg : MonoBehaviour
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                 }
-                else if (collision.gameObject.tag == "nodmg")
+                //else
                 {
-                    print("nodmg");
-                    dmg = false;
-                    dmgtrigger1 = false;
-                    dmgtrigger2 = false;
+                    //print("nodmg");
+                    //dmg = false;
+                    //dmgtrigger1 = false;
+                    //dmgtrigger2 = false;
                 }
             }
         }
