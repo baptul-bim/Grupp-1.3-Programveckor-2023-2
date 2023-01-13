@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
     public float jump;
+    public float jumping;
 
     
     private Rigidbody2D rb;
@@ -34,6 +35,14 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
+        }
+        if (isJumping==false)
+        {
+            jumping = 0;
+        }
+        if (isJumping==true)
+        {
+            jumping = 1;
         }
     }
 

@@ -5,14 +5,16 @@ using System;
 
 public class jumpdmg : MonoBehaviour
 {
+    PlayerMovement player;
     boss boss;
     public bool jump;
-    bool dmg=false;
     public bool dmgtrigger1=false;
     bool dmgtrigger2=false;
+    public float t1;
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerMovement>();
         boss = FindObjectOfType<boss>();
         jump = false;
     }
@@ -20,12 +22,19 @@ public class jumpdmg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (dmgtrigger1==false)
+        {
+            t1 = 0;
+        }
+        if (dmgtrigger1==true)
+        {
+            t1 = 1;
+        }
     }
 
 
     
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (jump==true)
         {
@@ -41,24 +50,19 @@ public class jumpdmg : MonoBehaviour
             }
             if (dmgtrigger1 == true && dmgtrigger2 == true)
             {
-                dmg = true;
-                print("dmg");
-            }
-            if (dmg == true)
-            {
-                if (collision.gameObject.tag == "player")
+                if (player.jumping == 0)
                 {
                     print("jumpkill");
-                    dmg = false;
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
+                    jump = false;
                 }
-                else
+                else if(player.jumping == 1)
                 {
-                    print("nodmg");
-                    dmg = false;
+                    print("nojumpdmg");
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
+                    jump = false;
                 }
             }
         }

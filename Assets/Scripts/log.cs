@@ -16,7 +16,6 @@ public class log : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, 3);
-        print("nologkill");
     }
   
     private void OnCollisionEnter2D(Collision2D collision)
