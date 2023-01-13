@@ -777,7 +777,7 @@ MonoBehaviour:
   bosshealth: {fileID: 1112992488}
   jumpforce: 200
   move: 0
-  maxbosshealth: 3
+  maxbosshealth: 5
   currentbosshealth: 0
 --- !u!1 &798561523
 GameObject:
@@ -947,7 +947,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1269,7 +1269,7 @@ GameObject:
   - component: {fileID: 1122046550}
   m_Layer: 0
   m_Name: ground
-  m_TagString: dmgtrigger2
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1807,6 +1807,7 @@ GameObject:
   - component: {fileID: 1840801585}
   - component: {fileID: 1840801586}
   - component: {fileID: 1840801587}
+  - component: {fileID: 1840801588}
   m_Layer: 0
   m_Name: player
   m_TagString: player
@@ -1952,12 +1953,26 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1840801588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840801581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc4177c26092884a8c6a3351dd25987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jump: 800
 --- !u!1 &1888841794
 GameObject:
   m_ObjectHideFlags: 0

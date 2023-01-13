@@ -32,18 +32,17 @@ public class jumpdmg : MonoBehaviour
             if (collision.gameObject.tag == "dmgtrigger1")
             {
                 dmgtrigger1 = true;
+                print("t1");
             }
-            if (collision.gameObject.tag == "dmgtrigger2")
+            if (collision.gameObject.tag == "Ground"&&dmgtrigger1==true)
             {
-                if (dmgtrigger1 == true)
-                {
-                    dmgtrigger2 = true;
-                }
-
+                dmgtrigger2 = true;
+                print("t2");
             }
             if (dmgtrigger1 == true && dmgtrigger2 == true)
             {
                 dmg = true;
+                print("dmg");
             }
             if (dmg == true)
             {
