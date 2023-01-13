@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class boss : MonoBehaviour
 {
+    public Slider slider;
     logfirepoint logfirepoint;
     jumpdmg jumpdmg;
 
@@ -12,9 +14,9 @@ public class boss : MonoBehaviour
     Rigidbody2D rb;
     //public float movetimer
     public float move;
-    public float bosshealth1;
-    public float bosshealth2;
+    public float bosshealth;
 
+   
     void Start()
     {
         logfirepoint = FindObjectOfType<logfirepoint>();
@@ -55,8 +57,7 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag=="bullet")
         {
-            bosshealth1 -= 1;
-            bosshealth2 -= 0.25f;
+            bosshealth -= 0.25f;
         }
     }
 
