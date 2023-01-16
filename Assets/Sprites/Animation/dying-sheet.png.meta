@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0852273d880f17a4db250ce5f520858d
+guid: f6f33249da0f4964dbe8eb91f1bd1a79
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jumping-sheet_0
+      name: dying-sheet_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 6
+        y: 0
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b08b82e8bcdf4847aaf02147ed980e7
+      internalID: -2030696530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 82
         y: 0
         width: 53
-        height: 52
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0debd6f9e4b91054b993a90bbe0b3c14
-      internalID: 1204307026
+      spriteID: cec5ec528623a3642939e2581a380fd4
+      internalID: -1031307585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumping-sheet_1
+      name: dying-sheet_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 150
         y: 0
-        width: 49
-        height: 51
+        width: 75
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,92 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e665970f32181544a2813da1c7d5db6
-      internalID: 192938272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping-sheet_2
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 0
-        width: 50
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7bebae726373134c8b8f52a3c8d963e
-      internalID: -501697839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping-sheet_3
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 0
-        width: 65
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96d541a195c876c4fa216443e602b0ad
-      internalID: -829434887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping-sheet_4
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 0
-        width: 65
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90fb4792187bc5c4a93e9d33cbd6ba21
-      internalID: 256217562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping-sheet_5
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 0
-        width: 65
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56d8d89be90ef7049ab7868e70fdfa81
-      internalID: -2048109995
+      spriteID: f5749fb3afa0ee447a6fc914bf250b26
+      internalID: 1724875505
       vertices: []
       indices: 
       edges: []
@@ -241,12 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jumping-sheet_2: -501697839
-      jumping-sheet_0: 1204307026
-      jumping-sheet_4: 256217562
-      jumping-sheet_1: 192938272
-      jumping-sheet_3: -829434887
-      jumping-sheet_5: -2048109995
+      dying-sheet_0: -2030696530
+      dying-sheet_1: -1031307585
+      dying-sheet_2: 1724875505
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

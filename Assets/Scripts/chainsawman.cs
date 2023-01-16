@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class chainsawman : MonoBehaviour
 {
+    [SerializeField]
+    Transform cast;
     public Transform player;
     public float speed;
     public float agrorange;
     Rigidbody2D rb;
-    public float timer=2;
+    public float timer = 2;
     public float distance;
     public bool move = false;
     public bool stun = false;
-    float health=3;
+    float health = 3;
 
 
     // Start is called before the first frame update
@@ -25,11 +27,11 @@ public class chainsawman : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (move==true)
+        if (move == true)
         {
             timer -= Time.deltaTime;
         }
-        if (stun==true)
+        if (stun == true)
         {
             distance = 100;
         }
@@ -46,27 +48,27 @@ public class chainsawman : MonoBehaviour
                 donothing();
             }
         }
-        if (health<=0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="object"||collision.gameObject.tag=="player")
+        if (collision.gameObject.tag == "object" || collision.gameObject.tag == "Player")
         {
             stun = true;
-            //collision.gameObject.GetComponent<healthPlayer>().Damaged();
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
         }
     }
     void Charge()
     {
-        if (transform.position.x>player.position.x)
+        if (transform.position.x > player.position.x)
         {
-            if (timer<=0)
+            if (timer <= 0)
             {
                 rb.velocity = transform.right * speed;
-            }            
+            }
         }
     }
     void donothing()
@@ -75,9 +77,10 @@ public class chainsawman : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag=="bullet")
+        if (collision.gameObject.tag == "bullet")
         {
             health -= 1;
         }
     }
+    
 }

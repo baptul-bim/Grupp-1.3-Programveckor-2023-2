@@ -95,5 +95,14 @@ public class AxeEnemy : MonoBehaviour
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
 
         }
+
+        if (collision.gameObject.tag == "bullet") 
+        {
+            Destroy(gameObject);
+            Debug.Log("jag dog :(");
+        }
     }
+
+
+    
 }
