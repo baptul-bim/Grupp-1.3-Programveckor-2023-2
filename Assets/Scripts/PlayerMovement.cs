@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public Animator animator;
+
     public float moveSpeed = 5;
     public float jump;
     public float jumping;
@@ -22,11 +25,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) == true)
+
+        animator.SetFloat("speed", Mathf.Abs(moveSpeed));
+
+        if (Input.GetButton("MoveR") == true)
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A) == true)
+        if (Input.GetButton("MoveL") == true)
         {
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
