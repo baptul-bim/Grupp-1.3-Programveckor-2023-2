@@ -55,6 +55,14 @@ public class boss : MonoBehaviour
             TakeDamage(0.25f);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
+
+        }
+    }
     void TakeDamage(float damage)
     {
         currentbosshealth -= damage;
