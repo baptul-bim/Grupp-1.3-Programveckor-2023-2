@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flip : MonoBehaviour
 {
     public bool facer;
-    public bool facel; 
+    public bool facel;
     //private SpriteRenderer sp;
 
     // Start is called before the first frame update
@@ -35,5 +35,7 @@ public class Flip : MonoBehaviour
         {
             transform.Rotate(0, 180, 0);
         }
+        
     }
+   
 }

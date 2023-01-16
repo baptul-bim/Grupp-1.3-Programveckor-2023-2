@@ -21,9 +21,14 @@ public class log : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
        
-        if (collision.gameObject.tag=="Player"||collision.gameObject.tag=="object")
+        if (collision.gameObject.tag=="Player")
         {
             print("logkill");
+            Destroy(gameObject);
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
+        }
+        if (collision.gameObject.tag == "object")
+        {
             Destroy(gameObject);
         }
     }

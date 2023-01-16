@@ -6,7 +6,7 @@ using System;
 public class jumpdmg : MonoBehaviour
 {
     PlayerMovement player;
-    boss boss;
+    healthPlayer health;
     public bool jump;
     public bool dmgtrigger1=false;
     bool dmgtrigger2=false;
@@ -15,7 +15,7 @@ public class jumpdmg : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
-        boss = FindObjectOfType<boss>();
+        health = FindObjectOfType<healthPlayer>();
         jump = false;
     }
 
@@ -53,6 +53,7 @@ public class jumpdmg : MonoBehaviour
                 if (player.jumping == 0)
                 {
                     print("jumpkill");
+                    collision.gameObject.GetComponent<healthPlayer>().Damaged();
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;

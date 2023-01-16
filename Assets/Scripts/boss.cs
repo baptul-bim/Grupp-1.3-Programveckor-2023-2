@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class boss : MonoBehaviour
 {
-    logfirepoint logfirepoint;
-    jumpdmg jumpdmg;
+    public Transform firepoint;
+    public GameObject logprefab;
     public bosshealth bosshealth;
 
+    public float movetimer=2;
+    public float move = 21;
+    public float logtimer = 3;
+    public float jumptimer = 3;
     public float jumpforce;
     Rigidbody2D rb;
-    public float maxbosshealth = 40;
-    public float currentbosshealth;
+    float maxbosshealth = 40;
+    float currentbosshealth;
 
    
     void Start()
     {
-        logfirepoint = FindObjectOfType<logfirepoint>();
-        jumpdmg = FindObjectOfType<jumpdmg>();
         rb = GetComponent<Rigidbody2D>();
         currentbosshealth = maxbosshealth;
         bosshealth.SetMaxHealth(maxbosshealth);
@@ -26,33 +27,43 @@ public class boss : MonoBehaviour
 
     void Update()
     {
-        if (currentbosshealth<=0)
+        
+        movetimer -= Time.deltaTime;
+        if (movetimer<=0)
+        {
+            move = Random.Range(1, 20);
+            movetimer = 4;
+            print("move");
+        }        
+        if (move<=10)//||Input.GetButtonDown("Fire2"))
+        {
+            logtimer -= Time.deltaTime;
+            if (logtimer<=0)
+            {
+                Shoot();
+                logtimer = 3;
+            }
+        }
+        if (move > 10 && move < 21)//|| Input.GetKeyDown(KeyCode.F))
+        {
+            jumptimer -= Time.deltaTime;
+            if (jumptimer<=0)
+            {
+                Jump();
+                jumptimer = 3;
+            }
+        }
+        if (currentbosshealth <= 0)
         {
             bossdeath();
         }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            Shoot();
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Jump();
-        }
     }
-    void Shoot()
-    {
-        logfirepoint.shoot = true;
-    }
-    void Jump()
-    {
-        jumpdmg.jump = true;
-        rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-    }
+   
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag=="bullet")
         {
-            TakeDamage(0.25f);
+            TakeDamage(1);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,6 +73,15 @@ public class boss : MonoBehaviour
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
 
         }
+    }
+    void Shoot()
+    {
+        Instantiate(logprefab, firepoint.position, firepoint.rotation);
+    }
+    void Jump()
+    {
+        GetComponent<jumpdmg>().jump = true;
+        rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
     }
     void TakeDamage(float damage)
     {

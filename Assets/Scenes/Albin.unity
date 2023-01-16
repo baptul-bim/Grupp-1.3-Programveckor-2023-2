@@ -898,8 +898,8 @@ GameObject:
   - component: {fileID: 599678501}
   - component: {fileID: 599678503}
   - component: {fileID: 599678504}
-  - component: {fileID: 599678505}
   - component: {fileID: 599678506}
+  - component: {fileID: 599678507}
   m_Layer: 0
   m_Name: boss
   m_TagString: enemy
@@ -1022,22 +1022,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.33585143, y: 0.3196953}
   m_EdgeRadius: 0
---- !u!114 &599678505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599678500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd8d096735e138459bc6f1aa29d069c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bosshealth: {fileID: 1112992488}
-  jumpforce: 60
-  maxbosshealth: 5
-  currentbosshealth: 0
 --- !u!114 &599678506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +1037,26 @@ MonoBehaviour:
   jump: 0
   dmgtrigger1: 0
   t1: 0
+--- !u!114 &599678507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599678500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd8d096735e138459bc6f1aa29d069c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepoint: {fileID: 1017517949}
+  logprefab: {fileID: 5795731090321076992, guid: 9cd8c267bc9a9c847b58130df7fa18cd, type: 3}
+  bosshealth: {fileID: 1112992488}
+  movetimer: 0
+  move: 0
+  logtimer: 0
+  jumptimer: 0
+  jumpforce: 70
 --- !u!1 &798561523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1468,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1017517949}
-  - component: {fileID: 1017517950}
   m_Layer: 0
   m_Name: log opening
   m_TagString: Untagged
@@ -1487,21 +1490,6 @@ Transform:
   m_Father: {fileID: 599678502}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1017517950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017517948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f41e2f59875fa37488ea2c4ba4c58521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firepoint: {fileID: 1017517949}
-  logprefab: {fileID: 5795731090321076992, guid: 9cd8c267bc9a9c847b58130df7fa18cd, type: 3}
-  shoot: 0
 --- !u!1 &1112992485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365510908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67, y: -7.9733, z: 0}
+  m_LocalPosition: {x: 15.18, y: -7.9733, z: 0}
   m_LocalScale: {x: 1.1850696, y: 1.132232, z: 1.5303}
   m_ConstrainProportionsScale: 1
   m_Children:
