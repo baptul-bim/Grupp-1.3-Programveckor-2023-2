@@ -55,7 +55,7 @@ public class chainsawman : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "object" || collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "object" || collision.gameObject.tag == "Player")
         {
             stun = true;
             collision.gameObject.GetComponent<healthPlayer>().Damaged();

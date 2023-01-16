@@ -27,7 +27,7 @@ public class healthPlayer : MonoBehaviour
             health = maxHealth;
         }
 
-        lerpSpeed = 0.2f * Time.deltaTime;
+        lerpSpeed = 3.5f * Time.deltaTime;
 
         HealthBarFiller();
     }
