@@ -7,7 +7,7 @@ public class healthPlayer : MonoBehaviour
 {
     public Image healthBar;
 
-    float health, maxHealth = 3;
+    public float health, maxHealth = 3;
     float lerpSpeed;
 
     // Start is called before the first frame update
@@ -21,9 +21,9 @@ public class healthPlayer : MonoBehaviour
     {
         if (health > maxHealth) health = maxHealth;
 
-        HealthBarFiller();
+        lerpSpeed = 0.2f * Time.deltaTime;
 
-        lerpSpeed = 3f * Time.deltaTime;
+        HealthBarFiller();
     }
 
     void HealthBarFiller()
