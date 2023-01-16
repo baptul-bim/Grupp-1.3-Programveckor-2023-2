@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778fe4a809deef443a6624202468b843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 2058999452}
+  Player: {fileID: 0}
   offset: {x: 0, y: 0, z: -10}
 --- !u!1 &645634899
 GameObject:
@@ -2058,11 +2058,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &2058999452 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
-  m_PrefabInstance: {fileID: 1666007665}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2089865057
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class PlayerCamera : MonoBehaviour
     void Update()
     {
         //transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z); // Camera follows the player with specified offset position
-        CamTransform.position = new Vector3(Player.position.x, CamTransform.position.y, CamTransform.position.z);
+        //CamTransform.position = new Vector3(Player.position.x, CamTransform.position.y, CamTransform.position.z);
 
     }
 }
