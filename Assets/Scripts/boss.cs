@@ -30,14 +30,6 @@ public class boss : MonoBehaviour
         {
             bossdeath();
         }
-        //movetimer -= Time.deltaTime;
-        //if (movetimer<=0)
-        {
-            //movetimer = 3;
-        }
-        
-        
-
         if (Input.GetButtonDown("Fire2"))
         {
             Shoot();
