@@ -54,7 +54,7 @@ public class AxeEnemy : MonoBehaviour
 
 
             }
-            else if (hit.distance <= 0.5f && hit.transform.tag == ("Player"))
+            else if (hit.distance <= 0.16f && hit.transform.tag == ("Player"))
             {
                 enemySpeed = 0;
 
@@ -62,14 +62,18 @@ public class AxeEnemy : MonoBehaviour
             }
             else if (hit.transform.tag == ("Player"))
             {
-                enemySpeed = 5;
+                enemySpeed = 2;
             }
             else
             {
-                enemySpeed = 3;
+                enemySpeed = 1;
             }
 
 
+        }
+        else
+        {
+            enemySpeed = 1;
         }
     }
 
