@@ -26,13 +26,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        animator.SetFloat("speed", );
+        animator.SetFloat("speed", Mathf.Abs(moveSpeed));
 
-        if (Input.GetKey(KeyCode.D) == true)
+        if (Input.GetButton("MoveR") == true)
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A) == true)
+        if (Input.GetButton("MoveL") == true)
         {
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
