@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  health: 0
+  maxHealth: 0
 --- !u!114 &537817788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411830, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_Size.x
-      value: 1.375
+      value: 1.1458334
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411830, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_Size.y
-      value: 1.0416666
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411830, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_WasSpriteAssigned
