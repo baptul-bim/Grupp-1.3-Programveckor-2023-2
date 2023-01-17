@@ -18,6 +18,7 @@ public class boss : MonoBehaviour
     TextMeshProUGUI playerdeathline;
     [SerializeField]
     TextMeshProUGUI bossdeathline;
+    public SpriteRenderer sprender;
 
     public float linetimer = 4;
     public float movetimer;
@@ -32,6 +33,8 @@ public class boss : MonoBehaviour
    
     void Start()
     {
+        sprender = gameObject.GetComponent<SpriteRenderer>();
+        //sprender.enabled = false;
         player = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
         currentbosshealth = maxbosshealth;
@@ -47,20 +50,24 @@ public class boss : MonoBehaviour
         if (linetimer>0)
         {
             startline.text = "Hesitation is defeat, Monke";
+            //sprender.enabled = true;
         }
         else
         {
             startline.text = "";
+            //sprender.enabled = false;
         }
         if (player.health<=0)
         {
             playerdeathline.text = "Put these foolish ambitions to rest";
+            //sprender.enabled = true;
             movetimer = 1000;
             move = 21;
         }
         else
         {
             playerdeathline.text = "";
+            //sprender.enabled = false;
         }
         bossname.text = "xXMONKE SLAYERXx";
         if (movetimer<=0)
@@ -90,6 +97,7 @@ public class boss : MonoBehaviour
         if (currentbosshealth <= 0)
         {
             bossdeathline.text = "Brave Monke, Thy strength befits a crown";
+            //sprender.enabled = true;
             bossdeath();
         }
     }
