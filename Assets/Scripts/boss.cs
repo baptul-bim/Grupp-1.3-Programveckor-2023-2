@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class boss : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class boss : MonoBehaviour
     public GameObject logprefab;
     public bosshealth bosshealth;
 
-    public float movetimer=2;
-    public float move = 21;
+
+    public float movetimer;
+    public float move;
     public float logtimer = 3;
     public float jumptimer = 3;
     public float jumpforce;
@@ -23,6 +25,8 @@ public class boss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentbosshealth = maxbosshealth;
         bosshealth.SetMaxHealth(maxbosshealth);
+        movetimer = 3;
+        move = 21;
     }
 
     void Update()
@@ -35,7 +39,7 @@ public class boss : MonoBehaviour
             movetimer = 4;
             print("move");
         }        
-        if (move<=10)//||Input.GetButtonDown("Fire2"))
+        if (move<=10)
         {
             logtimer -= Time.deltaTime;
             if (logtimer<=0)
@@ -44,7 +48,7 @@ public class boss : MonoBehaviour
                 logtimer = 3;
             }
         }
-        if (move > 10 && move < 21)//|| Input.GetKeyDown(KeyCode.F))
+        if (move > 10 && move < 21)
         {
             jumptimer -= Time.deltaTime;
             if (jumptimer<=0)

@@ -34,7 +34,7 @@ public class healthPlayer : MonoBehaviour
 
     void HealthBarFiller()
     {
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
+        healthBar.fillAmount = health / maxHealth;
     }
 
     public void Damaged(/*float damagePoints*/)
