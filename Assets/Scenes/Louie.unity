@@ -5736,11 +5736,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1805474597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3876060603290411832, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+  m_PrefabInstance: {fileID: 2057213627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2040904137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
   m_PrefabInstance: {fileID: 2057213627}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2040904143
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805474597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56af7a66c6f717e4b82da1e2473030b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2057213627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5752,6 +5777,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2040904143}
     - target: {fileID: 3876060603290411832, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_Name
       value: Orangutang 1
