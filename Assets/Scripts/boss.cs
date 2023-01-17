@@ -9,8 +9,16 @@ public class boss : MonoBehaviour
     public GameObject logprefab;
     public bosshealth bosshealth;
 
+    [SerializeField]
     TextMeshProUGUI bossname;
+    [SerializeField]
+    TextMeshProUGUI startline;
+    [SerializeField]
+    TextMeshProUGUI playerdeathline;
+    [SerializeField]
+    TextMeshProUGUI bossdeathline;
 
+    public float linetimer = 4;
     public float movetimer;
     public float move;
     public float logtimer = 3;
@@ -26,13 +34,29 @@ public class boss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentbosshealth = maxbosshealth;
         bosshealth.SetMaxHealth(maxbosshealth);
-        bossname = FindObjectOfType<TextMeshProUGUI>();
-        movetimer = 3;
+        movetimer = 4;
         move = 21;
     }
 
     void Update()
     {
+        linetimer -= Time.deltaTime;
+        if (linetimer>0)
+        {
+            startline.text = "Hesitation is defeat, Monke";
+        }
+        else
+        {
+            startline.text = "";
+        }
+        //if (GetComponent<healthPlayer>().health<=0)
+        {
+            //playerdeathline.text = "Put these foolish ambitions to rest";
+        }
+        //else
+        {
+            playerdeathline.text = "";
+        }
         bossname.text = "xXMONKE SLAYERXx";
         movetimer -= Time.deltaTime;
         if (movetimer<=0)
@@ -61,6 +85,7 @@ public class boss : MonoBehaviour
         }
         if (currentbosshealth <= 0)
         {
+            bossdeathline.text = "Brave Monke, Thy strength befits a crown";
             bossdeath();
         }
     }
