@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-      //  animator.SetFloat("speed", Mathf.Abs(moveSpeed));
+      // animator.SetFloat("speed", Mathf.Abs(transform.position));
 
         if (Input.GetButton("MoveR") == true)
         {
