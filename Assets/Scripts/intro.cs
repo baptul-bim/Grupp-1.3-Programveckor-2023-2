@@ -5,9 +5,9 @@ using TMPro;
 
 public class intro : MonoBehaviour
 {
-    float timer1;
-    float timer2;
-    float timer3;
+    public float timer1;
+    public float timer2;
+    public float timer3;
     [SerializeField]
     TextMeshProUGUI introtext;
     [SerializeField]
@@ -17,25 +17,40 @@ public class intro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer1 = 1;
-        timer2 = 5;
-        timer3 = 10;
+        timer1 = 15;
+        //timer2 = 5;
+        //timer3 = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer1<=0)
+        timer1 -= Time.deltaTime;
+        //timer2 -= Time.deltaTime;
+        //timer3 -= Time.deltaTime;
+        if (timer1<14)
         {
-            introtext.text = "dhskjfhjsdhfgsjhdfsdfd";
+            introtext.text = "The humans have taken everything from me";
         }
-        if (timer2<=0)
+        else
         {
-            introtext2.text = "asfjbsdjfhgsdjhvjdsvv";
+            introtext.text = "";
         }
-        if (timer3<=0)
+        if (timer1<10)
         {
-            introtext3.text = "kfdshfjdfhjdf";
+            introtext2.text = "Someone needs to do something about this";
+        }
+        else
+        {
+            introtext2.text = "";
+        }
+        if (timer1<5)
+        {
+            introtext3.text = "I need to do something about this";
+        }
+        else
+        {
+            introtext3.text = "";
         }
     }
 }
