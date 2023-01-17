@@ -10,6 +10,10 @@ public class healthPlayer : MonoBehaviour
     public float health;
     public float maxHealth;
 
+    public gameManagerScript gameManager;
+
+    private bool isDead;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +31,10 @@ public class healthPlayer : MonoBehaviour
 
         healthBar.fillAmount = health / maxHealth;
 
-        if(health <= 0)
+        if(health <= 0 && !isDead)
         {
+            isDead = true;
+            gameManager.gameOver();
             Debug.Log ("Dead");
         }
 

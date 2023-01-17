@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerHealth : MonoBehaviour
+public class gameManagerScript : MonoBehaviour
 {
+    public GameObject gameOverUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class playerHealth : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void gameOver()
+    {
+        gameOverUI.SetActive(true);
     }
 }
