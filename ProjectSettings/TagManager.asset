@@ -13,6 +13,7 @@ TagManager:
   - nodmg
   - enemy
   - warningtrigger
+  - wall
   layers:
   - Default
   - TransparentFX
