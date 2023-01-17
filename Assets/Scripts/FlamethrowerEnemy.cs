@@ -14,12 +14,14 @@ public class FlamethrowerEnemy : MonoBehaviour
 
     public GameObject player1;
     public Transform target;
-    public ParticleSystem flames;
+    private ParticleSystem flames;
 
     [SerializeField]
     float enemySpeed;
 
     public float playerDistance;
+
+    public ParticleSystem Flames { get => flames; set => flames = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +55,7 @@ public class FlamethrowerEnemy : MonoBehaviour
             {
                 timer = 0;
                 flamesActive = true;
-                flames.Play();
+                Flames.Play();
 
 
 
