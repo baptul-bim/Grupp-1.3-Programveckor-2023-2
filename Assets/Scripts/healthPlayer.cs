@@ -10,8 +10,6 @@ public class healthPlayer : MonoBehaviour
     public float health;
     public float maxHealth;
 
-    float lerpSpeed;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +25,13 @@ public class healthPlayer : MonoBehaviour
             health = maxHealth;
         }
 
-        lerpSpeed = 3.5f * Time.deltaTime;
-
-        HealthBarFiller();
-    }
-
-    void HealthBarFiller()
-    {
         healthBar.fillAmount = health / maxHealth;
+
+        if(health <= 0)
+        {
+            Debug.Log ("Dead");
+        }
+
     }
 
     public void Damaged(/*float damagePoints*/)
