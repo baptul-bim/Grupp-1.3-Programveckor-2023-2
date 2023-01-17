@@ -55,6 +55,8 @@ public class boss : MonoBehaviour
         if (player.health<=0)
         {
             playerdeathline.text = "Put these foolish ambitions to rest";
+            movetimer = 1000;
+            move = 21;
         }
         else
         {
