@@ -19,6 +19,7 @@ public class healthPlayer : MonoBehaviour
     {
         maxHealth = 3;
         health = maxHealth;
+        gameManager = FindObjectOfType<gameManagerScript>();
     }
 
     // Update is called once per frame

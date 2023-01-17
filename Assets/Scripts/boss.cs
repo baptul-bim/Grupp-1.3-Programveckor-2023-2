@@ -8,6 +8,7 @@ public class boss : MonoBehaviour
     public Transform firepoint;
     public GameObject logprefab;
     public bosshealth bosshealth;
+    healthPlayer player;
 
     [SerializeField]
     TextMeshProUGUI bossname;
@@ -31,6 +32,7 @@ public class boss : MonoBehaviour
    
     void Start()
     {
+        player = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
         currentbosshealth = maxbosshealth;
         bosshealth.SetMaxHealth(maxbosshealth);
@@ -41,6 +43,7 @@ public class boss : MonoBehaviour
     void Update()
     {
         linetimer -= Time.deltaTime;
+        movetimer -= Time.deltaTime;
         if (linetimer>0)
         {
             startline.text = "Hesitation is defeat, Monke";
@@ -49,16 +52,17 @@ public class boss : MonoBehaviour
         {
             startline.text = "";
         }
-        //if (GetComponent<healthPlayer>().health<=0)
+        if (player.health<=0)
         {
-            //playerdeathline.text = "Put these foolish ambitions to rest";
+            playerdeathline.text = "Put these foolish ambitions to rest";
+            movetimer = 1000;
+            move = 21;
         }
-        //else
+        else
         {
             playerdeathline.text = "";
         }
         bossname.text = "xXMONKE SLAYERXx";
-        movetimer -= Time.deltaTime;
         if (movetimer<=0)
         {
             move = Random.Range(1, 20);
