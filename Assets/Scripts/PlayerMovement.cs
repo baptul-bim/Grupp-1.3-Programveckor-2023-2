@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public Animator animator;
+   // public Animator animator;
 
     public float moveSpeed = 5;
     public float jump;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        animator.SetFloat("speed", Mathf.Abs(moveSpeed));
+      //  animator.SetFloat("speed", Mathf.Abs(moveSpeed));
 
         if (Input.GetButton("MoveR") == true)
         {
