@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 100947382}
   - component: {fileID: 100947380}
   - component: {fileID: 100947381}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5274,7 +5274,7 @@ GameObject:
   - component: {fileID: 941895458}
   - component: {fileID: 941895460}
   - component: {fileID: 941895459}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Flames 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10476,7 +10476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596522427}
   - component: {fileID: 1596522428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10560,7 +10560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1750213597}
   - component: {fileID: 1750213596}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Flamethrower Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
