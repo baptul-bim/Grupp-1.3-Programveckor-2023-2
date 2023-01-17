@@ -9,6 +9,7 @@ public class boss : MonoBehaviour
     public GameObject logprefab;
     public bosshealth bosshealth;
 
+    TextMeshProUGUI bossname;
 
     public float movetimer;
     public float move;
@@ -25,13 +26,14 @@ public class boss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentbosshealth = maxbosshealth;
         bosshealth.SetMaxHealth(maxbosshealth);
+        bossname = FindObjectOfType<TextMeshProUGUI>();
         movetimer = 3;
         move = 21;
     }
 
     void Update()
     {
-        
+        bossname.text = "xXMONKE SLAYERXx";
         movetimer -= Time.deltaTime;
         if (movetimer<=0)
         {
