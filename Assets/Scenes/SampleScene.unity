@@ -261,6 +261,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &537817799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+  m_PrefabInstance: {fileID: 600975694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537817786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc4177c26092884a8c6a3351dd25987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &600975694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,6 +287,34 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 537817795}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 537817799}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLanding
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411830, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_FlipX
       value: 0

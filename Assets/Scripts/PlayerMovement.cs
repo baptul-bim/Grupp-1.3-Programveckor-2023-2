@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-   // public Animator animator;
+    public Animator animator;
 
     public float moveSpeed = 5;
     public float jump;
@@ -14,7 +15,17 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody2D rb;
     private bool isJumping;
-   
+
+    [Header("Events")]
+    [Space]
+
+    public UnityEvent OnLandEvent;
+
+    [System.Serializable]
+    public class BoolEvent : UnityEvent<bool> 
+    {
+    
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-      // animator.SetFloat("speed", Mathf.Abs(transform.position));
+      //animator.SetFloat("speed", Mathf.Abs(transform.position));
 
         if (Input.GetButton("MoveR") == true)
         {
@@ -48,9 +59,16 @@ public class PlayerMovement : MonoBehaviour
         }
         if (isJumping==true)
         {
-            jumping = 1;
+           jumping = 1;
+           animator.SetBool("isjumping", true);
         }
     }
+
+     public void OnLanding() 
+      {
+     animator.SetBool("isjumping", false);
+      }
+     
 
     void OnCollisionEnter2D(Collision2D other)
     {
