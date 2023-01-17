@@ -36,16 +36,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horz = Input.GetAxis("Horizontal");
+        animator.SetFloat("speed", Mathf.Abs(horz));
+        transform.position += Vector3.right * horz * moveSpeed * Time.deltaTime;
 
-      //animator.SetFloat("speed", Mathf.Abs(transform.position));
 
         if (Input.GetButton("MoveR") == true)
         {
-            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+           
         }
         if (Input.GetButton("MoveL") == true)
         {
-            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+           // transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
 
         if(Input.GetButton("Jump") && !isJumping)
