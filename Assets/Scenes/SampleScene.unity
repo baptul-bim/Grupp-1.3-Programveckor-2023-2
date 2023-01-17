@@ -284,6 +284,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: jumping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 537817795}
@@ -341,6 +345,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411833, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
