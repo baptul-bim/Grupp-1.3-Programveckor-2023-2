@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelLoopingScript : MonoBehaviour
+public class LevelLoop : MonoBehaviour
 {
 
     public GameObject[] room;
@@ -10,12 +10,13 @@ public class LevelLoopingScript : MonoBehaviour
 
     public Transform player1;
 
-    double nextRoomPos;
+    float nextRoomPos;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        nextRoomPos = 2.5;
+        nextRoomPos = 0;
     }
 
     // Update is called once per frame
@@ -23,8 +24,10 @@ public class LevelLoopingScript : MonoBehaviour
     {
         if (player1.position.x >= nextRoomPos)
         {
-            nextRoomPos += 5;
-            Instantiate(room[currentRoom], new Vector3(5, 0, 0), transform.rotation);
+            int randRoom = Random.Range(0, 3);
+            currentRoom = randRoom;
+            nextRoomPos += 4.8f;
+            Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
 
         }
     }
