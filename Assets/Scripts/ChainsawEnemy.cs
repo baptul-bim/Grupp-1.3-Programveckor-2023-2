@@ -80,8 +80,6 @@ public class ChainsawEnemy : MonoBehaviour
                     rb.AddForce(new Vector2(rb.velocity.x, jump));
                     jumping = true;
                 }
-                rb.AddForce(new Vector2(rb.velocity.x, jump));
-                Debug.DrawRay(this.gameObject.transform.position, direction);
             }
 
 
