@@ -34,9 +34,10 @@ public class jumpdmg : MonoBehaviour
 
 
     
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (jump==true)
+        if (jump == true)
+            print("jump");
         {
             if (collision.gameObject.tag == "dmgtrigger1")
             {
@@ -53,7 +54,7 @@ public class jumpdmg : MonoBehaviour
                 if (player.jumping == 0)
                 {
                     print("jumpkill");
-                    collision.gameObject.GetComponent<healthPlayer>().Damaged();
+                    health.Damaged();
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;
