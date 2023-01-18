@@ -168,6 +168,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AxeEnemy (Prototype) Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 601895438562855587, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 601895438562855775, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
+      propertyPath: bloodParticles
+      value: 
+      objectReference: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
 --- !u!1 &4422369260423563222 stripped
