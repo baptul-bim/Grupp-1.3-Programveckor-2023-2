@@ -227,6 +227,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: 0
   maxHealth: 0
+  gameManager: {fileID: 0}
 --- !u!114 &537817788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +293,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 537817795}
     - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_GroundCheck
+      value: 
+      objectReference: {fileID: 1062821031}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411829, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -333,7 +342,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411830, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411831, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.0208334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876060603290411831, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 3876060603290411832, guid: a5b15a1e2d02b144bb39c5da04b0a27f, type: 3}
       propertyPath: m_Name

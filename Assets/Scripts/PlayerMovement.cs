@@ -5,6 +5,11 @@ using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private LayerMask m_WhatIsGround; //what is ground to player? (layer)
+    [SerializeField] private Transform m_GroundCheck; // this is ground
+
+    private bool m_Grounded; // is player on ground?
+    private Rigidbody2D m_Rigidbody2D;
 
     public Animator animator;
 
@@ -26,6 +31,16 @@ public class PlayerMovement : MonoBehaviour
     {
     
     }
+
+    private void Awake()
+    {
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
+        if (OnLandEvent == null)
+            OnLandEvent = new UnityEvent();
+    }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +81,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-     public void OnLanding() 
+    private void FixedUpdate()
+    {
+        bool wasGrounded = m_Grounded;
+        m_Grounded = false;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, m_WhatIsGround);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                m_Grounded = true;
+                if (!wasGrounded)
+                    OnLandEvent.Invoke();
+            }
+        }
+    }
+
+    public void OnLanding() 
       {
      animator.SetBool("isjumping", false);
       }
