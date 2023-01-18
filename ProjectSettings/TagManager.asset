@@ -14,6 +14,7 @@ TagManager:
   - enemy
   - warningtrigger
   - wall
+  - air
   layers:
   - Default
   - TransparentFX
