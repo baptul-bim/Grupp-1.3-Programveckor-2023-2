@@ -15,8 +15,7 @@ public class AxeEnemy : MonoBehaviour
     //blood splatter
     [SerializeField]
     ParticleSystem bloodParticles;
-    private ParticleSystem bloodSplatter;
-    public ParticleSystem Blood { get => bloodSplatter; set => bloodSplatter = value; }
+
 
     int facing;
 
@@ -98,20 +97,22 @@ public class AxeEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
-            StartCoroutine(AttackCoolDown());
+            //StartCoroutine(AttackCoolDown());
 
         }
 
-        if (collision.gameObject.tag == "bullet") 
+        if (collision.gameObject.tag == "Bullet2") 
         {
-            Destroy(gameObject);
-            Blood.Play();
+            Instantiate(bloodParticles);
             Debug.Log("jag dog :(");
+            Debug.Log(collision.gameObject.tag);
+            Destroy(this.gameObject);
+
         }
     }
 
 
-    IEnumerator AttackCoolDown()
+    /*IEnumerator AttackCoolDown()
     {
 
         enemySpeed = 0;
@@ -121,7 +122,7 @@ public class AxeEnemy : MonoBehaviour
 
         enemySpeed = 1;
 
-    }
+    }*/
 
 
     

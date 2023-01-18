@@ -20,8 +20,9 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag=="enemy"|| collision.gameObject.tag =="object")
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Bullet2") 
         {
+            Debug.Log(collision.gameObject.tag);
             Destroy(gameObject);
         }
                

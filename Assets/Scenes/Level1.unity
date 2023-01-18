@@ -2159,6 +2159,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101984800420324184, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817306839117810364, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8014117156123903317, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
       propertyPath: m_Name
       value: Room3
