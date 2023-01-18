@@ -9,7 +9,6 @@ public class boss : MonoBehaviour
     public GameObject logprefab;
     public bosshealth bosshealth;
     healthPlayer player;
-    jumpdmg jumpdmg;
 
     [SerializeField]
     TextMeshProUGUI bossname;
@@ -35,8 +34,6 @@ public class boss : MonoBehaviour
         sprender = gameObject.GetComponent<SpriteRenderer>();
         //sprender.enabled = false;
         player = FindObjectOfType<healthPlayer>();
-        bosshealth = FindObjectOfType<bosshealth>();
-        jumpdmg = FindObjectOfType<jumpdmg>();
         rb = GetComponent<Rigidbody2D>();
         movetimer = 4;
         move = 21;
@@ -101,7 +98,7 @@ public class boss : MonoBehaviour
         }
     }
    
-    void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag=="bullet")
         {
@@ -122,7 +119,7 @@ public class boss : MonoBehaviour
     }
     void Jump()
     {
-        jumpdmg.jump= true;
+        GetComponent<jumpdmg>().jump = true;
         rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
     }
     void bossdeath()
