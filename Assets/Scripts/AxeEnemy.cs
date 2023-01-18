@@ -125,7 +125,7 @@ public class AxeEnemy : MonoBehaviour
 
     public void AxeEnemyDeath()
     {
-        Instantiate(bloodParticles);
+        Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
         Debug.Log("jag dog :(");
         Destroy(this.gameObject);
 
