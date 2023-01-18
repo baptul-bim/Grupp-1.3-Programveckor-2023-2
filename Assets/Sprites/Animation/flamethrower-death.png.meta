@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 071b7a9ed87fb7e47b590e55ec7ed673
+guid: a8280b646da32e64da994ea86c659db6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle in battle murdr-sheet_0
+      name: flamethrower-death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 257
-        height: 242
+        width: 93
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +119,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e800a503b9cd72fe0800000000000000
-      internalID: -1213759015463812978
+      spriteID: bd8c0b2d00b297549b6f2bd86f809634
+      internalID: 710441428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamethrower-death_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a510d489c24e14bae258ebf7eb5816
+      internalID: 1662108400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamethrower-death_2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4791faffffdc0e43ba942b3e67ed86e
+      internalID: 5473191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamethrower-death_3
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 84
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6128aff49b9b06d47a580faccca352f0
+      internalID: 1581065824
       vertices: []
       indices: 
       edges: []
@@ -140,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle in battle murdr-sheet_0: -1213759015463812978
+      flamethrower-death_0: 710441428
+      flamethrower-death_3: 1581065824
+      flamethrower-death_1: 1662108400
+      flamethrower-death_2: 5473191
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
