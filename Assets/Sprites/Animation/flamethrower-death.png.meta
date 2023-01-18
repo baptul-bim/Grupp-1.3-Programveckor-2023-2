@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b4f0650376461754fa4c871a283b2ca9
+guid: a8280b646da32e64da994ea86c659db6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,12 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flamethrower-standing_0
+      name: flamethrower-death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 82
+        width: 93
         height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -119,19 +119,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dee7a12acb600c4aa5ba64f74e95b3f
-      internalID: -1195140053
+      spriteID: bd8c0b2d00b297549b6f2bd86f809634
+      internalID: 710441428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flamethrower-standing_1
+      name: flamethrower-death_1
       rect:
         serializedVersion: 2
-        x: 82
+        x: 93
         y: 0
-        width: 82
+        width: 92
         height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbf857a7456e2384691f9a02f119b4a9
-      internalID: -1707848567
+      spriteID: 81a510d489c24e14bae258ebf7eb5816
+      internalID: 1662108400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flamethrower-standing_2
+      name: flamethrower-death_2
       rect:
         serializedVersion: 2
-        x: 164
+        x: 185
         y: 0
-        width: 82
+        width: 92
         height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -161,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d25b4ac7428cee4fbcfa0f261248902
-      internalID: -1200242127
+      spriteID: d4791faffffdc0e43ba942b3e67ed86e
+      internalID: 5473191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flamethrower-standing_3
+      name: flamethrower-death_3
       rect:
         serializedVersion: 2
-        x: 246
+        x: 277
         y: 0
-        width: 82
+        width: 84
         height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -182,71 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8484412cff47049bca902303380e0d
-      internalID: 1095769030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flamethrower-standing_4
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 0
-        width: 82
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63695c9dc2d952c46a14c43b8c474f00
-      internalID: -2069021804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flamethrower-standing_5
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 0
-        width: 82
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bea535b33b815341926ef7f37dd0978
-      internalID: -1117412228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flamethrower-standing_6
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 0
-        width: 82
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c7b4c4e11012914c995c32696f075cc
-      internalID: -1685408802
+      spriteID: 6128aff49b9b06d47a580faccca352f0
+      internalID: 1581065824
       vertices: []
       indices: 
       edges: []
@@ -262,13 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      flamethrower-standing_2: -1200242127
-      flamethrower-standing_0: -1195140053
-      flamethrower-standing_4: -2069021804
-      flamethrower-standing_5: -1117412228
-      flamethrower-standing_1: -1707848567
-      flamethrower-standing_6: -1685408802
-      flamethrower-standing_3: 1095769030
+      flamethrower-death_0: 710441428
+      flamethrower-death_3: 1581065824
+      flamethrower-death_1: 1662108400
+      flamethrower-death_2: 5473191
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
