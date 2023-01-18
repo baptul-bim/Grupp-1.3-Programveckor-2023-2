@@ -15,15 +15,20 @@ public class bullet : MonoBehaviour
 
     private void Update()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 0.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Bullet2") 
+        if (collision.gameObject.tag == "enemy")
+        {
+            Debug.Log("HAHAHHAHAHAHA");
+            collision.gameObject.GetComponent<AxeEnemy>().AxeEnemyDeath();
+        }
+
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "bullet") 
         {
             Debug.Log(collision.gameObject.tag);
-            Destroy(gameObject);
         }
                
     }

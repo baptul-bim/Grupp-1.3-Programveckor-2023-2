@@ -9,7 +9,15 @@ public class gun : MonoBehaviour
     public float cooldown=1;
     bool canshoot;
 
-    
+
+    public int bulletsLoaded;
+
+
+    void Start()
+    {
+        bulletsLoaded = 2;
+    }
+
     void Update()
     {
         cooldown -= Time.deltaTime;
@@ -19,12 +27,19 @@ public class gun : MonoBehaviour
         }
         if (cooldown<0)
         {
+            bulletsLoaded = 2;
+        }
+        if (bulletsLoaded > 0)
+        {
             canshoot = true;
         }
-        if (canshoot==true)
+
+
+        if (canshoot == true && bulletsLoaded > 0)
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                bulletsLoaded -= 1;
                 Shoot();
                 cooldown = 1;
             }

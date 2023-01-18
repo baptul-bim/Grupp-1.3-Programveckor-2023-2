@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4023665641363819404}
   - component: {fileID: 4023665641363819407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "asset tr\xE4d2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 7640f2a847d7e4f4697169747c25c3b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7894684898026821037}
   - component: {fileID: 5469822515721291880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: asset tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 887871a30b54b784aaafb16aba000cb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1

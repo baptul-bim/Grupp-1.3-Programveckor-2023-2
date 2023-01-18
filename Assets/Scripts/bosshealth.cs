@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class bosshealth : MonoBehaviour
 {
-    public Slider slider;
-    public void SetMaxHealth(float health)
+    private Image health;
+    public float currenthealth;
+    public float maxhealth = 20f;
+    // Start is called before the first frame update
+    void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        health = GetComponent<Image>();
+        currenthealth = maxhealth;
     }
-    public void SetHealth(float health)
+
+    // Update is called once per frame
+    void Update()
     {
-        slider.value = health;
+        health.fillAmount = currenthealth / maxhealth;
     }
 }
