@@ -101,12 +101,9 @@ public class AxeEnemy : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag == "Bullet2") 
+        if (collision.gameObject.tag == "bullet") 
         {
-            Instantiate(bloodParticles);
-            Debug.Log("jag dog :(");
-            Debug.Log(collision.gameObject.tag);
-            Destroy(this.gameObject);
+            //AxeEnemyDeath();
 
         }
     }
@@ -121,6 +118,15 @@ public class AxeEnemy : MonoBehaviour
         yield return new WaitForSecondsRealtime(5);
 
         enemySpeed = 1;
+
+    }*/
+
+    /*public void AxeEnemyDeath()
+    {
+        Instantiate(bloodParticles);
+        Debug.Log("jag dog :(");
+        Destroy(this.gameObject);
+
 
     }*/
 
