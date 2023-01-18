@@ -12,7 +12,10 @@ public class testmov : MonoBehaviour
     public float jumping;
     private Rigidbody2D rb;
     private bool isJumping;
+    public bool isfalling = false;
     bool horizontalMove;
+    bool jumpanim;
+    bool fallanim;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +26,11 @@ public class testmov : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.A);
+        jumpanim = isJumping;
+        fallanim = isfalling;
         animator.SetBool("moving", horizontalMove);
-        animator.SetBool("jumping", isJumping);
+        animator.SetBool("jumping", jumpanim);
+        animator.SetBool("falling", fallanim);
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
@@ -48,15 +54,12 @@ public class testmov : MonoBehaviour
             jumping = 1;
         }
     }
-    //public void OnLanding()
-    //{
-        //animator.SetBool("jumping", false);
-    //}
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            isfalling = false;
         }
     }
 }
