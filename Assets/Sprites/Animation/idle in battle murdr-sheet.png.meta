@@ -133,6 +133,240 @@ TextureImporter:
       bones: []
       spriteID: e800a503b9cd72fe0800000000000000
       internalID: -1213759015463812978
+<<<<<<< Updated upstream
+=======
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4292622b52d764faf33cb74bd4aeba
+      internalID: 478863152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ca65cc36da85b42bbd1e81671876c2
+      internalID: -1612366351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3062465bcd4a8b54787b4f45c8a809bc
+      internalID: 1000935252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbb044bbfdcf034c92e9b0d2cd61216
+      internalID: -133674991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088ae81fb9dadb04b9c8a2306627e3fe
+      internalID: -2006350062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c73acfecbed7fc44b796fe77b971c5b
+      internalID: -1113341062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2838f133a54a3d748b6c6b075446bf4c
+      internalID: -106918563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d3bc04063ff314ea07d0fa249f1ed4
+      internalID: 531168730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6973158551c984d9f8fddd364b7209
+      internalID: -1661721681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e125e2000e15b04895e0f66aa47f901
+      internalID: 643292508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle in battle murdr-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 0
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ed0cb1da26ad845993060fad354ba0
+      internalID: 934250998
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -140,7 +374,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 
+=======
+    spriteID: d11c55829c131f94b815bd3b3c730ac4
+>>>>>>> Stashed changes
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +386,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       idle in battle murdr-sheet_0: -1213759015463812978
+=======
+      idle in battle murdr-sheet_10: 643292508
+      idle in battle murdr-sheet_2: -1612366351
+      idle in battle murdr-sheet_9: -1661721681
+      idle in battle murdr-sheet_5: -2006350062
+      idle in battle murdr-sheet_3: 1000935252
+      idle in battle murdr-sheet_8: 531168730
+      idle in battle murdr-sheet_0: -1213759015463812978
+      idle in battle murdr-sheet_4: -133674991
+      idle in battle murdr-sheet_11: 934250998
+      idle in battle murdr-sheet_7: -106918563
+      idle in battle murdr-sheet_1: 478863152
+      idle in battle murdr-sheet_6: -1113341062
+>>>>>>> Stashed changes
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
