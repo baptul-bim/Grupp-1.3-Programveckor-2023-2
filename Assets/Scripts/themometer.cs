@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class themometer : MonoBehaviour
 {
     private Image thermometer;
-    public float currenttemp = 20f; 
+    public static float currenttemp = 20f; 
     public float maxtemp = 50f;
     public float temptimer = 2; 
     // Start is called before the first frame update
