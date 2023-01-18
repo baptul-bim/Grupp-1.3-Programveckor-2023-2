@@ -27,8 +27,6 @@ public class boss : MonoBehaviour
     public float jumptimer = 3;
     public float jumpforce;
     Rigidbody2D rb;
-    float maxbosshealth = 40;
-    float currentbosshealth;
 
    
     void Start()
@@ -37,8 +35,6 @@ public class boss : MonoBehaviour
         //sprender.enabled = false;
         player = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
-        currentbosshealth = maxbosshealth;
-        bosshealth.SetMaxHealth(maxbosshealth);
         movetimer = 4;
         move = 21;
     }
@@ -94,7 +90,7 @@ public class boss : MonoBehaviour
                 jumptimer = 3;
             }
         }
-        if (currentbosshealth <= 0)
+        if (bosshealth.currenthealth <= 0)
         {
             bossdeathline.text = "Brave Monke, Thy strength befits a crown";
             //sprender.enabled = true;
@@ -106,7 +102,7 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag=="bullet")
         {
-            TakeDamage(1);
+            bosshealth.currenthealth -= 1;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -125,11 +121,6 @@ public class boss : MonoBehaviour
     {
         GetComponent<jumpdmg>().jump = true;
         rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-    }
-    void TakeDamage(float damage)
-    {
-        currentbosshealth -= damage;
-        bosshealth.SetHealth(currentbosshealth);
     }
     void bossdeath()
     {
