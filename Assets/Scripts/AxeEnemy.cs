@@ -98,6 +98,7 @@ public class AxeEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
+            StartCoroutine(AttackCoolDown());
 
         }
 
@@ -107,6 +108,19 @@ public class AxeEnemy : MonoBehaviour
             Blood.Play();
             Debug.Log("jag dog :(");
         }
+    }
+
+
+    IEnumerator AttackCoolDown()
+    {
+
+        enemySpeed = 0;
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSecondsRealtime(5);
+
+        enemySpeed = 1;
+
     }
 
 
