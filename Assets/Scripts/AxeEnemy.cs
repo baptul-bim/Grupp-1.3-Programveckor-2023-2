@@ -58,7 +58,7 @@ public class AxeEnemy : MonoBehaviour
 
 
             }
-            else if (hit.distance <= 0.16f && hit.transform.tag == ("Player"))
+            else if (hit.distance <= 0.5f && hit.transform.tag == ("Player"))
             {
                 enemySpeed = 0;
 
@@ -125,7 +125,7 @@ public class AxeEnemy : MonoBehaviour
 
     public void AxeEnemyDeath()
     {
-        Instantiate(bloodParticles);
+        Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
         Debug.Log("jag dog :(");
         Destroy(this.gameObject);
 

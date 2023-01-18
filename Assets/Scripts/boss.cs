@@ -35,6 +35,7 @@ public class boss : MonoBehaviour
         //sprender.enabled = false;
         player = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
+        bosshealth = FindObjectOfType<bosshealth>();
         movetimer = 4;
         move = 21;
     }
@@ -98,19 +99,19 @@ public class boss : MonoBehaviour
         }
     }
    
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag=="bullet")
-        {
-            bosshealth.currenthealth -= 1;
-        }
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
 
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag=="bullet")
+        {
+            bosshealth.currenthealth -= 1;
         }
     }
     void Shoot()
