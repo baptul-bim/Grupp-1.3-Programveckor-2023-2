@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class bosshealth : MonoBehaviour
 {
-    public Slider slider;
-    public void SetMaxHealth(float health)
+    private Image health;
+    public float currenttemp = 20f;
+    public float maxtemp = 50f;
+
+    void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        health = GetComponent<Image>();
     }
-    public void SetHealth(float health)
+    private void Update()
     {
-        slider.value = health;
+        health.fillAmount = currenttemp / maxtemp;
     }
 }
