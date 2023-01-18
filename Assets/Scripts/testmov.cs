@@ -6,6 +6,9 @@ public class testmov : MonoBehaviour
 {
     public Animator animator;
 
+    //raycast direction
+    public Vector2 direction;
+
     public float moveSpeed = 5;
     public float jumpforce;
     public float jump;
@@ -31,6 +34,10 @@ public class testmov : MonoBehaviour
         animator.SetBool("moving", horizontalMove);
         animator.SetBool("jumping", jumpanim);
         animator.SetBool("falling", fallanim);
+
+        //raycast ground detection
+        RaycastHit2D GroundHit = Physics2D.Raycast(this.gameObject.transform.position, direction);
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
