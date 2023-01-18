@@ -5,7 +5,7 @@ using System;
 
 public class jumpdmg : MonoBehaviour
 {
-    testmov player;
+    PlayerMovement player;
     healthPlayer health;
     public bool jump;
     public bool dmgtrigger1=false;
@@ -14,7 +14,7 @@ public class jumpdmg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<testmov>();
+        player = FindObjectOfType<PlayerMovement>();
         health = FindObjectOfType<healthPlayer>();
         jump = false;
     }
