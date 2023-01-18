@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    bosshealth bosshealth;
     public float speed = 20f;
     public Rigidbody2D rb;
    
    
     void Start()
     {
+        bosshealth = FindObjectOfType<bosshealth>();
         rb.velocity = transform.right * speed;      
     }
 
@@ -24,6 +26,7 @@ public class bullet : MonoBehaviour
         {
             Debug.Log("HAHAHHAHAHAHA");
             collision.gameObject.GetComponent<AxeEnemy>().AxeEnemyDeath();
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "bullet") 
