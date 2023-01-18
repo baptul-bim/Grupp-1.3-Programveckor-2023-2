@@ -17,7 +17,7 @@ public class healthPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 3;
+        maxHealth = 5;
         health = maxHealth;
         gameManager = FindObjectOfType<gameManagerScript>();
     }
