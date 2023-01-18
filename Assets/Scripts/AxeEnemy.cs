@@ -128,6 +128,7 @@ public class AxeEnemy : MonoBehaviour
         Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
         Debug.Log("jag dog :(");
         Destroy(this.gameObject);
+        themometer.currenttemp -= 5;
 
 
     }
