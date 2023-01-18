@@ -9,12 +9,18 @@ public class AxeEnemy : MonoBehaviour
     float enemySpeed;
 
     bool facingRight;
-    //bool facingLeft;
 
     public Vector2 direction;
 
+    //blood splatter
+    [SerializeField]
+    ParticleSystem bloodParticles;
+    private ParticleSystem bloodSplatter;
+    public ParticleSystem Blood { get => bloodSplatter; set => bloodSplatter = value; }
 
     int facing;
+
+    
 
 
 
@@ -23,7 +29,6 @@ public class AxeEnemy : MonoBehaviour
     void Start()
     {
         facingRight = false;
-        //facingLeft = false;
     }
 
     // Update is called once per frame
@@ -99,6 +104,7 @@ public class AxeEnemy : MonoBehaviour
         if (collision.gameObject.tag == "bullet") 
         {
             Destroy(gameObject);
+            Blood.Play();
             Debug.Log("jag dog :(");
         }
     }
