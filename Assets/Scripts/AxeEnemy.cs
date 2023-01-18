@@ -98,12 +98,14 @@ public class AxeEnemy : MonoBehaviour
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
             //StartCoroutine(AttackCoolDown());
+            Debug.Log("Attackerar spelare");
 
         }
 
         if (collision.gameObject.tag == "bullet") 
         {
             //AxeEnemyDeath();
+            Debug.Log("blir skjuten");
 
         }
     }
@@ -121,14 +123,14 @@ public class AxeEnemy : MonoBehaviour
 
     }*/
 
-    /*public void AxeEnemyDeath()
+    public void AxeEnemyDeath()
     {
         Instantiate(bloodParticles);
         Debug.Log("jag dog :(");
         Destroy(this.gameObject);
 
 
-    }*/
+    }
 
 
     
