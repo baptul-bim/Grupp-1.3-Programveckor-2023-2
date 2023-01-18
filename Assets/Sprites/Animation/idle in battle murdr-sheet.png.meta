@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -119,311 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 5672b4ec3afd0fc44bf19ce66d1046d6
-      internalID: 751087616
-=======
-      spriteID: ab2cc090c20db134398fbd3397585c87
-      internalID: 1025595304
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_1
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: e6b85d6d2362975489ca86253ea9b8a6
-      internalID: -2010067009
-=======
-      spriteID: 420c3419d066bd44090c7325c7b14407
-      internalID: -596004115
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_2
-      rect:
-        serializedVersion: 2
-        x: 514
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: 89a3b9de81804a0409db3795fdc7ecb3
-      internalID: -1559754705
-=======
-      spriteID: 4d1ac56bfb8b8554eaaa9c1313114187
-      internalID: -1441672596
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_3
-      rect:
-        serializedVersion: 2
-        x: 771
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: e1347e317ba601c46bf46acb8c32ecae
-      internalID: -307260793
-=======
-      spriteID: 013a6d37a65fb424e8c2974e21aee904
-      internalID: -2142964002
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_4
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: e29c6ea6f0f8f2b458fe76b2f5e2d4e0
-      internalID: 1145066207
-=======
-      spriteID: 494df119b0b5d2e4aae166d2784963f1
-      internalID: 531010386
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_5
-      rect:
-        serializedVersion: 2
-        x: 1285
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: 67427675514eb344ca41e56d12596fd6
-      internalID: 1708382534
-=======
-      spriteID: 63ed10654d97d0d4bbbcb586e6d0faee
-      internalID: -1231397141
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_6
-      rect:
-        serializedVersion: 2
-        x: 1542
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: eb42b3776727bb240ba027d818beb973
-      internalID: -758105567
-=======
-      spriteID: 188a5d2ee47157f4a83ad4b97031f5f5
-      internalID: 412402958
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_7
-      rect:
-        serializedVersion: 2
-<<<<<<< HEAD
-        x: 1799
-=======
-        x: 1807
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: 80205badf63f11346a10e8b36661b023
-      internalID: -1150925377
-=======
-      spriteID: 70825071489cdd544b5faca6d20ae8e1
-      internalID: -22765290
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_8
-      rect:
-        serializedVersion: 2
-<<<<<<< HEAD
-        x: 2056
-=======
-        x: 2059
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: a6ac3700593c6cf428d5873bf562ea5c
-      internalID: 321637162
-=======
-      spriteID: 296a9651d6adb1449aef55e48a6c194a
-      internalID: -861717406
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_9
-      rect:
-        serializedVersion: 2
-<<<<<<< HEAD
-        x: 2313
-=======
-        x: 2316
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: d0311f31dcafa34438ead9464b263c88
-      internalID: -768544481
-=======
-      spriteID: 8ee38b8e0220afd47964b990a1bc9598
-      internalID: 1018741833
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_10
-      rect:
-        serializedVersion: 2
-        x: 2570
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: df5528c9b10994e468238a52b2919b10
-      internalID: -555748601
-=======
-      spriteID: 8534303eb1c1732479ad19a411677118
-      internalID: -2076750655
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle in battle murdr-sheet_11
-      rect:
-        serializedVersion: 2
-        x: 2827
-        y: 0
-        width: 257
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: ed69df10f699df34391922a8c2cb9274
-      internalID: -1476895646
-=======
-      spriteID: f560e650d47a62e4bb06555e72f50f49
-      internalID: 1014617534
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
+      spriteID: e800a503b9cd72fe0800000000000000
+      internalID: -1213759015463812978
       vertices: []
       indices: 
       edges: []
@@ -431,7 +140,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -439,33 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      idle in battle murdr-sheet_10: -555748601
-      idle in battle murdr-sheet_2: -1559754705
-      idle in battle murdr-sheet_9: -768544481
-      idle in battle murdr-sheet_5: 1708382534
-      idle in battle murdr-sheet_3: -307260793
-      idle in battle murdr-sheet_8: 321637162
-      idle in battle murdr-sheet_0: 751087616
-      idle in battle murdr-sheet_4: 1145066207
-      idle in battle murdr-sheet_11: -1476895646
-      idle in battle murdr-sheet_7: -1150925377
-      idle in battle murdr-sheet_1: -2010067009
-      idle in battle murdr-sheet_6: -758105567
-=======
-      idle in battle murdr-sheet_10: -2076750655
-      idle in battle murdr-sheet_2: -1441672596
-      idle in battle murdr-sheet_9: 1018741833
-      idle in battle murdr-sheet_5: -1231397141
-      idle in battle murdr-sheet_3: -2142964002
-      idle in battle murdr-sheet_8: -861717406
-      idle in battle murdr-sheet_0: 1025595304
-      idle in battle murdr-sheet_4: 531010386
-      idle in battle murdr-sheet_11: 1014617534
-      idle in battle murdr-sheet_7: -22765290
-      idle in battle murdr-sheet_1: -596004115
-      idle in battle murdr-sheet_6: 412402958
->>>>>>> 4eeecceb1ed46a5376d8ff6360abc9482c431849
+      idle in battle murdr-sheet_0: -1213759015463812978
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
