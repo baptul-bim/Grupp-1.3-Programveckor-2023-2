@@ -2326,6 +2326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd8d096735e138459bc6f1aa29d069c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1826951145}
   firepoint: {fileID: 1222964219}
   logprefab: {fileID: 5795731090321076992, guid: 9cd8c267bc9a9c847b58130df7fa18cd, type: 3}
   bosshealth: {fileID: 0}
@@ -2334,12 +2335,9 @@ MonoBehaviour:
   playerdeathline: {fileID: 229961252}
   bossdeathline: {fileID: 1469537399}
   sprender: {fileID: 0}
-  linetimer: 4
-  movetimer: 0
-  move: 0
-  logtimer: 0
-  jumptimer: 0
   jumpforce: 70
+  logtoss: 0
+  landing: 0
 --- !u!114 &1826951140
 MonoBehaviour:
   m_ObjectHideFlags: 0

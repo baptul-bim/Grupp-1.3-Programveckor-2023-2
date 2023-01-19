@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class log : MonoBehaviour
 {
+    boss boss;
     public float speed = 20f;
     public Rigidbody2D rb;
 
     void Start()
     {
+        boss = FindObjectOfType<boss>();
         rb.velocity = transform.right * speed;
     }
 
