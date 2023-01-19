@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class FireWallDamage : MonoBehaviour
 {
+    int health;
+    float decimalHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +20,15 @@ public class FireWallDamage : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "Player")
         {
 
-            healthPlayer fireDamage = this.GetComponent<healthPlayer>();
-            fireDamage.health -= 1;
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
 
         }
     }
+
 
 }
