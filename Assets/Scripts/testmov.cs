@@ -9,7 +9,7 @@ public class testmov : MonoBehaviour
     //raycast direction
     public Vector2 direction;
 
-    public static float moveSpeed = 5;
+    public static float moveSpeed = 3;
     public float jumpforce;
     public float jump;
     public float jumping;
@@ -23,6 +23,7 @@ public class testmov : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        moveSpeed = 3;
     }
 
     // Update is called once per frame
