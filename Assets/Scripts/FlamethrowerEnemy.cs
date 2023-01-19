@@ -12,14 +12,16 @@ public class FlamethrowerEnemy : MonoBehaviour
 
     bool flamesActive;
 
-    public GameObject player1;
-    public Transform target;
+
     private ParticleSystem flames;
+
+    public Transform playerTarget;
 
     [SerializeField]
     float enemySpeed;
 
     public float playerDistance;
+    public Vector2 direction;
 
     public ParticleSystem Flames { get => flames; set => flames = value; }
 
@@ -32,8 +34,19 @@ public class FlamethrowerEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //-2.4, -1.2
+
+        Vector3 playerPos = playerTarget.position;
+
+        RaycastHit2D flameRay = Physics2D.Raycast(this.gameObject.transform.position, playerPos - transform.position);
+
+        RaycastHit2D flameRay2 = Physics2D.Raycast(this.gameObject.transform.position, direction);
+
+        Debug.DrawRay(this.gameObject.transform.position, playerPos - transform.position);
+        Debug.DrawRay(this.gameObject.transform.position, direction, color:Color.green);
+
         //Checks if the player is close enough to fire
-        if (Vector3.Distance(target.position, transform.position) > 5f)
+        /*if (Vector3.Distance(target.position, transform.position) > 5f)
         {
 
             //Checks if the players position relative to the enemy and moves towards them
@@ -61,7 +74,7 @@ public class FlamethrowerEnemy : MonoBehaviour
 
             }
 
-        }
+        }*/
 
 
     }

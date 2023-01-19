@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public static int enemyPoints;
-    int enemyPointsIncrease;
+    public static float enemyPoints;
+    float enemyPointsIncrease;
 
 
     public GameObject[] enemyPrefab;
@@ -91,7 +91,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void spawnEnemies()
     {
-        enemyPoints = enemyPointsIncrease + 1;
+        enemyPoints = enemyPointsIncrease + 0.5f;
         enemyPointsIncrease = enemyPoints;
         
         
