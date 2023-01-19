@@ -2143,6 +2143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: the earth-sheet_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4033236374197084570, guid: 7a1d543b5b0a4c74d914bc9e5b37921a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4033236374197084573, guid: 7a1d543b5b0a4c74d914bc9e5b37921a, type: 3}
       propertyPath: m_RootOrder
       value: 9
