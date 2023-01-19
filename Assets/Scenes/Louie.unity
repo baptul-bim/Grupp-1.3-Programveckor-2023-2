@@ -11109,7 +11109,9 @@ MonoBehaviour:
   playerTarget: {fileID: 88813824}
   enemySpeed: 4
   playerDistance: 0
-  direction: {x: -2.4, y: -1.2}
+  direction1: {x: 0, y: 0}
+  direction2: {x: 0, y: 0}
+  direction3: {x: 0, y: 0}
 --- !u!4 &1750213597
 Transform:
   m_ObjectHideFlags: 0

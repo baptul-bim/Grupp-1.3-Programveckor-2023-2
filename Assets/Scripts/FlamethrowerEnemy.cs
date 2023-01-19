@@ -21,7 +21,9 @@ public class FlamethrowerEnemy : MonoBehaviour
     float enemySpeed;
 
     public float playerDistance;
-    public Vector2 direction;
+    public Vector2 direction1;
+    public Vector2 direction2;
+    public Vector2 direction3;
 
     public ParticleSystem Flames { get => flames; set => flames = value; }
 
@@ -40,10 +42,14 @@ public class FlamethrowerEnemy : MonoBehaviour
 
         RaycastHit2D flameRay = Physics2D.Raycast(this.gameObject.transform.position, playerPos - transform.position);
 
-        RaycastHit2D flameRay2 = Physics2D.Raycast(this.gameObject.transform.position, direction);
+        RaycastHit2D flameRay1 = Physics2D.Raycast(this.gameObject.transform.position, direction1);
+        RaycastHit2D flameRay2 = Physics2D.Raycast(this.gameObject.transform.position, direction2);
+        RaycastHit2D flameRay3 = Physics2D.Raycast(this.gameObject.transform.position, direction3);
 
         Debug.DrawRay(this.gameObject.transform.position, playerPos - transform.position);
-        Debug.DrawRay(this.gameObject.transform.position, direction, color:Color.green);
+        Debug.DrawRay(this.gameObject.transform.position, direction1, color:Color.green);
+        Debug.DrawRay(this.gameObject.transform.position, direction2, color: Color.green);
+        Debug.DrawRay(this.gameObject.transform.position, direction3, color: Color.green);
 
         //Checks if the player is close enough to fire
         /*if (Vector3.Distance(target.position, transform.position) > 5f)
