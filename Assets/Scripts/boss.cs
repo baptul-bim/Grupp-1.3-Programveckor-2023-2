@@ -11,6 +11,7 @@ public class boss : MonoBehaviour
     public GameObject logprefab;
     public bosshealth bosshealth;
     healthPlayer player;
+    jumpdmg jumpdmg;
 
     [SerializeField]
     TextMeshProUGUI bossname;
@@ -25,14 +26,12 @@ public class boss : MonoBehaviour
     float linetimer = 4;
     public float movetimer;
     public float move;
-    public float logtimer = 3;
+    public float logtimer = 1.5f;
     float logtimer2;
     float jumptimer = 3;
     public float jumpforce;
-    public bool logtoss;
-    public float logtossf;
-    public bool landing;
-    public float landingf;
+    public float logtossf = 0;
+    public float landingf = 0;
     float loganimtimer;
     Rigidbody2D rb;
 
@@ -41,6 +40,7 @@ public class boss : MonoBehaviour
     {
         sprender = gameObject.GetComponent<SpriteRenderer>();
         //sprender.enabled = false;
+        jumpdmg = FindObjectOfType<jumpdmg>();
         player = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
         bosshealth = FindObjectOfType<bosshealth>();
@@ -51,12 +51,16 @@ public class boss : MonoBehaviour
     void Update()
     {
         #region animation
-        if (logtossf==1)
+        if (jumpdmg.landingj==1)
         {
-            logtoss = true;
+            landingf = 1;
         }
-        animator.SetBool("logtoss", logtoss);
-        animator.SetBool("landing", landing);
+        if (jumpdmg.landingj==0)
+        {
+            landingf = 0;
+        }
+        animator.SetFloat("logtoss", logtossf);
+        animator.SetFloat("landing", landingf);
         #endregion
         #region lines
         linetimer -= Time.deltaTime;
@@ -93,23 +97,21 @@ public class boss : MonoBehaviour
         }        
         if (move<=10)
         {
-            logtimer2 = 0.1f;
-            logtimer2 -= Time.deltaTime;
-            if (logtimer2<0&&logtimer2>-3.4f)
-            {
-                logtoss = true;
-            }
+            loganimtimer = 3.5f;
             logtimer -= Time.deltaTime;
             loganimtimer -= Time.deltaTime;
+            if (logtimer>-0.5f&&logtimer<1.5f)
+            {
+                logtossf = 1;
+            }
+            if (logtimer<-0.5f)
+            {
+                logtossf = 0;
+            }
             if (logtimer<=0)
             {
                 Shoot();
-                logtimer = 3;
-                loganimtimer = 3.5f;
-                if (loganimtimer<=0)
-                {
-                    logtoss = false;
-                }
+                logtimer = 1.5f;
             }
         }
         if (move > 10 && move < 21)
@@ -147,6 +149,7 @@ public class boss : MonoBehaviour
     void Shoot()
     {
         Instantiate(logprefab, firepoint.position, firepoint.rotation);
+        print("shoot");
     }
     void Jump()
     {
