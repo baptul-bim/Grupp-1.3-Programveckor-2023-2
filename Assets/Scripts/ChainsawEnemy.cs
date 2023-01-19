@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChainsawEnemy : MonoBehaviour
 {
-    
 
+    public int chainsawHealth = 3;
 
     [SerializeField]
     float enemySpeed;
@@ -31,8 +31,10 @@ public class ChainsawEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rage = false;
         facingRight = false;
-        chainsawHealth = 2;
+
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
+        healthChanger.enemyHealth = chainsawHealth;
 
     }
 

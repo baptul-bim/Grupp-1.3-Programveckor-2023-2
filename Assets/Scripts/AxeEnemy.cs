@@ -31,7 +31,8 @@ public class AxeEnemy : MonoBehaviour
     void Start()
     {
         facingRight = false;
-        this.gameObject.GetComponent<EnemyDeath>().EnemyDamage();
+        EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
+        healthChanger.enemyHealth = axeHealth;
     }
 
     // Update is called once per frame

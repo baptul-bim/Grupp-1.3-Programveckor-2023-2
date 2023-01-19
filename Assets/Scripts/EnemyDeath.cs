@@ -10,10 +10,12 @@ public class EnemyDeath : MonoBehaviour
 
     public int enemyHealth;
 
+    public int enemyMaxHealth;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemyMaxHealth = enemyHealth;
     }
 
     // Update is called once per frame
@@ -24,8 +26,9 @@ public class EnemyDeath : MonoBehaviour
 
     public void EnemyDamage()
     {
-
+        enemyMaxHealth = enemyHealth;
         enemyHealth -= 1;
+        
 
 
 
@@ -34,7 +37,7 @@ public class EnemyDeath : MonoBehaviour
             Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
             Debug.Log("jag dog :(");
             Destroy(this.gameObject);
-            themometer.currenttemp -= 5;
+            themometer.currenttemp -= enemyMaxHealth * 2;
         }
 
 
