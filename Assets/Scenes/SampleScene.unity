@@ -802,6 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  animator: {fileID: 0}
   health: 0
   maxHealth: 5
   gameManager: {fileID: 0}
