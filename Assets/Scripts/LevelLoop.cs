@@ -10,7 +10,9 @@ public class LevelLoop : MonoBehaviour
 
     public Transform player1;
 
-    float nextRoomPos;
+    public static float nextRoomPos;
+
+    int enemyPointsSaver;
 
 
 
@@ -27,10 +29,15 @@ public class LevelLoop : MonoBehaviour
     {
         if (player1.position.x >= nextRoomPos)
         {
+            //enemyPointsSaver = EnemySpawner.enemyPoints;
             int randRoom = Random.Range(0, 8);
             currentRoom = randRoom;
             nextRoomPos += 4.8f;
             Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
+            player1.gameObject.GetComponent<EnemySpawner>().spawnEnemies();
+            //EnemySpawner.enemyPoints += enemyPointsSaver + 1;
+
+            
 
         }
     }

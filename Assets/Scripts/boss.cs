@@ -5,6 +5,8 @@ using TMPro;
 
 public class boss : MonoBehaviour
 {
+    public Animator animator;
+
     public Transform firepoint;
     public GameObject logprefab;
     public bosshealth bosshealth;
@@ -20,12 +22,18 @@ public class boss : MonoBehaviour
     TextMeshProUGUI bossdeathline;
     public SpriteRenderer sprender;
 
-    public float linetimer = 4;
+    float linetimer = 4;
     public float movetimer;
     public float move;
     public float logtimer = 3;
-    public float jumptimer = 3;
+    float logtimer2;
+    float jumptimer = 3;
     public float jumpforce;
+    public bool logtoss;
+    public float logtossf;
+    public bool landing;
+    public float landingf;
+    float loganimtimer;
     Rigidbody2D rb;
 
    
@@ -42,6 +50,15 @@ public class boss : MonoBehaviour
 
     void Update()
     {
+        #region animation
+        if (logtossf==1)
+        {
+            logtoss = true;
+        }
+        animator.SetBool("logtoss", logtoss);
+        animator.SetBool("landing", landing);
+        #endregion
+        #region lines
         linetimer -= Time.deltaTime;
         movetimer -= Time.deltaTime;
         if (linetimer>0)
@@ -67,6 +84,7 @@ public class boss : MonoBehaviour
             //sprender.enabled = false;
         }
         bossname.text = "xXMONKE SLAYERXx";
+        #endregion
         if (movetimer<=0)
         {
             move = Random.Range(1, 20);
@@ -75,11 +93,23 @@ public class boss : MonoBehaviour
         }        
         if (move<=10)
         {
+            logtimer2 = 0.1f;
+            logtimer2 -= Time.deltaTime;
+            if (logtimer2<0&&logtimer2>-3.4f)
+            {
+                logtoss = true;
+            }
             logtimer -= Time.deltaTime;
+            loganimtimer -= Time.deltaTime;
             if (logtimer<=0)
             {
                 Shoot();
                 logtimer = 3;
+                loganimtimer = 3.5f;
+                if (loganimtimer<=0)
+                {
+                    logtoss = false;
+                }
             }
         }
         if (move > 10 && move < 21)

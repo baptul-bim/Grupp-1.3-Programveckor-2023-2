@@ -1377,6 +1377,25 @@ MonoBehaviour:
   - {fileID: 4797012138358167846, guid: 54e55693792fd9446bfcae5a264889bb, type: 3}
   currentRoom: 0
   player1: {fileID: 1150682947}
+--- !u!114 &1150682949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150682938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a08e73d09043349b8d27a57ea1e13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  axePrefab: {fileID: 6606875478358254050, guid: 7522e5130d598e1499de4ef12d13c087, type: 3}
+  chainsawPrefab: {fileID: 601895438562855587, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
+  flamethrowerPrefab: {fileID: 3431099913473828435, guid: e1e313d4b3cd38643ba824407afbbe25, type: 3}
 --- !u!1 &1314389335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,11 +1963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 159225355153096645, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9808978
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 159225355153096645, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07521397
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 159225355153096645, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
       propertyPath: m_LocalPosition.z
