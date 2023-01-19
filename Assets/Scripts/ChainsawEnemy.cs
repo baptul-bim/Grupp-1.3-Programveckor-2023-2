@@ -6,6 +6,7 @@ public class ChainsawEnemy : MonoBehaviour
 {
 
     public int chainsawHealth = 3;
+    int healthComparison;
 
     [SerializeField]
     float enemySpeed;
@@ -35,6 +36,8 @@ public class ChainsawEnemy : MonoBehaviour
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = chainsawHealth;
+
+        healthComparison = healthChanger.enemyHealth;
 
     }
 
@@ -92,6 +95,12 @@ public class ChainsawEnemy : MonoBehaviour
 
 
 
+        }
+
+        if (healthComparison != healthChanger.enemyHealth)
+        {
+            GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+            healthComparison= HealthChanger.enemyHealth
         }
 
     }
