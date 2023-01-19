@@ -9,7 +9,7 @@ public class testmov : MonoBehaviour
     //raycast direction
     public Vector2 direction;
 
-    public float moveSpeed = 5;
+    public static float moveSpeed = 5;
     public float jumpforce;
     public float jump;
     public float jumping;

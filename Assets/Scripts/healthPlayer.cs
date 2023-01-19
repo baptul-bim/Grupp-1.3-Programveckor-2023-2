@@ -39,6 +39,11 @@ public class healthPlayer : MonoBehaviour
             Debug.Log ("Dead");
         }
 
+        if(health <= 0)
+        {
+            testmov.moveSpeed = 0;
+        }
+
     }
 
     public void Damaged(/*float damagePoints*/)
