@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,9 +12,17 @@ public class healthPlayer : MonoBehaviour
     public float health;
     public float maxHealth;
 
+    public bool onFire;
+
     public gameManagerScript gameManager;
 
     private bool isDead;
+
+    public ParticleSystem burning;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +55,14 @@ public class healthPlayer : MonoBehaviour
             testmov.moveSpeed = 0;
         }
 
+        if (onFire == true)
+        {
+
+            health -= Time.deltaTime / 2;
+
+        }
+
+
     }
 
     public void Damaged(/*float damagePoints*/)
@@ -56,4 +73,33 @@ public class healthPlayer : MonoBehaviour
             health -= 1;
         }
     }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Fire")
+        {
+            health-=Time.deltaTime / 2;
+            StartCoroutine(BurnTimer());
+
+        }
+
+    }
+
+
+    IEnumerator BurnTimer()
+    {
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+        ps.Play();
+
+        onFire = true;
+
+        yield return new WaitForSeconds(5);
+
+        onFire = false;
+        ps.Stop();
+
+    }
+
 }
