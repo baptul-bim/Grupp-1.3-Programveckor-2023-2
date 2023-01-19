@@ -62,14 +62,14 @@ public class ChainsawEnemy : MonoBehaviour
             {
                 //här ska den revva upp motorsågen och kanske se arg ut.
                 rage = true;
-                GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+                this.GameObject.GetComponent<Animator>().Play("chainsaw-charge");
             }
 
         }
         //rage activated
         else if (searchHit.collider != null && rage == true)
         {
-            GameObject.GetComponent<Animator>().Play("chainsaw-run");
+            this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
             //checks if terrain in front.
             RaycastHit2D groundHit = Physics2D.Raycast(this.gameObject.transform.position, direction);
 
