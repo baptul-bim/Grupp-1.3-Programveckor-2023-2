@@ -16,7 +16,7 @@ public class AxeEnemy : MonoBehaviour
     [SerializeField]
     ParticleSystem bloodParticles;
 
-    bool attack;
+    bool axeattack;
 
     int facing;
 
@@ -113,11 +113,11 @@ public class AxeEnemy : MonoBehaviour
 
     IEnumerator AttackCoolDown()
     {
-        attack = true;
+        axeattack = true;
         enemySpeed = 0;
 
         yield return new WaitForSecondsRealtime(5);
-        attack = false;
+        axeattack = false;
 
         enemySpeed = 1;
 
