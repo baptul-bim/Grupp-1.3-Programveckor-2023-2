@@ -19,6 +19,9 @@ public class AxeEnemy : MonoBehaviour
 
     int facing;
 
+    //axe health
+    public int axeHealth = 1;
+
     
 
 
@@ -28,6 +31,7 @@ public class AxeEnemy : MonoBehaviour
     void Start()
     {
         facingRight = false;
+        this.gameObject.GetComponent<EnemyDeath>().EnemyDamage();
     }
 
     // Update is called once per frame
@@ -123,15 +127,7 @@ public class AxeEnemy : MonoBehaviour
 
     }*/
 
-    public void AxeEnemyDeath()
-    {
-        Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
-        Debug.Log("jag dog :(");
-        Destroy(this.gameObject);
-        themometer.currenttemp -= 5;
 
-
-    }
 
 
     

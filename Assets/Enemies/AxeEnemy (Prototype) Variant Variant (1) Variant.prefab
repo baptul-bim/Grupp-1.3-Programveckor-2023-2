@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563222, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_Name
-      value: AxeEnemy (Prototype) Variant Variant (1)
+      value: AxeEnemy (Prototype) Variant Variant (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563222, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_TagString
@@ -41,15 +41,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalPosition.x

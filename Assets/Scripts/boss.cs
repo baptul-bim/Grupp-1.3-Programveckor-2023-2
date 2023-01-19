@@ -53,14 +53,14 @@ public class boss : MonoBehaviour
         #region animation
         if (jumpdmg.landingj==1)
         {
-            landingf = 1;
+            animator.SetTrigger("New Trigger");
         }
         if (jumpdmg.landingj==0)
         {
-            landingf = 0;
+            animator.ResetTrigger("New Trigger");
         }
         animator.SetFloat("logtoss", logtossf);
-        animator.SetFloat("landing", landingf);
+        //animator.SetFloat("landing", landingf);    
         #endregion
         #region lines
         linetimer -= Time.deltaTime;
