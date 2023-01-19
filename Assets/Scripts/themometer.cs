@@ -13,6 +13,7 @@ public class themometer : MonoBehaviour
     void Start()
     {
         thermometer = GetComponent<Image>();
+        currenttemp = 20;
     }
 
     // Update is called once per frame

@@ -17,7 +17,7 @@ public class healthPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 5;
+        maxHealth = 10;
         health = maxHealth;
         gameManager = FindObjectOfType<gameManagerScript>();
     }
@@ -37,6 +37,11 @@ public class healthPlayer : MonoBehaviour
             isDead = true;
             gameManager.gameOver();
             Debug.Log ("Dead");
+        }
+
+        if(health <= 0)
+        {
+            testmov.moveSpeed = 0;
         }
 
     }
