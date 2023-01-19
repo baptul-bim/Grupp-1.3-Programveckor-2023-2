@@ -14,6 +14,8 @@ public class LevelLoop : MonoBehaviour
 
     int enemyPointsSaver;
 
+    public static int roomAmount;
+
 
 
 
@@ -21,7 +23,7 @@ public class LevelLoop : MonoBehaviour
     void Start()
     {
         nextRoomPos = 0;
-
+        roomAmount = 1;
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class LevelLoop : MonoBehaviour
             currentRoom = randRoom;
             nextRoomPos += 4.8f;
             Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
+            roomAmount += 1;
             player1.gameObject.GetComponent<EnemySpawner>().spawnEnemies();
             //EnemySpawner.enemyPoints += enemyPointsSaver + 1;
 

@@ -35,8 +35,8 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (enemyPoints < 1)
-        {
+        //while (enemyPoints < 1)
+        //{
             if (enemyPoints == 1)
             {
                 enemyToSpawn = 0;
@@ -85,7 +85,7 @@ public class EnemySpawner : MonoBehaviour
                     Instantiate(flamethrowerPrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
                 }
             }
-        }
+        //}
 
     }
 
