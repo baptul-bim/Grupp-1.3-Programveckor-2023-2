@@ -16,6 +16,7 @@ public class AxeEnemy : MonoBehaviour
     [SerializeField]
     ParticleSystem bloodParticles;
 
+    bool attack;
 
     int facing;
 
@@ -102,31 +103,25 @@ public class AxeEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
-            //StartCoroutine(AttackCoolDown());
+            StartCoroutine(AttackCoolDown());
             Debug.Log("Attackerar spelare");
 
         }
-
-        if (collision.gameObject.tag == "bullet") 
-        {
-            //AxeEnemyDeath();
-            Debug.Log("blir skjuten");
-
-        }
+     
     }
 
 
-    /*IEnumerator AttackCoolDown()
+    IEnumerator AttackCoolDown()
     {
-
+        attack = true;
         enemySpeed = 0;
 
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSecondsRealtime(5);
+        attack = false;
 
         enemySpeed = 1;
 
-    }*/
+    }
 
 
 
