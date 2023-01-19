@@ -5,6 +5,7 @@ using System;
 
 public class jumpdmg : MonoBehaviour
 {
+    boss boss;
     testmov player;
     healthPlayer health;
     public bool jump;
@@ -14,6 +15,7 @@ public class jumpdmg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        boss = FindObjectOfType<boss>();
         player = FindObjectOfType<testmov>();
         health = FindObjectOfType<healthPlayer>();
         jump = false;
@@ -51,6 +53,7 @@ public class jumpdmg : MonoBehaviour
             }
             if (dmgtrigger1 == true && dmgtrigger2 == true)
             {
+                boss.landing = true;
                 if (player.jumping == 0)
                 {
                     print("jumpkill");
@@ -58,6 +61,7 @@ public class jumpdmg : MonoBehaviour
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;
+                    boss.landing = false;
                 }
                 else if(player.jumping == 1)
                 {
@@ -65,6 +69,7 @@ public class jumpdmg : MonoBehaviour
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;
+                    boss.landing = false;
                 }
             }
         }
