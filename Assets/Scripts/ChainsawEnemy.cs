@@ -8,6 +8,8 @@ public class ChainsawEnemy : MonoBehaviour
     public int chainsawHealth = 3;
     //int healthComparison;
 
+    //private Animator animator;
+
     [SerializeField]
     float enemySpeed;
     [SerializeField]
@@ -69,7 +71,7 @@ public class ChainsawEnemy : MonoBehaviour
         //rage activated
         else if (searchHit.collider != null && rage == true)
         {
-            //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
+           // this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
             //checks if terrain in front.
             RaycastHit2D groundHit = Physics2D.Raycast(this.gameObject.transform.position, direction);
 
@@ -97,10 +99,10 @@ public class ChainsawEnemy : MonoBehaviour
 
         }
 
-        /*if (healthComparison != healthChanger.enemyHealth)
+       /* if (healthComparison != healthChanger.enemyHealth)
         {
-            GameObject.GetComponent<Animator>().Play("chainsaw-charge");
-            //healthComparison = HealthChanger.enemyHealth;
+            //GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+            healthComparison = HealthChanger.enemyHealth;
         }*/
 
     }
@@ -119,7 +121,10 @@ public class ChainsawEnemy : MonoBehaviour
         
     }
 
-
+    /*private void awake()
+    {
+        animator = GetComponent<Animator>();
+    }*/
 
 
 
