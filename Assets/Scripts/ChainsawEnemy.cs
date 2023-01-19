@@ -100,7 +100,7 @@ public class ChainsawEnemy : MonoBehaviour
         if (healthComparison != healthChanger.enemyHealth)
         {
             GameObject.GetComponent<Animator>().Play("chainsaw-charge");
-            healthComparison= HealthChanger.enemyHealth
+            healthComparison = HealthChanger.enemyHealth;
         }
 
     }
