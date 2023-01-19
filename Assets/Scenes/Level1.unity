@@ -1373,6 +1373,8 @@ MonoBehaviour:
   - {fileID: 2056932203581845388, guid: fd5af24536b39c7429a2aac79f12e488, type: 3}
   - {fileID: 9099956920576161581, guid: bda70120af36c364b903b81228d8bb8b, type: 3}
   - {fileID: 828754306709131073, guid: 43d17f45fc5ee2545935a10aec80cbba, type: 3}
+  - {fileID: 5779531254870371861, guid: dd95907dccd3c2448a7e67359bcceeaa, type: 3}
+  - {fileID: 4797012138358167846, guid: 54e55693792fd9446bfcae5a264889bb, type: 3}
   currentRoom: 0
   player1: {fileID: 1150682947}
 --- !u!1 &1314389335
