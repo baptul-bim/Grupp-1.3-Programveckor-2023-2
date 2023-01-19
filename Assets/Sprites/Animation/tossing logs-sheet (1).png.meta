@@ -1,0 +1,629 @@
+fileFormatVersion: 2
+guid: 891ae4dd464a0df498d145224f980c63
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec455343d5378a24e90d336bd229b8e4
+      internalID: -1195829296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e8e683e6b5ecb46bdb1329ede927c5
+      internalID: -233378087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5092e1ff0db124940b643ddb5ce6c0f4
+      internalID: 1238362188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51dcbf070883554d94ffdf6aba2fab8
+      internalID: 547570352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc029f70c73ddf499cf1cb7e8dd5f8a
+      internalID: 2111094914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515bcf09781b69f45b4b8b44d86ec4cb
+      internalID: -1944411742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45edd4cd2e425b14e8dbd711d49bf52f
+      internalID: 370680365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86e234f9dcd6024d919ba246c2cfcd6
+      internalID: 841934607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_8
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5bd6a0aee38fe41a772603f07b2466
+      internalID: 935737444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_9
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9126bd2314dbc4f813ce12c998b37e
+      internalID: 2083197526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d4ef90f3c7527469165be9de772411
+      internalID: 898371572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_11
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2444cf566543a448aae0639380b02d
+      internalID: -815565209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_12
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbf6e827782c384582fcbe895710f3f
+      internalID: 1052875149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_13
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae540c3294b66344d98063d9ee8cafaf
+      internalID: 1784244708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2cc775b3780784085a416cf4dd9c40
+      internalID: 32669625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_15
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35c4dd8b6cac2b4ab0703ef19ec638b
+      internalID: -1274390106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_16
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0650a3e654f5f43afbeb9eaa3ec1bf
+      internalID: 1256529607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_17
+      rect:
+        serializedVersion: 2
+        x: 4845
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47737601bbc4c054ba209f91e07af243
+      internalID: 78820502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_18
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8072c242fba7d054592f0c01234c4138
+      internalID: 1314982356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_19
+      rect:
+        serializedVersion: 2
+        x: 5415
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7313b528a31c64cac69c9d6e7b97ca
+      internalID: 37328117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_20
+      rect:
+        serializedVersion: 2
+        x: 5700
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d870c185565aaad41a076b2c9671b0e3
+      internalID: 1298776880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_21
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdb58778a244284fbdfc4444c356a34
+      internalID: -770731506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tossing logs-sheet (1)_22
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 0
+        width: 285
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8c599dd61c88f41895ec2a532e75af
+      internalID: -1706008301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tossing logs-sheet (1)_9: 2083197526
+      tossing logs-sheet (1)_12: 1052875149
+      tossing logs-sheet (1)_17: 78820502
+      tossing logs-sheet (1)_4: 2111094914
+      tossing logs-sheet (1)_3: 547570352
+      tossing logs-sheet (1)_13: 1784244708
+      tossing logs-sheet (1)_15: -1274390106
+      tossing logs-sheet (1)_20: 1298776880
+      tossing logs-sheet (1)_7: 841934607
+      tossing logs-sheet (1)_16: 1256529607
+      tossing logs-sheet (1)_0: -1195829296
+      tossing logs-sheet (1)_11: -815565209
+      tossing logs-sheet (1)_22: -1706008301
+      tossing logs-sheet (1)_14: 32669625
+      tossing logs-sheet (1)_2: 1238362188
+      tossing logs-sheet (1)_10: 898371572
+      tossing logs-sheet (1)_18: 1314982356
+      tossing logs-sheet (1)_21: -770731506
+      tossing logs-sheet (1)_8: 935737444
+      tossing logs-sheet (1)_19: 37328117
+      tossing logs-sheet (1)_1: -233378087
+      tossing logs-sheet (1)_5: -1944411742
+      tossing logs-sheet (1)_6: 370680365
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

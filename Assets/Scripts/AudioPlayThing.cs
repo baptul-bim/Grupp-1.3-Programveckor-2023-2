@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class nextSceneBoss : MonoBehaviour
+public class AudioPlayThing : MonoBehaviour
 {
+    AudioSource aud;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (LevelLoop.roomAmount == 20)
-        {
-            SceneManager.LoadScene("BossRoom");
-        }
+        
+    }
 
+    public void play_sound()
+    {
+        aud.Play();
     }
 }

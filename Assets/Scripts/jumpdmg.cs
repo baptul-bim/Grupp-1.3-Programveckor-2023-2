@@ -12,6 +12,9 @@ public class jumpdmg : MonoBehaviour
     public bool dmgtrigger1=false;
     bool dmgtrigger2=false;
     public float t1;
+    public float landingj;
+    float landingtimer = 0.01f;
+    float landingtimer2 = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +56,18 @@ public class jumpdmg : MonoBehaviour
             }
             if (dmgtrigger1 == true && dmgtrigger2 == true)
             {
-                boss.landing = true;
+                landingtimer = 0.01f;
+                landingtimer2 = 0.5f;
+                landingtimer2 -= Time.deltaTime;
+                if (landingtimer2 <= 0)
+                {
+                    landingj = 0;
+                }
+                landingtimer -= Time.deltaTime;
+                if (landingtimer<=0)
+                {
+                    landingj = 1;
+                }
                 if (player.jumping == 0)
                 {
                     print("jumpkill");
@@ -61,7 +75,6 @@ public class jumpdmg : MonoBehaviour
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;
-                    boss.landing = false;
                 }
                 else if(player.jumping == 1)
                 {
@@ -69,7 +82,6 @@ public class jumpdmg : MonoBehaviour
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;
-                    boss.landing = false;
                 }
             }
         }

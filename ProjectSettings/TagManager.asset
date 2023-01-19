@@ -17,6 +17,7 @@ TagManager:
   - air
   - Bullet2
   - boss
+  - Room
   layers:
   - Default
   - TransparentFX
