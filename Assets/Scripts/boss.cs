@@ -55,12 +55,7 @@ public class boss : MonoBehaviour
         {
             animator.SetTrigger("New Trigger");
         }
-        if (jumpdmg.landingj==0)
-        {
-            animator.ResetTrigger("New Trigger");
-        }
-        animator.SetFloat("logtoss", logtossf);
-        //animator.SetFloat("landing", landingf);    
+        animator.SetFloat("logtoss", logtossf);   
         #endregion
         #region lines
         linetimer -= Time.deltaTime;
@@ -97,9 +92,7 @@ public class boss : MonoBehaviour
         }        
         if (move<=10)
         {
-            loganimtimer = 3.5f;
             logtimer -= Time.deltaTime;
-            loganimtimer -= Time.deltaTime;
             if (logtimer>-0.5f&&logtimer<1.5f)
             {
                 logtossf = 1;
@@ -107,11 +100,6 @@ public class boss : MonoBehaviour
             if (logtimer<-0.5f)
             {
                 logtossf = 0;
-            }
-            if (logtimer<=0)
-            {
-                Shoot();
-                logtimer = 1.5f;
             }
         }
         if (move > 10 && move < 21)
@@ -159,5 +147,9 @@ public class boss : MonoBehaviour
     void bossdeath()
     {
         Destroy(gameObject);
+    }
+    void stoplanding()
+    {
+        animator.ResetTrigger("New Trigger");
     }
 }
