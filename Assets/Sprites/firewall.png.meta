@@ -122,10 +122,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 720
+        width: 240
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,36 +138,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: firewall_1
+      name: firewall_2
       rect:
         serializedVersion: 2
         x: 720
         y: 0
-        width: 720
+        width: 240
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3fe8af47f9f10242ad08fbc883bfd7a
-      internalID: 383590730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firewall_2
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 720
-        height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,6 +154,27 @@ TextureImporter:
       bones: []
       spriteID: 88d7e9d6a6f0f9a4985d68361250e6d5
       internalID: -1914945450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firewall_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 240
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2363ab8815aec47a46909fee1b6719
+      internalID: -1708879545
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       firewall_2: -1914945450
+      firewall_4: 592254404
       firewall_0: -1053453439
+      firewall_3: -1708879545
       firewall_1: 383590730
   spritePackingTag: 
   pSDRemoveMatte: 0
