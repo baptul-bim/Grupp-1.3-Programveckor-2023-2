@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class healthPlayer : MonoBehaviour
 {
     public Image healthBar;
+    public Animator animator;
 
     public float health;
     public float maxHealth;
@@ -19,6 +20,7 @@ public class healthPlayer : MonoBehaviour
     {
         maxHealth = 10;
         health = maxHealth;
+        animator = FindObjectOfType<Animator>();
         gameManager = FindObjectOfType<gameManagerScript>();
     }
 
@@ -50,6 +52,7 @@ public class healthPlayer : MonoBehaviour
     {
         if (health > 0)
         {
+            animator.SetTrigger("damage");
             health -= 1;
         }
     }
