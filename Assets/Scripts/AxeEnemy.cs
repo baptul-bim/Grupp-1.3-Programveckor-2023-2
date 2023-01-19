@@ -110,7 +110,7 @@ public class AxeEnemy : MonoBehaviour
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
             StartCoroutine(AttackCoolDown());
             Debug.Log("Attackerar spelare");
-            anim.Play
+            
 
         }
      
