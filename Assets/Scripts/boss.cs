@@ -27,17 +27,18 @@ public class boss : MonoBehaviour
     public float movetimer;
     public float move;
     public float logtimer = 1.5f;
-    float logtimer2;
-    float jumptimer = 3;
+    public float jumpanimtimer;
+    public float landanimtimer;
     public float jumpforce;
     public float logtossf = 0;
     public float landingf = 0;
-    float loganimtimer;
+    public float jumpingf = 0;
     Rigidbody2D rb;
 
-   
+
     void Start()
     {
+        animator = GetComponent<Animator>();
         sprender = gameObject.GetComponent<SpriteRenderer>();
         //sprender.enabled = false;
         jumpdmg = FindObjectOfType<jumpdmg>();
@@ -50,16 +51,8 @@ public class boss : MonoBehaviour
 
     void Update()
     {
-        #region animation
-        if (jumpdmg.landingj==1)
-        {
-            animator.SetTrigger("New Trigger");
-        }
-        animator.SetFloat("logtoss", logtossf);   
-        #endregion
         #region lines
         linetimer -= Time.deltaTime;
-        movetimer -= Time.deltaTime;
         if (linetimer>0)
         {
             startline.text = "Hesitation is defeat, Monke";
@@ -84,32 +77,18 @@ public class boss : MonoBehaviour
         }
         bossname.text = "xXMONKE SLAYERXx";
         #endregion
-        if (movetimer<=0)
+        movetimer -= Time.deltaTime;
+        if (movetimer>0&&movetimer<0.1)
         {
-            move = Random.Range(1, 20);
-            movetimer = 4;
-            print("move");
-        }        
+            attack();
+        }
         if (move<=10)
         {
-            logtimer -= Time.deltaTime;
-            if (logtimer>-0.5f&&logtimer<1.5f)
-            {
-                logtossf = 1;
-            }
-            if (logtimer<-0.5f)
-            {
-                logtossf = 0;
-            }
+            animator.SetTrigger("log");
         }
         if (move > 10 && move < 21)
         {
-            jumptimer -= Time.deltaTime;
-            if (jumptimer<=0)
-            {
-                Jump();
-                jumptimer = 3;
-            }
+            animator.SetTrigger("jumping");
         }
         if (bosshealth.currenthealth <= 0)
         {
@@ -124,7 +103,7 @@ public class boss : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
-
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -137,7 +116,6 @@ public class boss : MonoBehaviour
     void Shoot()
     {
         Instantiate(logprefab, firepoint.position, firepoint.rotation);
-        print("shoot");
     }
     void Jump()
     {
@@ -148,8 +126,20 @@ public class boss : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    void stoplanding()
+    void land()
     {
-        animator.ResetTrigger("New Trigger");
+        animator.SetTrigger("landing");
+        animator.ResetTrigger("log");
+        animator.ResetTrigger("jumping");
+    }
+    void attack()
+    {
+        move = Random.Range(1, 20);
+    }
+    void TriggerReset()
+    {
+        animator.ResetTrigger("log");
+        animator.ResetTrigger("jumping");
+        //animator.ResetTrigger("landing");
     }
 }
