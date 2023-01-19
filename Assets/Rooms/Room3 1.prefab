@@ -114,7 +114,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8014117156123903318}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8014117155267161174
 SpriteRenderer:
@@ -391,10 +391,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 101984800420324185}
   - {fileID: 8014117156915855739}
   - {fileID: 8014117155267161173}
-  - {fileID: 1817306839117810365}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -516,7 +514,7 @@ Transform:
   - {fileID: 8014117155390132922}
   - {fileID: 8014117156424126926}
   m_Father: {fileID: 8014117156123903318}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8014117156915855732
 BoxCollider2D:
@@ -544,127 +542,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8, y: 0.64}
   m_EdgeRadius: 0
---- !u!1001 &662044628160965115
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8014117156123903318}
-    m_Modifications:
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.023830658
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855587, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_Name
-      value: AxeEnemy (Prototype) Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
---- !u!4 &101984800420324185 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-  m_PrefabInstance: {fileID: 662044628160965115}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1252566151653146655
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8014117156123903318}
-    m_Modifications:
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.299
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.023830658
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 601895438562855587, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-      propertyPath: m_Name
-      value: AxeEnemy (Prototype) Variant (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
---- !u!4 &1817306839117810365 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 601895438562855586, guid: e718002bfd9011048bf3ef7d7762ea67, type: 3}
-  m_PrefabInstance: {fileID: 1252566151653146655}
-  m_PrefabAsset: {fileID: 0}

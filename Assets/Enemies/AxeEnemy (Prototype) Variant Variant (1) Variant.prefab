@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563222, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_Name
-      value: AxeEnemy (Prototype) Variant Variant (1)
+      value: AxeEnemy (Prototype) Variant Variant (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563222, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_TagString
@@ -41,15 +41,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4422369260423563223, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
       propertyPath: m_LocalPosition.x
@@ -101,3 +101,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
+--- !u!1 &6606875478358254050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4422369260423563222, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
+  m_PrefabInstance: {fileID: 7417216755471164980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8169341482907274108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606875478358254050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7888b835e16ee4f46bdae4ef381ffb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
+  enemyHealth: 0
+  enemyMaxHealth: 0
