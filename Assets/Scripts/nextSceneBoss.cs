@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class nextSceneBoss : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,10 @@ public class nextSceneBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (LevelLoop.roomAmount == 20)
+        {
+            SceneManager.LoadScene("BossRoom");
+        }
+
     }
 }
