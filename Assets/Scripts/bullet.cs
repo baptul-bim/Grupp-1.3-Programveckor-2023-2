@@ -24,8 +24,10 @@ public class bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            Debug.Log("HAHAHHAHAHAHA");
-            collision.gameObject.GetComponent<AxeEnemy>().AxeEnemyDeath();
+            FindObjectOfType
+
+            collision.gameObject.GetComponents().EnemyDeath();
+
             Destroy(gameObject);
         }
 

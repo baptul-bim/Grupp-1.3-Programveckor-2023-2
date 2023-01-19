@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChainsawEnemy : MonoBehaviour
 {
+    
 
 
     [SerializeField]
@@ -30,6 +31,9 @@ public class ChainsawEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rage = false;
         facingRight = false;
+        chainsawHealth = 2;
+        playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
 
@@ -101,8 +105,10 @@ public class ChainsawEnemy : MonoBehaviour
         }
         
     }
-    
 
 
-    
+
+
+
+
 }
