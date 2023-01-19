@@ -10,8 +10,9 @@ public class jumpdmg : MonoBehaviour
     healthPlayer health;
     public bool jump;
     public bool dmgtrigger1=false;
-    bool dmgtrigger2=false;
+    public bool dmgtrigger2=false;
     public float t1;
+    public float t2;
     public float landingj;
     public float landingtimer = 0.01f;
     public float landingtimer2 = 0.5f;
@@ -35,6 +36,15 @@ public class jumpdmg : MonoBehaviour
         {
             t1 = 1;
         }
+        if (dmgtrigger2 == false)
+        {
+            t2 = 0;
+        }
+        if (dmgtrigger2 == true)
+        {
+            t2 = 1;
+        }
+
     }
 
 
@@ -56,7 +66,6 @@ public class jumpdmg : MonoBehaviour
             }
             if (dmgtrigger1 == true && dmgtrigger2 == true)
             {
-                landingj = 1;
                 if (player.jumping == 0)
                 {
                     print("jumpkill");

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f391f4d8f9426af4b8a90b9d72f8961c
+guid: 47c50c69ef4e2174eb191c18e804f62e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,80 +101,152 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: firewall_0
+      name: landing murdr-sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 240
-        height: 480
+        width: 688
+        height: 246
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 253ea4294fcd639449986f9cb2f5df40
-      internalID: -1053453439
+      spriteID: 65f8fd772d275454abb19d46d196f0ae
+      internalID: 1827797107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: firewall_2
+      name: landing murdr-sheet_1
       rect:
         serializedVersion: 2
-        x: 720
+        x: 688
         y: 0
-        width: 240
-        height: 480
+        width: 688
+        height: 246
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88d7e9d6a6f0f9a4985d68361250e6d5
-      internalID: -1914945450
+      spriteID: 102ee3991ab814342808f995a67c1eca
+      internalID: -1958982196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: firewall_3
+      name: landing murdr-sheet_2
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 1376
         y: 0
-        width: 240
-        height: 480
+        width: 688
+        height: 246
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2363ab8815aec47a46909fee1b6719
-      internalID: -1708879545
+      spriteID: b7fff19f82aa6e74d8fdd42b19a87269
+      internalID: 363795967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landing murdr-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 0
+        width: 688
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba70b111c0cd4cf4e85d8ea4824afe9c
+      internalID: 1673163421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landing murdr-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2752
+        y: 0
+        width: 688
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4944087122321842bd0622366064b35
+      internalID: 1487976931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landing murdr-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 0
+        width: 688
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0631ba73e9a9eb4ca6f75424235eb72
+      internalID: -18950604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landing murdr-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4128
+        y: 0
+        width: 688
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fdb85f61cb3b24f928646110e499ae
+      internalID: -2057042456
       vertices: []
       indices: 
       edges: []
@@ -190,11 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      firewall_2: -1914945450
-      firewall_4: 592254404
-      firewall_0: -1053453439
-      firewall_3: -1708879545
-      firewall_1: 383590730
+      landing murdr-sheet_2: 363795967
+      landing murdr-sheet_6: -2057042456
+      landing murdr-sheet_1: -1958982196
+      landing murdr-sheet_3: 1673163421
+      landing murdr-sheet_0: 1827797107
+      landing murdr-sheet_4: 1487976931
+      landing murdr-sheet_5: -18950604
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
