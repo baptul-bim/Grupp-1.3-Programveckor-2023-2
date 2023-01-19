@@ -5,9 +5,11 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    int enemyPoints;
+    public static int enemyPoints;
+    int enemyPointsIncrease;
 
-    public GameObject[] room;
+
+    public GameObject[] enemyPrefab;
 
     [SerializeField]
     GameObject axePrefab;
@@ -16,6 +18,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     GameObject flamethrowerPrefab;
 
+
+
+
     int enemyToSpawn;
 
     
@@ -23,35 +28,75 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyPoints = 1;
+        enemyPoints = 0;
+        enemyPointsIncrease = enemyPoints;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemyPoints == 1)
-        {
-            enemyToSpawn = 0;
-            enemyPoints -= (enemyToSpawn + 1);
-            Instantiate(axePrefab);
-        }
-        else if (enemyPoints == 2)
-        {
-            int randEnemy = Random.Range(0, 3);
-            enemyToSpawn = randEnemy;
-            if (randEnemy == 0)
+        //while (enemyPoints < 1)
+        //{
+            if (enemyPoints == 1)
             {
                 enemyToSpawn = 0;
                 enemyPoints -= (enemyToSpawn + 1);
-                Instantiate(axePrefab);
+                Instantiate(axePrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
             }
-            if (randEnemy == 1)
+            else if (enemyPoints == 2)
             {
-                enemyToSpawn = 1;
-                enemyPoints -= (enemyToSpawn + 1);
-                Instantiate(axePrefab);
+                int randEnemy = Random.Range(0, 2);
+                enemyToSpawn = randEnemy;
+                if (randEnemy == 0)
+                {
+                    enemyToSpawn = 0;
+                    enemyPoints -= (enemyToSpawn + 1);
+
+                    Instantiate(axePrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
+
+                }
+                if (randEnemy == 1)
+                {
+                    enemyToSpawn = 1;
+                    enemyPoints -= (enemyToSpawn + 1);
+                    Instantiate(chainsawPrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
+                }
             }
-        }
+            else if (enemyPoints >= 3)
+            {
+                int randEnemy = Random.Range(0, 3);
+                enemyToSpawn = randEnemy;
+                if (randEnemy == 0)
+                {
+                    enemyToSpawn = 0;
+                    enemyPoints -= (enemyToSpawn + 1);
+                    Instantiate(axePrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
+                }
+                if (randEnemy == 1)
+                {
+                    enemyToSpawn = 1;
+                    enemyPoints -= (enemyToSpawn + 1);
+                    Instantiate(chainsawPrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
+                }
+                if (randEnemy == 2)
+                {
+                    enemyToSpawn = 2;
+                    enemyPoints -= (enemyToSpawn + 1);
+                    Instantiate(flamethrowerPrefab, new Vector3(Random.Range(-2.4f, 2.4f) + LevelLoop.nextRoomPos, 2, 0), Quaternion.identity);
+                }
+            }
+        //}
+
+    }
+
+    public void spawnEnemies()
+    {
+        enemyPoints = enemyPointsIncrease + 1;
+        enemyPointsIncrease = enemyPoints;
+        
+        
+
+
 
     }
 
