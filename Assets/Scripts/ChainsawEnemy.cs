@@ -37,7 +37,7 @@ public class ChainsawEnemy : MonoBehaviour
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = chainsawHealth;
 
-        //ShealthComparison = healthChanger.enemyHealth;
+        //healthComparison = healthChanger.enemyHealth;
 
     }
 
@@ -97,11 +97,11 @@ public class ChainsawEnemy : MonoBehaviour
 
         }
 
-        if (healthComparison != healthChanger.enemyHealth)
+        /*if (healthComparison != healthChanger.enemyHealth)
         {
             GameObject.GetComponent<Animator>().Play("chainsaw-charge");
             //healthComparison = HealthChanger.enemyHealth;
-        }
+        }*/
 
     }
 
