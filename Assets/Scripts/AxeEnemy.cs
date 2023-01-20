@@ -39,7 +39,7 @@ public class AxeEnemy : MonoBehaviour
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = axeHealth;
         animator = GetComponent<Animator>();
-
+        animator.Play("Axeman");
 
     }
 
