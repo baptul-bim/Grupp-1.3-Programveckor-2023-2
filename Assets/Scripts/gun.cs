@@ -10,7 +10,7 @@ public class gun : MonoBehaviour
     bool canshoot;
 
 
-    public int bulletsLoaded;
+    public static float bulletsLoaded;
 
 
     void Start()
