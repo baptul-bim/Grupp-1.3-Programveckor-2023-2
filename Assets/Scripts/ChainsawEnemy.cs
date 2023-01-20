@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChainsawEnemy : MonoBehaviour
 {
 
-    public int chainsawHealth = 3;
+    public int chainsawHealth = 5;
     int healthComparison;
 
     private Animator animator;
@@ -158,7 +158,7 @@ public class ChainsawEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && rage == true)
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
         }

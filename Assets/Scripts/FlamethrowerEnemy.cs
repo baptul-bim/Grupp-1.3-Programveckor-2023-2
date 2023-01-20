@@ -6,7 +6,7 @@ using UnityEngine;
 public class FlamethrowerEnemy : MonoBehaviour
 {
 
-    public int flamethrowerHealth = 3;
+    public int flamethrowerHealth = 7;
 
     private Animator animator;
     float timer;
