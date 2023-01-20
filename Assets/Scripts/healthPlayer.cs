@@ -9,6 +9,7 @@ public class healthPlayer : MonoBehaviour
     public Image healthBar;
     public Animator animator;
     gun gun;
+    testmov testmov;
 
     public float health;
     public float maxHealth;
@@ -30,6 +31,7 @@ public class healthPlayer : MonoBehaviour
     {
         maxHealth = 10;
         health = maxHealth;
+        testmov = FindObjectOfType<testmov>();
         gun = FindObjectOfType<gun>();
         animator = FindObjectOfType<Animator>();
         gameManager = FindObjectOfType<gameManagerScript>();
