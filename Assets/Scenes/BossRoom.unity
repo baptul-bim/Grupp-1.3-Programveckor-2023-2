@@ -5237,7 +5237,7 @@ MonoBehaviour:
   animator: {fileID: 1285832557}
   health: {fileID: 2136971204}
   currenthealth: 0
-  maxhealth: 5
+  maxhealth: 90
 --- !u!95 &2136971207
 Animator:
   serializedVersion: 4
