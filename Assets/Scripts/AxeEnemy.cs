@@ -12,6 +12,8 @@ public class AxeEnemy : MonoBehaviour
 
     public Vector2 direction;
 
+    private Animator animator;
+
     //blood splatter
     [SerializeField]
     ParticleSystem bloodParticles;
@@ -36,9 +38,9 @@ public class AxeEnemy : MonoBehaviour
         facingRight = false;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = axeHealth;
-        anim= gameObject.GetComponent<Animation>();
+        animator = GetComponent<Animator>();
+        animator.Play("Axeman");
 
-        
     }
 
     // Update is called once per frame
@@ -110,10 +112,11 @@ public class AxeEnemy : MonoBehaviour
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
             StartCoroutine(AttackCoolDown());
             Debug.Log("Attackerar spelare");
-            
+             animator.Play("Axeman-Attack");
+            //här ska den spela attack-animationen, annars ska den alltid springa
 
         }
-     
+
     }
 
 

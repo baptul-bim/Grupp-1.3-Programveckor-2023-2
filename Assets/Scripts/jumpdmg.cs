@@ -7,21 +7,18 @@ public class jumpdmg : MonoBehaviour
 {
     boss boss;
     testmov player;
-    healthPlayer health;
+    healthPlayer phealth;
     public bool jump;
     public bool dmgtrigger1=false;
     public bool dmgtrigger2=false;
     public float t1;
     public float t2;
-    public float landingj;
-    public float landingtimer = 0.01f;
-    public float landingtimer2 = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
         boss = FindObjectOfType<boss>();
         player = FindObjectOfType<testmov>();
-        health = FindObjectOfType<healthPlayer>();
+        phealth = FindObjectOfType<healthPlayer>();
         jump = false;
     }
 
@@ -69,7 +66,7 @@ public class jumpdmg : MonoBehaviour
                 if (player.jumping == 0)
                 {
                     print("jumpkill");
-                    health.Damaged();
+                    phealth.health -= 4;
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;

@@ -3427,6 +3427,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 779079782155312700, guid: f9ba28c91041d3043a040a841f222493, type: 3}
   m_PrefabInstance: {fileID: 1983281992}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1285832557 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2299536352294164533, guid: 1035e298d4f50f34585a0dba22baf777, type: 3}
+  m_PrefabInstance: {fileID: 1696165274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1307388514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,7 +5137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.057642035, b: 0.057642035, a: 1}
+  m_Color: {r: 1, g: 0.9511619, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5169,6 +5174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b46e222cadc4f54bb657b57fa47971e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1285832557}
   health: {fileID: 2136971204}
   currenthealth: 0
   maxhealth: 90
