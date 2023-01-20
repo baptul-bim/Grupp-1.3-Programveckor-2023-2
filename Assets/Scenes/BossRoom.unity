@@ -2180,11 +2180,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742270025}
   m_CullTransparentMesh: 1
+--- !u!1 &931481056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159225355153096647, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
+  m_PrefabInstance: {fileID: 1722682683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &931481065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 159225355153096645, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
   m_PrefabInstance: {fileID: 1722682683}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &931481066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931481056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da3213064646584cacad83649812c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1455767993}
+  animator: {fileID: 0}
+  health: 0
+  maxHealth: 0
+  onFire: 0
+  gameManager: {fileID: 0}
+  burning: {fileID: 0}
 --- !u!1 &969175564
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,7 +4375,7 @@ PrefabInstance:
     - target: {fileID: 2299536352294164543, guid: 1035e298d4f50f34585a0dba22baf777, type: 3}
       propertyPath: bosshealth
       value: 
-      objectReference: {fileID: 2136971206}
+      objectReference: {fileID: 0}
     - target: {fileID: 2299536352294164543, guid: 1035e298d4f50f34585a0dba22baf777, type: 3}
       propertyPath: bossdeathline
       value: 
@@ -4429,7 +4453,8 @@ PrefabInstance:
       propertyPath: jumpforce
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 159225355153096668, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d9f40cd92adccc04e98cdc9f8e8dfeeb, type: 3}
 --- !u!1 &1799633225
 GameObject:
@@ -5144,10 +5169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b46e222cadc4f54bb657b57fa47971e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currenthealth: 20
-  maxhealth: 20
-  delayBeforeLoading: 10
-  timeElapsed: 0
+  health: {fileID: 2136971204}
+  currenthealth: 0
+  maxhealth: 90
 --- !u!1001 &4690921596707376467
 PrefabInstance:
   m_ObjectHideFlags: 0

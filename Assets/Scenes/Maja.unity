@@ -1490,7 +1490,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5488068139398778898, guid: 3cb8f2a63a46d0a4db5f2f438c859281, type: 3}
       propertyPath: health
-      value: 5
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 5488068139398778898, guid: 3cb8f2a63a46d0a4db5f2f438c859281, type: 3}
       propertyPath: healthBar
@@ -1498,7 +1498,7 @@ PrefabInstance:
       objectReference: {fileID: 248039239}
     - target: {fileID: 5488068139398778898, guid: 3cb8f2a63a46d0a4db5f2f438c859281, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5488068139398778899, guid: 3cb8f2a63a46d0a4db5f2f438c859281, type: 3}
       propertyPath: m_Name

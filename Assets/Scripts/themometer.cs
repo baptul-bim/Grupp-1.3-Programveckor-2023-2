@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class themometer : MonoBehaviour
 {
     private Image thermometer;
-    public static float currenttemp = 20f; 
+    public static float currenttemp = 30f; 
     public float maxtemp = 50f;
-    public float temptimer = 2; 
+    public float temptimer = 1; 
     // Start is called before the first frame update
     void Start()
     {
         thermometer = GetComponent<Image>();
-        currenttemp = 20;
     }
 
     // Update is called once per frame
@@ -23,8 +22,8 @@ public class themometer : MonoBehaviour
         thermometer.fillAmount = currenttemp / maxtemp;
         if (temptimer<=0)
         {
-            currenttemp += 1;
-            temptimer = 2;
+            currenttemp += 3;
+            temptimer = 1;
         }
     }
 }

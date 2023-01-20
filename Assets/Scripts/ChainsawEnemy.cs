@@ -7,9 +7,9 @@ public class ChainsawEnemy : MonoBehaviour
 {
 
     public int chainsawHealth = 3;
-    //int healthComparison;
+    int healthComparison;
 
-    //private Animator animator;
+    private Animator animator;
 
     [SerializeField]
     float enemySpeed;
@@ -41,7 +41,7 @@ public class ChainsawEnemy : MonoBehaviour
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = chainsawHealth;
-
+        animator = GetComponent<Animator>();
         //healthComparison = healthChanger.enemyHealth;
 
 
@@ -72,7 +72,7 @@ public class ChainsawEnemy : MonoBehaviour
             {
                 //här ska den revva upp motorsågen och kanske se arg ut.
                 Charge();
-                //this.GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+                animator.Play("chainsaw-charge");
 
             }
 
@@ -93,12 +93,14 @@ public class ChainsawEnemy : MonoBehaviour
 
             if (timer >= 3)
             {
-                enemySpeed = 0;
+                //enemySpeed = 0;
                 Flip();
                 Charge();
                 timer = 0;
             }
-            // this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
+            animator.Play("Chainsaw-run");
+
+            //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
             //checks if terrain in front.
 
 
@@ -115,11 +117,12 @@ public class ChainsawEnemy : MonoBehaviour
 
         }
 
-        /* if (healthComparison != healthChanger.enemyHealth)
+       /* if (healthComparison != healthChanger.enemyHealth)
          {
-             //GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+             animator.Play("chainsaw-charge");
              healthComparison = HealthChanger.enemyHealth;
          }*/
+
         Vector3 groundRay = transform.position;
         RaycastHit2D Grounded = Physics2D.Raycast(groundRay, new Vector2(0, -0.5f));
         Debug.DrawRay(groundRay, new Vector2(0, -0.5f));
