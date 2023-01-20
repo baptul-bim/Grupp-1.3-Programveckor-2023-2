@@ -9858,6 +9858,7 @@ MonoBehaviour:
   bloodParticles: {fileID: 7290811019700048815, guid: 2bf8f835e1a74ad49a383f03e3d88383, type: 3}
   enemyHealth: 0
   enemyMaxHealth: 0
+  enemies: []
 --- !u!61 &9162208899604976193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9899,6 +9900,10 @@ MonoBehaviour:
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
   enemyHealth: 0
   enemyMaxHealth: 0
+  enemies:
+  - {fileID: 6606875478358254050, guid: 7522e5130d598e1499de4ef12d13c087, type: 3}
+  - {fileID: 5696412302534163327, guid: 077992cdbffcb2f459a626b4ddf53c4f, type: 3}
+  - {fileID: 9162208899604976250}
 --- !u!1 &9162208899764489330
 GameObject:
   m_ObjectHideFlags: 0
