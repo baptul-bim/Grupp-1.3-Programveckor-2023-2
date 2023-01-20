@@ -19,11 +19,15 @@ public class testmov : MonoBehaviour
     bool horizontalMove;
     bool jumpanim;
     bool fallanim;
+
+    private BoxCollider2D boxCollider2d;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3;
+        
     }
 
     // Update is called once per frame
@@ -61,10 +65,16 @@ public class testmov : MonoBehaviour
         {
             jumping = 1;
         }
+
+
     }
+
+
+
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground")|| collision.gameObject.CompareTag("enemy"))
         {
             isJumping = false;
             isfalling = false;
