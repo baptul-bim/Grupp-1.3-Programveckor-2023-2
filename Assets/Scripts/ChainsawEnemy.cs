@@ -93,7 +93,7 @@ public class ChainsawEnemy : MonoBehaviour
 
             if (timer >= 3)
             {
-                enemySpeed = 0;
+                //enemySpeed = 0;
                 Flip();
                 Charge();
                 timer = 0;
