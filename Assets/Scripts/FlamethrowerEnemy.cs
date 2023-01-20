@@ -6,6 +6,7 @@ using UnityEngine;
 public class FlamethrowerEnemy : MonoBehaviour
 {
 
+    private Animator animator;
     float timer;
 
     [SerializeField]
@@ -35,6 +36,7 @@ public class FlamethrowerEnemy : MonoBehaviour
     {
         flameHitbox.gameObject.SetActive(false);
         flamesActive = false;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
