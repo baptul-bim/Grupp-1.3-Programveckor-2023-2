@@ -9774,6 +9774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9162208899382267418}
   - component: {fileID: 9162208899382267421}
+  - component: {fileID: 7247983997559706407}
   m_Layer: 2
   m_Name: Body
   m_TagString: enemy
@@ -9848,6 +9849,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7247983997559706407
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162208899382267419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3ba4d6af1e0a8e4299258713d2042e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9162208899604976250
 GameObject:
   m_ObjectHideFlags: 0
@@ -9862,6 +9883,7 @@ GameObject:
   - component: {fileID: 9162208899604976254}
   - component: {fileID: 9162208899604976193}
   - component: {fileID: 9162208899604976192}
+  - component: {fileID: 5075237542662447843}
   m_Layer: 2
   m_Name: Flamethrower Enemy
   m_TagString: enemy
@@ -9899,12 +9921,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d035fc39dd2b44b98ea99200263bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flamethrowerHealth: 3
   flameParticles:
   - {fileID: 3079222784197264226}
   - {fileID: 1383862125832960089}
   flameHitbox: {fileID: 9162208899764489330}
   direction: {x: 0, y: 0}
-  playerTarget: {fileID: 5060076439007881288, guid: aa3ee79bb81332c4794020b3ef305a81, type: 3}
+  playerTarget: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
   enemySpeed: 4
   playerDistance: 0
   direction1: {x: -6, y: 0}
@@ -9944,6 +9967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7290811019700048815, guid: 2bf8f835e1a74ad49a383f03e3d88383, type: 3}
+  source: {fileID: 0}
+  clip: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies: []
@@ -9986,12 +10011,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
+  source: {fileID: 0}
+  clip: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies:
   - {fileID: 6606875478358254050, guid: 7522e5130d598e1499de4ef12d13c087, type: 3}
   - {fileID: 5696412302534163327, guid: 077992cdbffcb2f459a626b4ddf53c4f, type: 3}
   - {fileID: 9162208899604976250}
+--- !u!95 &5075237542662447843
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162208899604976250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87ba13d0817d63f4699e7045d8c59ace, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9162208899764489330
 GameObject:
   m_ObjectHideFlags: 0

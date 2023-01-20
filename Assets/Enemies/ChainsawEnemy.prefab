@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5696412301416161859}
   - component: {fileID: 5696412301416161858}
+  - component: {fileID: 6484996898961405402}
   m_Layer: 2
   m_Name: ChainsawBody
   m_TagString: Untagged
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6484996898961405402
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696412301416161856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2937d02b590cb74b99920d238c2e6ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5696412302534163327
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +182,7 @@ MonoBehaviour:
   chainsawHealth: 3
   enemySpeed: 3
   jump: 10
-  playerTarget: {fileID: 5060076439007881288, guid: aa3ee79bb81332c4794020b3ef305a81, type: 3}
+  playerTarget: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
   direction: {x: -1, y: 0}
 --- !u!50 &5696412302534163323
 Rigidbody2D:
@@ -197,6 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
+  source: {fileID: 0}
+  clip: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies:
