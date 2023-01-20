@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class bosshealth : MonoBehaviour
 {
+    public Animator animator;
     public Image health;
     public float currenthealth;
     public float maxhealth = 90f;
@@ -12,6 +13,7 @@ public class bosshealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         health = GetComponent<Image>();
         currenthealth = maxhealth;
     }
