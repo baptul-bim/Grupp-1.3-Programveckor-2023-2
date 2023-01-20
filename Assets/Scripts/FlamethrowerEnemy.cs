@@ -41,7 +41,7 @@ public class FlamethrowerEnemy : MonoBehaviour
     {
         flameHitbox.gameObject.SetActive(false);
         flamesActive = false;
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = flamethrowerHealth;
@@ -67,7 +67,7 @@ public class FlamethrowerEnemy : MonoBehaviour
                 StartCoroutine(AttackDuration());
             }
 
-             animator.Play("flamethrower-standing");
+           //  animator.Play("flamethrower-standing");
 
         }
 
@@ -110,19 +110,20 @@ public class FlamethrowerEnemy : MonoBehaviour
     {
         flamesActive = true;
         //när den ser dig grej.
-        animator.Play("flamethrower-look!");
+       // animator.Play("flamethrower-look!");
         yield return new WaitForSeconds(2.5f);
         flameParticles[1].Play();
         flameParticles[0].Play();
         flameHitbox.gameObject.SetActive(true);
-        animator.Play("flamethrower-attack");
-
+        // animator.Play("flamethrower-attack");
+        animator.SetBool("flameattack", true);
 
         yield return new WaitForSeconds(5);
         flameHitbox.gameObject.SetActive(false);
         flamesActive = false;
         //idle igen.
-         animator.Play("flamethrower-standing");
+        // animator.Play("flamethrower-standing");
+        animator.SetBool("flameattack", false);
 
         yield return new WaitForSeconds(1);
         if (playerTarget.position.x < transform.position.x && facingRight == true)
