@@ -82,6 +82,7 @@ public class ChainsawEnemy : MonoBehaviour
         //rage activated
         if (rage == true)
         {
+            //här ska springa attackera animation vara
             Vector3 enemyPos = transform.position;
             enemyPos.y -= 0.2f;
             RaycastHit2D groundHit = Physics2D.Raycast(enemyPos, direction);
@@ -179,7 +180,9 @@ public class ChainsawEnemy : MonoBehaviour
 
 
     IEnumerator Charge()
+        //här ska charge animation vara.
     {
+        
         print("börjar");
         enemySpeed = 0;
         yield return new WaitForSeconds(1);
