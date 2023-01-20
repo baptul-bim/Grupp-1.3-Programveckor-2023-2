@@ -41,7 +41,7 @@ public class ChainsawEnemy : MonoBehaviour
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = chainsawHealth;
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         //healthComparison = healthChanger.enemyHealth;
 
 
@@ -74,7 +74,8 @@ public class ChainsawEnemy : MonoBehaviour
                 print("Ska springa");
                 //här ska den revva upp motorsågen och kanske se arg ut.
                 StartCoroutine(Charge());
-                animator.Play("chainsaw-charge");
+               // animator.Play("chainsaw-charge");
+               
 
             }
 
@@ -184,7 +185,8 @@ public class ChainsawEnemy : MonoBehaviour
     IEnumerator Charge()
         //här ska charge animation vara.
     {
-        animator.Play("chainsaw-charge"); 
+        // animator.Play("chainsaw-charge"); 
+        animator.SetBool("attackchainsaw", true);
         print("börjar");
         enemySpeed = 0;
         yield return new WaitForSeconds(1);

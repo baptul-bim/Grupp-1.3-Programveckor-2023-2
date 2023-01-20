@@ -123,6 +123,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &56172293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5696412301416161856, guid: 077992cdbffcb2f459a626b4ddf53c4f, type: 3}
+  m_PrefabInstance: {fileID: 1073497628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &56172296
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56172293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2937d02b590cb74b99920d238c2e6ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &88813824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8977895899174250559, guid: a7d3c847948d0764bba1e30e8c6f33d9, type: 3}
@@ -677,6 +702,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d23e9127554b0f4c8a5d5db85ac4879, type: 3}
+--- !u!1 &383063040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9162208899382267419, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+  m_PrefabInstance: {fileID: 848315202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &383063043
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383063040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc872d8f66230d14db4bc07f5f4704e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &592934450
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,6 +5715,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9162208899382267421, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8541666
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162208899382267421, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162208899382267421, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1608619017, guid: 19bebab58bc94954495eb8bb06d965b9, type: 3}
+    - target: {fileID: 9162208899382267421, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9162208899604976250, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
       propertyPath: m_Name
       value: Flamethrower Enemy (1)
