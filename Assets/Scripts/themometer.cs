@@ -17,7 +17,7 @@ public class themometer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currenttemp -= Time.deltaTime;
+        currenttemp += Time.deltaTime;
         thermometer.fillAmount = currenttemp / maxtemp;
     }
 }
