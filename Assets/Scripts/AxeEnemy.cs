@@ -113,6 +113,7 @@ public class AxeEnemy : MonoBehaviour
             StartCoroutine(AttackCoolDown());
             Debug.Log("Attackerar spelare");
              animator.Play("Axeman-Attack");
+            //här ska den spela attack-animationen, annars ska den alltid springa
 
         }
 
