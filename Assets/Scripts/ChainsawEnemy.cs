@@ -74,7 +74,7 @@ public class ChainsawEnemy : MonoBehaviour
                 print("Ska springa");
                 //här ska den revva upp motorsågen och kanske se arg ut.
                 StartCoroutine(Charge());
-                //animator.Play("chainsaw-charge");
+                animator.Play("chainsaw-charge");
 
             }
 
@@ -88,6 +88,7 @@ public class ChainsawEnemy : MonoBehaviour
             RaycastHit2D groundHit = Physics2D.Raycast(enemyPos, direction);
             Debug.DrawRay(enemyPos, direction, Color.green);
             timer += Time.deltaTime;
+            animator.Play("chainsaw-run");
 
             if (facingRight == false)
             {
@@ -102,12 +103,13 @@ public class ChainsawEnemy : MonoBehaviour
 
             if (timer >= 3)
             {
-                //enemySpeed = 0;
+                enemySpeed = 0;
+                animator.Play("chainsaw-stop");
                 Flip();
                 StartCoroutine(Charge());
                 timer = 0;
             }
-            //animator.Play("Chainsaw-run");
+            animator.Play("Chainsaw-run");
 
             //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
             //checks if terrain in front.
@@ -182,7 +184,7 @@ public class ChainsawEnemy : MonoBehaviour
     IEnumerator Charge()
         //här ska charge animation vara.
     {
-        
+        animator.Play("chainsaw-charge"); 
         print("börjar");
         enemySpeed = 0;
         yield return new WaitForSeconds(1);
