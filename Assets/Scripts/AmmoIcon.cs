@@ -8,7 +8,7 @@ public class AmmoIcon : MonoBehaviour
 
     public Image bullets;
 
-    float maxBullets;
+    float maxBullets = 2;
 
     float bulletAmount;
 
@@ -24,5 +24,6 @@ public class AmmoIcon : MonoBehaviour
     {
         bulletAmount = gun.bulletsLoaded;
         bullets.fillAmount = (bulletAmount / maxBullets);
+        Debug.Log(bulletAmount / maxBullets);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class gun : MonoBehaviour
 {
-    public Transform firepoint;
+    public Transform[] firepoint;
     public GameObject bulletprefab;
     public float cooldown=1;
     bool canshoot;
@@ -47,7 +47,9 @@ public class gun : MonoBehaviour
 
         void Shoot()
         {
-            Instantiate(bulletprefab, firepoint.position, firepoint.rotation);
+            Instantiate(bulletprefab, firepoint[0].position, firepoint[0].rotation);
+            Instantiate(bulletprefab, firepoint[1].position, firepoint[1].rotation);
+            Instantiate(bulletprefab, firepoint[2].position, firepoint[2].rotation);
         }
     }
 }
