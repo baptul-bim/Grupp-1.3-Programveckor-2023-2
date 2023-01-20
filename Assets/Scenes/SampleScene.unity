@@ -1483,6 +1483,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0e02b3347e56d45a4e741bd04c8919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1544533913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544533907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6936afc199d79c143999715ee3cc8cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chainsawHealth: 3
+  enemySpeed: 0
+  jump: 0
+  playerTarget: {fileID: 0}
+  direction: {x: 0, y: 0}
 --- !u!1 &1570181370
 GameObject:
   m_ObjectHideFlags: 0
