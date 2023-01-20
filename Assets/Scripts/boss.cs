@@ -23,11 +23,12 @@ public class boss : MonoBehaviour
     TextMeshProUGUI bossdeathline;
     public SpriteRenderer sprender;
 
-    float linetimer = 4;
+    public float linetimer = 4;
     public float movetimer;
     public float move;
     public float jumpforce;
     bool bossdeath = false;
+    public bool bubbla = false;
     Rigidbody2D rb;
 
 
@@ -61,7 +62,6 @@ public class boss : MonoBehaviour
         {
             playerdeathline.text = "Put these foolish ambitions to rest";
             //sprender.enabled = true;
-            movetimer = 1000;
             move = 21;
         }
         else
@@ -138,7 +138,7 @@ public class boss : MonoBehaviour
     void deathline()
     {
         bossdeathline.text = "Brave Monke, Thy strength befits a crown";
-        //sprender.enabled = true;
+        bubbla = true;
     }
     void deathanim()
     {
