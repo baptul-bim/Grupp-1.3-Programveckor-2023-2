@@ -18,7 +18,7 @@ public class EnemyDeath : MonoBehaviour
     void Start()
     {
         enemyMaxHealth = enemyHealth;
-        Physics2D.IgnoreCollision(enemies[3].GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        //Physics2D.IgnoreCollision(enemies[3].GetComponent<Collider2D>(), GetComponent<Collider2D>());
 
     }
 
