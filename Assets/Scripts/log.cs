@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class log : MonoBehaviour
 {
+    healthPlayer phealth;
     boss boss;
     public float speed = 20f;
     public Rigidbody2D rb;
 
     void Start()
     {
+        phealth = FindObjectOfType<healthPlayer>();
         boss = FindObjectOfType<boss>();
         rb.velocity = transform.right * speed;
     }
@@ -27,7 +29,7 @@ public class log : MonoBehaviour
         {
             print("logkill");
             Destroy(gameObject);
-            collision.gameObject.GetComponent<healthPlayer>().Damaged();
+            phealth.health -= 4;
         }
         if (collision.gameObject.tag == "object")
         {
