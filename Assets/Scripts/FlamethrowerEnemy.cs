@@ -66,7 +66,9 @@ public class FlamethrowerEnemy : MonoBehaviour
                 Debug.Log(flameRay.transform.tag);
                 StartCoroutine(AttackDuration());
             }
-                
+
+             animator.Play("flamethrower-standing");
+
         }
 
 
@@ -107,16 +109,20 @@ public class FlamethrowerEnemy : MonoBehaviour
     IEnumerator AttackDuration()
     {
         flamesActive = true;
+        //när den ser dig grej.
+        animator.Play("flamethrower-look!");
         yield return new WaitForSeconds(2.5f);
         flameParticles[1].Play();
         flameParticles[0].Play();
         flameHitbox.gameObject.SetActive(true);
-        
+        animator.Play("flamethrower-attack");
+
 
         yield return new WaitForSeconds(5);
         flameHitbox.gameObject.SetActive(false);
         flamesActive = false;
-
+        //idle igen.
+         animator.Play("flamethrower-standing");
 
         yield return new WaitForSeconds(1);
         if (playerTarget.position.x < transform.position.x && facingRight == true)
