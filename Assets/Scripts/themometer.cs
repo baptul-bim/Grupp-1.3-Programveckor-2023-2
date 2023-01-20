@@ -7,8 +7,7 @@ public class themometer : MonoBehaviour
 {
     private Image thermometer;
     public static float currenttemp = 30f; 
-    public float maxtemp = 50f;
-    public float temptimer = 1; 
+    public float maxtemp = 50f; 
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +17,7 @@ public class themometer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        temptimer -= Time.deltaTime;
+        currenttemp -= Time.deltaTime;
         thermometer.fillAmount = currenttemp / maxtemp;
-        if (temptimer<=0)
-        {
-            currenttemp += 3;
-            temptimer = 1;
-        }
     }
 }

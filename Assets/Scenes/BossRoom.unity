@@ -5097,6 +5097,7 @@ GameObject:
   - component: {fileID: 2136971205}
   - component: {fileID: 2136971204}
   - component: {fileID: 2136971206}
+  - component: {fileID: 2136971207}
   m_Layer: 5
   m_Name: fill
   m_TagString: Untagged
@@ -5177,7 +5178,27 @@ MonoBehaviour:
   animator: {fileID: 1285832557}
   health: {fileID: 2136971204}
   currenthealth: 0
-  maxhealth: 90
+  maxhealth: 5
+--- !u!95 &2136971207
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136971202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1574eee85f8229248aa16dc9bbb91805, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4690921596707376467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5199,7 +5220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4690921597015317319, guid: 57869360c1a06aa408640c24e8407bac, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4690921597015317319, guid: 57869360c1a06aa408640c24e8407bac, type: 3}
       propertyPath: m_AnchorMax.x

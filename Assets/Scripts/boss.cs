@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class boss : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class boss : MonoBehaviour
     public GameObject logprefab;
     bosshealth bosshealth;
     healthPlayer phealth;
-    jumpdmg jumpdmg;
 
     [SerializeField]
     TextMeshProUGUI bossname;
@@ -27,6 +27,7 @@ public class boss : MonoBehaviour
     public float movetimer;
     public float move;
     public float jumpforce;
+    bool bossdeath = false;
     Rigidbody2D rb;
 
 
@@ -35,7 +36,6 @@ public class boss : MonoBehaviour
         animator = GetComponent<Animator>();
         sprender = gameObject.GetComponent<SpriteRenderer>();
         //sprender.enabled = false;
-        jumpdmg = FindObjectOfType<jumpdmg>();
         phealth = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
         bosshealth = FindObjectOfType<bosshealth>();
@@ -71,6 +71,7 @@ public class boss : MonoBehaviour
         }
         bossname.text = "xXMONKE SLAYERXx";
         #endregion
+        animator.SetBool("death", bossdeath == true);
         movetimer -= Time.deltaTime;
         if (movetimer>0&&movetimer<0.1)
         {
@@ -84,11 +85,10 @@ public class boss : MonoBehaviour
         {
             animator.SetTrigger("jumping");
         }
+
         if (bosshealth.currenthealth <= 0)
         {
-            bossdeathline.text = "Brave Monke, Thy strength befits a crown";
-            //sprender.enabled = true;
-            bossdeath();
+            deathanim();
         }
     }
    
@@ -115,10 +115,7 @@ public class boss : MonoBehaviour
         GetComponent<jumpdmg>().jump = true;
         rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
     }
-    void bossdeath()
-    {
-        Destroy(gameObject);
-    }
+
     void land()
     {
         animator.SetTrigger("landing");
@@ -133,5 +130,21 @@ public class boss : MonoBehaviour
     {
         animator.ResetTrigger("log");
         animator.ResetTrigger("jumping");
+    }
+    void victoryscreen()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    void deathline()
+    {
+        bossdeathline.text = "Brave Monke, Thy strength befits a crown";
+        //sprender.enabled = true;
+    }
+    void deathanim()
+    {
+        bossdeath = true;
+        animator.ResetTrigger("log");
+        animator.ResetTrigger("jumping");
+        animator.ResetTrigger("landing");
     }
 }
