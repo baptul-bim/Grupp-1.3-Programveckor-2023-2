@@ -8,6 +8,9 @@ public class EnemyDeath : MonoBehaviour
     [SerializeField]
     ParticleSystem bloodParticles;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     public int enemyHealth;
 
     public int enemyMaxHealth;
@@ -45,6 +48,7 @@ public class EnemyDeath : MonoBehaviour
             Debug.Log("jag dog :(");
             Destroy(this.gameObject);
             themometer.currenttemp -= enemyMaxHealth * 2;
+            source.PlayOneShot(clip);
         }
 
 
