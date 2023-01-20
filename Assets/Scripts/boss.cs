@@ -26,13 +26,7 @@ public class boss : MonoBehaviour
     float linetimer = 4;
     public float movetimer;
     public float move;
-    public float logtimer = 1.5f;
-    public float jumpanimtimer;
-    public float landanimtimer;
     public float jumpforce;
-    public float logtossf = 0;
-    public float landingf = 0;
-    public float jumpingf = 0;
     Rigidbody2D rb;
 
 
@@ -102,7 +96,7 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            phealth.health -= 4;
+            phealth.health -= 10;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
