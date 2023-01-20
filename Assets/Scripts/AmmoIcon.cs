@@ -10,15 +10,19 @@ public class AmmoIcon : MonoBehaviour
 
     float maxBullets;
 
+    float bulletAmount;
+
     // Start is called before the first frame update
     void Start()
     {
+        bulletAmount = gun.bulletsLoaded;
         bullets = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        bullets.fillAmount = gun.bulletsLoaded / maxBullets;
+        bulletAmount = gun.bulletsLoaded;
+        bullets.fillAmount = (bulletAmount / maxBullets);
     }
 }
