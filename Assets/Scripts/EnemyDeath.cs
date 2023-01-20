@@ -16,6 +16,10 @@ public class EnemyDeath : MonoBehaviour
     void Start()
     {
         enemyMaxHealth = enemyHealth;
+
+        GameObject[] enemy = GameObject.FindGameObjectsWithTag("enemy");
+        Physics2D.IgnoreCollision(enemy[3].GetComponent<Collider2D>(), GetComponent<Collider2D>());
+
     }
 
     // Update is called once per frame
