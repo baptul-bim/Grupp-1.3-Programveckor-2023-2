@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class bosshealth : MonoBehaviour
 {
-    private Image health;
+    public Image health;
     public float currenthealth;
-    public float maxhealth = 20f;
+    public float maxhealth = 90f;
 
     [SerializeField]
     private float delayBeforeLoading = 10f;

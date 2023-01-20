@@ -9,8 +9,8 @@ public class boss : MonoBehaviour
 
     public Transform firepoint;
     public GameObject logprefab;
-    public bosshealth bosshealth;
-    healthPlayer player;
+    bosshealth bosshealth;
+    healthPlayer phealth;
     jumpdmg jumpdmg;
 
     [SerializeField]
@@ -42,7 +42,7 @@ public class boss : MonoBehaviour
         sprender = gameObject.GetComponent<SpriteRenderer>();
         //sprender.enabled = false;
         jumpdmg = FindObjectOfType<jumpdmg>();
-        player = FindObjectOfType<healthPlayer>();
+        phealth = FindObjectOfType<healthPlayer>();
         rb = GetComponent<Rigidbody2D>();
         bosshealth = FindObjectOfType<bosshealth>();
         movetimer = 4;
@@ -63,7 +63,7 @@ public class boss : MonoBehaviour
             startline.text = "";
             //sprender.enabled = false;
         }
-        if (player.health<=0)
+        if (phealth.health<=0)
         {
             playerdeathline.text = "Put these foolish ambitions to rest";
             //sprender.enabled = true;
@@ -102,8 +102,7 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<healthPlayer>().Damaged();
-            collision.gameObject.GetComponent<healthPlayer>().Damaged();
+            phealth.health -= 4;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
