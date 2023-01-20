@@ -199,3 +199,7 @@ MonoBehaviour:
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
   enemyHealth: 0
   enemyMaxHealth: 0
+  enemies:
+  - {fileID: 6606875478358254050, guid: 7522e5130d598e1499de4ef12d13c087, type: 3}
+  - {fileID: 5696412302534163327}
+  - {fileID: 9162208899604976250, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}

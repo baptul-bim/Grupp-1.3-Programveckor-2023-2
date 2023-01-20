@@ -12,10 +12,14 @@ public class EnemyDeath : MonoBehaviour
 
     public int enemyMaxHealth;
 
+    public GameObject[] enemies;
+
     // Start is called before the first frame update
     void Start()
     {
         enemyMaxHealth = enemyHealth;
+        Physics2D.IgnoreCollision(enemies[3].GetComponent<Collider2D>(), GetComponent<Collider2D>());
+
     }
 
     // Update is called once per frame

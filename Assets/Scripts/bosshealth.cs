@@ -9,11 +9,6 @@ public class bosshealth : MonoBehaviour
     public float currenthealth;
     public float maxhealth = 90f;
 
-    [SerializeField]
-    private float delayBeforeLoading = 10f;
-    [SerializeField]
-    private float timeElapsed;
-
     // Start is called before the first frame update
     void Start()
     {
