@@ -139,6 +139,5 @@ public class boss : MonoBehaviour
     {
         animator.ResetTrigger("log");
         animator.ResetTrigger("jumping");
-        //animator.ResetTrigger("landing");
     }
 }
