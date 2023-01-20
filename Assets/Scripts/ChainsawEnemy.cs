@@ -68,10 +68,12 @@ public class ChainsawEnemy : MonoBehaviour
 
         if (searchHit.collider != null && rage == false)
         {
+            print("ser något");
             if (searchHit.distance <= 2f && searchHit.transform.tag == ("Player"))
             {
+                print("Ska springa");
                 //här ska den revva upp motorsågen och kanske se arg ut.
-                Charge();
+                StartCoroutine(Charge());
                 animator.Play("chainsaw-charge");
 
             }
@@ -80,22 +82,31 @@ public class ChainsawEnemy : MonoBehaviour
         //rage activated
         if (rage == true)
         {
+            //här ska springa attackera animation vara
             Vector3 enemyPos = transform.position;
             enemyPos.y -= 0.2f;
             RaycastHit2D groundHit = Physics2D.Raycast(enemyPos, direction);
             Debug.DrawRay(enemyPos, direction, Color.green);
             timer += Time.deltaTime;
+            animator.Play("chainsaw-run");
 
-            transform.position -= transform.right * enemySpeed * Time.deltaTime;
-
+            if (facingRight == false)
+            {
+                transform.position -= transform.right * enemySpeed * Time.deltaTime;
+            }
+            else if (facingRight == true)
+            {
+                transform.position += transform.right * enemySpeed * Time.deltaTime;
+            }
 
 
 
             if (timer >= 3)
             {
-                //enemySpeed = 0;
+                enemySpeed = 0;
+                animator.Play("chainsaw-stop");
                 Flip();
-                Charge();
+                StartCoroutine(Charge());
                 timer = 0;
             }
             animator.Play("Chainsaw-run");
@@ -115,6 +126,10 @@ public class ChainsawEnemy : MonoBehaviour
 
 
 
+        }
+        if (rage == true && searchHit.collider != null && searchHit.transform.tag == "Player")
+        {
+            enemySpeed = 4;
         }
 
        /* if (healthComparison != healthChanger.enemyHealth)
@@ -144,15 +159,12 @@ public class ChainsawEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //collision.gameObject.GetComponent<healthPlayer>().Damaged();
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
         }
 
     }
 
-    /*private void awake()
-    {
-        animator = GetComponent<Animator>();
-    }*/
+
 
     void Jump()
     {
@@ -170,22 +182,17 @@ public class ChainsawEnemy : MonoBehaviour
 
 
     IEnumerator Charge()
+        //här ska charge animation vara.
     {
+        animator.Play("chainsaw-charge"); 
+        print("börjar");
         enemySpeed = 0;
-        rage = rage;
         yield return new WaitForSeconds(1);
         enemySpeed = 3;
         rage = true;
+        print("slutar");
     }
 
-    /*IEnumerator Rage()
-    {
-       
-
-        Charge();
-
-        facingRight =! facingRight;
-    }*/
 
 
 

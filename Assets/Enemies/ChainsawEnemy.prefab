@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chainsawHealth: 3
   enemySpeed: 3
-  jump: 50
+  jump: 10
   playerTarget: {fileID: 5060076439007881288, guid: aa3ee79bb81332c4794020b3ef305a81, type: 3}
   direction: {x: -1, y: 0}
 --- !u!50 &5696412302534163323
