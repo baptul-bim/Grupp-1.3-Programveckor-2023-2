@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class ChainsawEnemy : MonoBehaviour
@@ -7,6 +8,8 @@ public class ChainsawEnemy : MonoBehaviour
 
     public int chainsawHealth = 3;
     //int healthComparison;
+
+    //private Animator animator;
 
     [SerializeField]
     float enemySpeed;
@@ -26,6 +29,8 @@ public class ChainsawEnemy : MonoBehaviour
 
     private Rigidbody2D rb;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +42,10 @@ public class ChainsawEnemy : MonoBehaviour
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = chainsawHealth;
 
-        //ShealthComparison = healthChanger.enemyHealth;
+        //healthComparison = healthChanger.enemyHealth;
+
+
+
 
     }
 
@@ -47,6 +55,8 @@ public class ChainsawEnemy : MonoBehaviour
     {
 
         Vector3 playerPos = playerTarget.position;
+
+
 
         //searches for player.
         RaycastHit2D searchHit = Physics2D.Raycast(this.gameObject.transform.position, playerPos - transform.position);
@@ -58,68 +68,121 @@ public class ChainsawEnemy : MonoBehaviour
 
         if (searchHit.collider != null && rage == false)
         {
-            if (searchHit.distance <= 5f && searchHit.transform.tag == ("Player"))
+            if (searchHit.distance <= 2f && searchHit.transform.tag == ("Player"))
             {
                 //här ska den revva upp motorsågen och kanske se arg ut.
-                rage = true;
+                Charge();
                 //this.GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+
             }
 
         }
         //rage activated
-        else if (searchHit.collider != null && rage == true)
+        if (rage == true)
         {
-            //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
+            Vector3 enemyPos = transform.position;
+            enemyPos.y -= 0.2f;
+            RaycastHit2D groundHit = Physics2D.Raycast(enemyPos, direction);
+            Debug.DrawRay(enemyPos, direction, Color.green);
+            timer += Time.deltaTime;
+
+            transform.position -= transform.right * enemySpeed * Time.deltaTime;
+
+
+
+
+            if (timer >= 3)
+            {
+                enemySpeed = 0;
+                Flip();
+                Charge();
+                timer = 0;
+            }
+            // this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
             //checks if terrain in front.
-            RaycastHit2D groundHit = Physics2D.Raycast(this.gameObject.transform.position, direction);
 
-            if (facingRight == false)
-            {
-                transform.position -= transform.right * enemySpeed * Time.deltaTime;
-            }
 
-            else if (facingRight == true)
-            {
-                transform.position += transform.right * enemySpeed * Time.deltaTime;
-            }
 
-            if (groundHit.distance <= 2.5f && groundHit.transform.tag == ("Ground"))
+            
+
+            if (groundHit.distance <= 0.7f && groundHit.transform.tag == ("Ground")&&jumping==false)
             {
 
-                if (jumping == false)
-                {
-                    rb.AddForce(new Vector2(rb.velocity.x, jump));
-                    jumping = true;
-                }
+                Jump();
             }
 
 
 
         }
 
-        if (healthComparison != healthChanger.enemyHealth)
+        /* if (healthComparison != healthChanger.enemyHealth)
+         {
+             //GameObject.GetComponent<Animator>().Play("chainsaw-charge");
+             healthComparison = HealthChanger.enemyHealth;
+         }*/
+        Vector3 groundRay = transform.position;
+        RaycastHit2D Grounded = Physics2D.Raycast(groundRay, new Vector2(0, -0.5f));
+        Debug.DrawRay(groundRay, new Vector2(0, -0.5f));
+        if (Grounded.collider != null)
         {
-            GameObject.GetComponent<Animator>().Play("chainsaw-charge");
-            //healthComparison = HealthChanger.enemyHealth;
+            Debug.Log(Grounded.collider.tag);
+            if (Grounded.collider.CompareTag("Ground") && Grounded.distance <= 0.4f)
+            {
+
+                jumping = false;
+            }
         }
+
 
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        RaycastHit2D Grounded = Physics2D.Raycast(this.gameObject.transform.position, direction);
-        if (Grounded.collider != null)
+        if (collision.gameObject.tag == "Player")
         {
-            if (collision.gameObject.CompareTag("Ground") && Grounded.distance <= 0.4f && Grounded.transform.tag == ("Ground"))
-            {
-                jumping = false;
-            }
+            //collision.gameObject.GetComponent<healthPlayer>().Damaged();
         }
-        
+
+    }
+
+    /*private void awake()
+    {
+        animator = GetComponent<Animator>();
+    }*/
+
+    void Jump()
+    {
+        rb.AddForce(new Vector2(rb.velocity.x, jump));
+    }
+
+    void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z);
+        facingRight = !facingRight;
+        direction = direction * (-1);
     }
 
 
+
+    IEnumerator Charge()
+    {
+        enemySpeed = 0;
+        rage = rage;
+        yield return new WaitForSeconds(1);
+        enemySpeed = 3;
+        rage = true;
+    }
+
+    /*IEnumerator Rage()
+    {
+       
+
+        Charge();
+
+        facingRight =! facingRight;
+    }*/
 
 
 

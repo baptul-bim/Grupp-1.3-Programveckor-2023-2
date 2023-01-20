@@ -24,7 +24,7 @@ public class walloffire : MonoBehaviour
             currenttemp += 1;
             temptimer = 2;
         }
-        transform.position += transform.right*(currenttemp*0.005f)*Time.deltaTime;
+        transform.position += transform.right*(currenttemp*0.03f)*Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

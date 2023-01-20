@@ -23,7 +23,9 @@ public class AxeEnemy : MonoBehaviour
     //axe health
     public int axeHealth = 1;
 
-    
+    private Animation anim;
+
+
 
 
 
@@ -34,6 +36,9 @@ public class AxeEnemy : MonoBehaviour
         facingRight = false;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = axeHealth;
+        anim= gameObject.GetComponent<Animation>();
+
+        
     }
 
     // Update is called once per frame
@@ -105,6 +110,7 @@ public class AxeEnemy : MonoBehaviour
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
             StartCoroutine(AttackCoolDown());
             Debug.Log("Attackerar spelare");
+            
 
         }
      

@@ -18,6 +18,7 @@ TagManager:
   - Bullet2
   - boss
   - Room
+  - Fire
   layers:
   - Default
   - TransparentFX
