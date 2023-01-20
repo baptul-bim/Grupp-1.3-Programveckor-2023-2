@@ -6,6 +6,8 @@ using UnityEngine;
 public class FlamethrowerEnemy : MonoBehaviour
 {
 
+    public int flamethrowerHealth = 3;
+
     private Animator animator;
     float timer;
 
@@ -15,6 +17,9 @@ public class FlamethrowerEnemy : MonoBehaviour
     public GameObject flameHitbox;
 
     bool flamesActive;
+
+    bool facingRight;
+    public Vector2 direction;
 
 
     private ParticleSystem flames;
@@ -37,6 +42,9 @@ public class FlamethrowerEnemy : MonoBehaviour
         flameHitbox.gameObject.SetActive(false);
         flamesActive = false;
         animator = GetComponent<Animator>();
+
+        EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
+        healthChanger.enemyHealth = flamethrowerHealth;
     }
 
     // Update is called once per frame
@@ -48,18 +56,10 @@ public class FlamethrowerEnemy : MonoBehaviour
 
         RaycastHit2D flameRay = Physics2D.Raycast(this.gameObject.transform.position, playerPos - transform.position);
 
-        /*
-        RaycastHit2D flameRay1 = Physics2D.Raycast(this.gameObject.transform.position, direction1);
-        RaycastHit2D flameRay2 = Physics2D.Raycast(this.gameObject.transform.position, direction2);
-        RaycastHit2D flameRay3 = Physics2D.Raycast(this.gameObject.transform.position, direction3);
-        */
 
         Debug.DrawRay(this.gameObject.transform.position, playerPos - transform.position);
-        Debug.DrawRay(this.gameObject.transform.position, direction1, color: Color.green);
-        Debug.DrawRay(this.gameObject.transform.position, direction2, color: Color.green);
-        Debug.DrawRay(this.gameObject.transform.position, direction3, color: Color.green);
 
-        if (flameRay.collider != null/* || flameRay2.collider != null || flameRay3.collider != null*/)
+        if (flameRay.collider != null)
         {
             if (flameRay.distance <= 6f && flameRay.transform.tag == ("Player") && flamesActive == false)
             {
@@ -69,36 +69,38 @@ public class FlamethrowerEnemy : MonoBehaviour
                 
         }
 
+
+
         //Checks if the player is close enough to fire
-            /*if (Vector3.Distance(target.position, transform.position) > 5f)
+        /*if (Vector3.Distance(target.position, transform.position) > 5f)
+        {
+
+            //Checks if the players position relative to the enemy and moves towards them
+            if (target.position.x > transform.position.x)
             {
+                transform.position += transform.right * enemySpeed * Time.deltaTime;
 
-                //Checks if the players position relative to the enemy and moves towards them
-                if (target.position.x > transform.position.x)
-                {
-                    transform.position += transform.right * enemySpeed * Time.deltaTime;
-
-                }
-                else if (target.position.x < transform.position.x)
-                {
-                    transform.position -= transform.right * enemySpeed * Time.deltaTime;
-
-                }
             }
-            else
+            else if (target.position.x < transform.position.x)
             {
-                timer = timer + Time.deltaTime;
-                if (timer >= 1 && flamesActive == false)
-                {
-                    timer = 0;
-                    flamesActive = true;
-                    Flames.Play();
+                transform.position -= transform.right * enemySpeed * Time.deltaTime;
+
+            }
+        }
+        else
+        {
+            timer = timer + Time.deltaTime;
+            if (timer >= 1 && flamesActive == false)
+            {
+                timer = 0;
+                flamesActive = true;
+                Flames.Play();
 
 
 
-                }
+            }
 
-            }*/
+        }*/
 
 
     }
@@ -106,6 +108,8 @@ public class FlamethrowerEnemy : MonoBehaviour
     {
         flamesActive = true;
         yield return new WaitForSeconds(2.5f);
+        flameParticles[1].Play();
+        flameParticles[0].Play();
         flameHitbox.gameObject.SetActive(true);
         
 
@@ -114,5 +118,24 @@ public class FlamethrowerEnemy : MonoBehaviour
         flamesActive = false;
 
 
+        yield return new WaitForSeconds(1);
+        if (playerTarget.position.x < transform.position.x && facingRight == true)
+        {
+            Flip();
+        }
+        else if (playerTarget.position.x > transform.position.x && facingRight == false)
+        {
+            Flip();
+        }
+
+
+    }
+
+    void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z);
+        facingRight = !facingRight;
+        direction = direction * (-1);
     }
 }
