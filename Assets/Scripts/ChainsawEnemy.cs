@@ -68,11 +68,13 @@ public class ChainsawEnemy : MonoBehaviour
 
         if (searchHit.collider != null && rage == false)
         {
+            print("ser något");
             if (searchHit.distance <= 2f && searchHit.transform.tag == ("Player"))
             {
+                print("Ska springa");
                 //här ska den revva upp motorsågen och kanske se arg ut.
-                Charge();
-                animator.Play("chainsaw-charge");
+                StartCoroutine(Charge());
+                //animator.Play("chainsaw-charge");
 
             }
 
@@ -86,8 +88,14 @@ public class ChainsawEnemy : MonoBehaviour
             Debug.DrawRay(enemyPos, direction, Color.green);
             timer += Time.deltaTime;
 
-            transform.position -= transform.right * enemySpeed * Time.deltaTime;
-
+            if (facingRight == false)
+            {
+                transform.position -= transform.right * enemySpeed * Time.deltaTime;
+            }
+            else if (facingRight == true)
+            {
+                transform.position += transform.right * enemySpeed * Time.deltaTime;
+            }
 
 
 
@@ -95,10 +103,10 @@ public class ChainsawEnemy : MonoBehaviour
             {
                 //enemySpeed = 0;
                 Flip();
-                Charge();
+                StartCoroutine(Charge());
                 timer = 0;
             }
-            animator.Play("Chainsaw-run");
+            //animator.Play("Chainsaw-run");
 
             //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
             //checks if terrain in front.
@@ -115,6 +123,10 @@ public class ChainsawEnemy : MonoBehaviour
 
 
 
+        }
+        if (rage == true && searchHit.collider != null && searchHit.transform.tag == "Player")
+        {
+            enemySpeed = 4;
         }
 
        /* if (healthComparison != healthChanger.enemyHealth)
@@ -144,15 +156,12 @@ public class ChainsawEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //collision.gameObject.GetComponent<healthPlayer>().Damaged();
+            collision.gameObject.GetComponent<healthPlayer>().Damaged();
         }
 
     }
 
-    /*private void awake()
-    {
-        animator = GetComponent<Animator>();
-    }*/
+
 
     void Jump()
     {
@@ -171,21 +180,14 @@ public class ChainsawEnemy : MonoBehaviour
 
     IEnumerator Charge()
     {
+        print("börjar");
         enemySpeed = 0;
-        rage = rage;
         yield return new WaitForSeconds(1);
         enemySpeed = 3;
         rage = true;
+        print("slutar");
     }
 
-    /*IEnumerator Rage()
-    {
-       
-
-        Charge();
-
-        facingRight =! facingRight;
-    }*/
 
 
 
