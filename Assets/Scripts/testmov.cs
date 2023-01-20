@@ -10,7 +10,7 @@ public class testmov : MonoBehaviour
     public Vector2 direction;
 
     public static float moveSpeed = 3;
-    public float jumpforce;
+    public static float jumpforce;
     public float jump;
     public float jumping;
     private Rigidbody2D rb;
