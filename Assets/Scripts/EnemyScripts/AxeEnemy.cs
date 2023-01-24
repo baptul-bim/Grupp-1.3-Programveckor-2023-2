@@ -61,7 +61,7 @@ public class AxeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (hit.distance <= 0.5f && hit.transform.tag == ("Ground"))
+            if (hit.distance <= 0.16f && hit.transform.tag == ("Ground"))
             {
                 Debug.DrawRay(this.gameObject.transform.position, direction);
                 Debug.Log("attack haaha");
