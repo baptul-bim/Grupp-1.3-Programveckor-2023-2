@@ -12,8 +12,9 @@ public class gun : MonoBehaviour
 
     public static float bulletsLoaded;
 
-    AudioSource shootAud;
-    AudioSource reloadAud;
+    public AudioSource sourceAud;
+    public AudioClip shootAud;
+    public AudioClip reloadAud;
 
 
     void Start()
@@ -21,22 +22,21 @@ public class gun : MonoBehaviour
         bulletsLoaded = 2;
 
         //gun audio
-        shootAud = GetComponent<AudioSource>();
-        reloadAud = GetComponent<AudioSource>();
+        sourceAud = GetComponent<AudioSource>();
 
     }
 
     void Update()
     {
         //reload function
-        cooldown -= Time.deltaTime;
-        if (cooldown>0)
+        cooldown += Time.deltaTime;
+        if (cooldown < 1)
         {
             canshoot = false;
         }
-        if (cooldown<0)
+        if (cooldown >= 1 && bulletsLoaded < 2) 
         {
-            reloadAud.Play();
+            sourceAud.PlayOneShot(reloadAud);
             bulletsLoaded = 2;
         }
         if (bulletsLoaded > 0)
@@ -51,13 +51,14 @@ public class gun : MonoBehaviour
             {
                 bulletsLoaded -= 1;
                 Shoot();
-                cooldown = 1;
+                cooldown = 0;
             }
         }
 
+
         void Shoot()
         {
-            shootAud.Play();
+            sourceAud.PlayOneShot(shootAud);
             Instantiate(bulletprefab, firepoint[0].position, firepoint[0].rotation);
             Instantiate(bulletprefab, firepoint[1].position, firepoint[1].rotation);
             Instantiate(bulletprefab, firepoint[2].position, firepoint[2].rotation);
