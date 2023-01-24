@@ -30,7 +30,7 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "bullet") 
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "bullet"|| collision.gameObject.tag != "Fire") 
         {
             Debug.Log(collision.gameObject.tag);
             Destroy(gameObject);

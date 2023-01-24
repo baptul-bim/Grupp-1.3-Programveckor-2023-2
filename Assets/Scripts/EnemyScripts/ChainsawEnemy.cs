@@ -86,8 +86,11 @@ public class ChainsawEnemy : MonoBehaviour
             //här ska springa attackera animation vara
             Vector3 enemyPos = transform.position;
             enemyPos.y -= 0.2f;
+
+            //checkar om det är terräng framför för att veta om den ska klättra över det.
             RaycastHit2D groundHit = Physics2D.Raycast(enemyPos, direction);
             Debug.DrawRay(enemyPos, direction, Color.green);
+
             timer += Time.deltaTime;
             animator.Play("chainsaw-run");
 
@@ -113,7 +116,6 @@ public class ChainsawEnemy : MonoBehaviour
             animator.Play("Chainsaw-run");
 
             //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
-            //checks if terrain in front.
 
 
 

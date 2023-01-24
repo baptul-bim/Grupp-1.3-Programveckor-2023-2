@@ -1999,6 +1999,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: realmonke 1 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3388705428283258712, guid: f466d7ee493e157489661f4039938e0c, type: 3}
+      propertyPath: direction.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388705428283258712, guid: f466d7ee493e157489661f4039938e0c, type: 3}
+      propertyPath: mask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258713, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: burning
       value: 
@@ -2011,6 +2019,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1848513427}
+    - target: {fileID: 3388705428283258716, guid: f466d7ee493e157489661f4039938e0c, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258719, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: shootAud
       value: 
@@ -6273,6 +6285,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8014117155103790964, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014117155390132921, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014117156025784511, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8014117156123903317, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
       propertyPath: m_Name
       value: Room3
@@ -6320,6 +6344,14 @@ PrefabInstance:
     - target: {fileID: 8014117156123903318, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014117156424126925, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014117156915855738, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7176f957b188641a8d3d0007ab3781, type: 3}
