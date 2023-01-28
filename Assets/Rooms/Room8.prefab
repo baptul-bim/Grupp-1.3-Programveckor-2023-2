@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2178154948627348392}
   - component: {fileID: 422682264775506622}
   - component: {fileID: 637460597286871489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 6876672217003503677}
   - component: {fileID: 7963798027444409700}
   - component: {fileID: 3801821185260298892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4797012137179608343}
   - component: {fileID: 4797012137179608342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4797012137744550388}
   - component: {fileID: 4797012137744550391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4797012137853946324}
   - component: {fileID: 4797012137853946327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 2016376970312755833}
   - component: {fileID: 3528365970570828741}
   - component: {fileID: 4516716821755849034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 7624373693195544938}
   - component: {fileID: 7624373693195544941}
   - component: {fileID: 7624373693195544939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 7624373693211476206}
   - component: {fileID: 7624373693211476177}
   - component: {fileID: 7624373693211476176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 7624373693314221176}
   - component: {fileID: 7624373693314221179}
   - component: {fileID: 7624373693314221178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt
   m_TagString: Ground
   m_Icon: {fileID: 0}

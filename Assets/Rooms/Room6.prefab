@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828754307203080083}
   - component: {fileID: 828754307203080080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -109,9 +109,9 @@ GameObject:
   m_Component:
   - component: {fileID: 828754307346063283}
   - component: {fileID: 828754307346063280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,9 +193,9 @@ GameObject:
   m_Component:
   - component: {fileID: 828754307636110192}
   - component: {fileID: 828754307636110193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,9 +277,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2368064110410421685}
   - component: {fileID: 2368064110410421690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2368064110687000359}
   - component: {fileID: 2368064110687000357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 2368064111243928981}
   - component: {fileID: 2368064111243928987}
   - component: {fileID: 2368064111243928986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -724,9 +724,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2368064112244525025}
   - component: {fileID: 2368064112244525030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 2368064112380214778}
   - component: {fileID: 2368064112380214776}
   - component: {fileID: 2368064112380214779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt
   m_TagString: Ground
   m_Icon: {fileID: 0}

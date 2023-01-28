@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6130759183439990129}
   - component: {fileID: 6130759183439990143}
   - component: {fileID: 6130759183439990128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile ston
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -408,9 +408,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9099956921536617244}
   - component: {fileID: 9099956921536617245}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9099956922112518143}
   - component: {fileID: 9099956922112518140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -553,9 +553,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9099956922221225951}
   - component: {fileID: 9099956922221225948}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

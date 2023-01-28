@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8014117155103790965}
   - component: {fileID: 8014117155103790966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8014117155390132922}
   - component: {fileID: 8014117155390132923}
   - component: {fileID: 8014117155390132916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8014117156025784504}
   - component: {fileID: 8014117156025784505}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile grass
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8014117156424126926}
   - component: {fileID: 8014117156424126927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tile dirt (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8014117156915855739}
   - component: {fileID: 8014117156915855732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
