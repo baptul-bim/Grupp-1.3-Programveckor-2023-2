@@ -65,7 +65,7 @@ public class healthPlayer : MonoBehaviour
         {
             testmov.moveSpeed = 0;
             testmov.jumpforce = 0;
-            gun.cooldown = 999;
+            gun.cooldown = -999;
             animator.SetTrigger("death");
         }
 
