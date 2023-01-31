@@ -66,7 +66,8 @@ public class jumpdmg : MonoBehaviour
                 if (player.jumping == 0)
                 {
                     print("jumpkill");
-                    phealth.health -= 4;
+                    phealth.Damaged();
+                    phealth.health -= 3;
                     dmgtrigger1 = false;
                     dmgtrigger2 = false;
                     jump = false;

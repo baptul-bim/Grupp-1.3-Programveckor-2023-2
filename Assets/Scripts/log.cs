@@ -29,7 +29,8 @@ public class log : MonoBehaviour
         {
             print("logkill");
             Destroy(gameObject);
-            phealth.health -= 4;
+            phealth.Damaged();
+            phealth.health -= 3;
         }
         if (collision.gameObject.tag == "object")
         {

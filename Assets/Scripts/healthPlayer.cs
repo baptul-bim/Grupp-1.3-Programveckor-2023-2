@@ -6,10 +6,16 @@ using UnityEngine.UI;
 
 public class healthPlayer : MonoBehaviour
 {
+    private Renderer rend;
     public Image healthBar;
     public Animator animator;
     gun gun;
     testmov testmov;
+
+    [SerializeField]
+    private Color red = Color.red;
+    [SerializeField]
+    private Color white = Color.white;
 
     public float health;
     public float maxHealth;
@@ -31,6 +37,7 @@ public class healthPlayer : MonoBehaviour
     {
         maxHealth = 10;
         health = maxHealth;
+        rend = GetComponent<Renderer>();
         testmov = FindObjectOfType<testmov>();
         gun = FindObjectOfType<gun>();
         animator = FindObjectOfType<Animator>();
@@ -58,7 +65,8 @@ public class healthPlayer : MonoBehaviour
         {
             testmov.moveSpeed = 0;
             testmov.jumpforce = 0;
-            gun.cooldown = 999;
+            gun.cooldown = -999;
+            animator.SetTrigger("death");
         }
 
         if (onFire == true)
@@ -75,8 +83,8 @@ public class healthPlayer : MonoBehaviour
     {
         if (health > 0)
         {
-            animator.SetTrigger("damage");
             health -= 1;
+            animator.SetTrigger("damage");
         }
     }
 
@@ -91,8 +99,14 @@ public class healthPlayer : MonoBehaviour
         }
 
     }
-
-
+    private void Red()
+    {
+        rend.material.color = red;
+    }
+    private void White()
+    {
+        rend.material.color = white;
+    }
     IEnumerator BurnTimer()
     {
         ParticleSystem ps = GetComponent<ParticleSystem>();

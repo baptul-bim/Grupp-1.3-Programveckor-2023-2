@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class walloffire : MonoBehaviour
 {
+    themometer temp;
     healthPlayer health;
-    public float currenttemp = 20f;
+    //public float currenttemp = 20f;
     public float maxtemp = 50f;
     public float temptimer = 2;
     // Start is called before the first frame update
     void Start()
     {
+        temp = FindObjectOfType<themometer>();
         health = GetComponent<healthPlayer>();
         //speed = temp.currenttemp;
     }
@@ -18,13 +20,7 @@ public class walloffire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        temptimer -= Time.deltaTime;
-        if (temptimer <= 0)
-        {
-            currenttemp += 1;
-            temptimer = 2;
-        }
-        transform.position += transform.right*(currenttemp*0.03f)*Time.deltaTime;
+        transform.position += transform.right * (themometer.currenttemp * 0.07f) * Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
