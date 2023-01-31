@@ -51,6 +51,14 @@ public class testmov : MonoBehaviour
             print("hipp");
             Jump();
         }
+        if (IsGrounded()==false)
+        {
+            jumping = 1;
+        }
+        if (IsGrounded()==true)
+        {
+            jumping = 0;
+        }
 
         //raycast ground detection
         //RaycastHit2D GroundHit = Physics2D.Raycast(this.gameObject.transform.position, direction);
@@ -107,6 +115,7 @@ public class testmov : MonoBehaviour
         rb.velocity = new Vector2(0, jumpforce);
         print("hopp");
     }
+    
 
 
 
@@ -116,5 +125,6 @@ public class testmov : MonoBehaviour
         
         print("groundcheck: " + (groundCheck.collider != null && groundCheck.collider.CompareTag("Ground")));
         return groundCheck.collider != null && groundCheck.collider.CompareTag("Ground");
+
     }
 }
