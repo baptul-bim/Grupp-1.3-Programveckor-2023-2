@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class pauseMenu : MonoBehaviour
 {
+    public GameObject gameOverUI;
 
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
-    public GameObject gameOverScreen;
-    public bool gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,7 @@ public class pauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && gameOverUI.activeSelf == false)
         {
             if (GameIsPaused)
             {
@@ -30,16 +29,6 @@ public class pauseMenu : MonoBehaviour
             {
                 Pause();
             }
-
-            if (!gameOver)
-            {
-                pauseMenuUI.SetActive(true);
-            }
-        }
-
-        void GameOver()
-        {
-            gameOver = true;
         }
     }
 
