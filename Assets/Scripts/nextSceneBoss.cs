@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class nextSceneBoss : MonoBehaviour
 {
+    themometer temp;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        temp = FindObjectOfType<themometer>();
     }
 
     // Update is called once per frame
@@ -18,6 +19,7 @@ public class nextSceneBoss : MonoBehaviour
         if (LevelLoop.roomAmount == 20)
         {
             SceneManager.LoadScene("BossRoom");
+            temp.temptimer = 99999;
         }
 
     }
