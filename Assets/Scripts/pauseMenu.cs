@@ -8,6 +8,8 @@ public class pauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject gameOverScreen;
+    public bool gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,16 @@ public class pauseMenu : MonoBehaviour
             {
                 Pause();
             }
+
+            if (!gameOver)
+            {
+                pauseMenuUI.SetActive(true);
+            }
+        }
+
+        void GameOver()
+        {
+            gameOver = true;
         }
     }
 
