@@ -59,6 +59,7 @@ public class healthPlayer : MonoBehaviour
             testmov.moveSpeed = 0;
             testmov.jumpforce = 0;
             gun.cooldown = 999;
+            animator.SetTrigger("death");
         }
 
         if (onFire == true)
@@ -75,8 +76,8 @@ public class healthPlayer : MonoBehaviour
     {
         if (health > 0)
         {
-            animator.SetTrigger("damage");
             health -= 1;
+            animator.SetTrigger("damage");
         }
     }
 

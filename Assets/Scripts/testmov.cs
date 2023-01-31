@@ -5,6 +5,7 @@ using UnityEngine;
 public class testmov : MonoBehaviour
 {
     public Animator animator;
+    healthPlayer health;
 
     //raycast direction
     public Vector2 direction;
@@ -30,18 +31,15 @@ public class testmov : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3;
-        
+        health = FindObjectOfType<healthPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.A);
-        jumpanim = isJumping;
-        fallanim = isfalling;
         animator.SetBool("moving", horizontalMove);
-        animator.SetBool("jumping", jumpanim);
-        animator.SetBool("falling", fallanim);
+        animator.SetBool("jump", isJumping);
 
         MovePlayer();
         Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.green);
@@ -54,10 +52,12 @@ public class testmov : MonoBehaviour
         if (IsGrounded()==false)
         {
             jumping = 1;
+            isJumping = true;
         }
         if (IsGrounded()==true)
         {
             jumping = 0;
+            isJumping = false;
         }
 
         //raycast ground detection
