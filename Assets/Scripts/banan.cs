@@ -6,19 +6,26 @@ public class banan : MonoBehaviour
 {
     public Animator animator;
     healthPlayer health;
-    bool idle;
+    bool moving1;
+    bool moving2;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         health = FindObjectOfType<healthPlayer>();
-        idle = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (moving1==true)
+        {
+            transform.position += new Vector3(0, 0.2f, 0) * Time.deltaTime;
+        }
+        if (moving1 == false)
+        {
+            transform.position += new Vector3(0, -0.2f, 0) * Time.deltaTime;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,12 +42,20 @@ public class banan : MonoBehaviour
             }
         }
     }
-    void up()
+    void up1()
     {
-        transform.position += new Vector3(0, 0, 0.2f) * Time.deltaTime;
+        moving1 = true;
     }
-    void dn()
+    void up2()
     {
-        transform.position += new Vector3(0, 0, -0.2f) * Time.deltaTime;
+
+    }
+    void dn2()
+    {
+
+    }
+    void dn1()
+    {
+        moving1 = false;
     }
 }
