@@ -12,7 +12,7 @@ public class themometer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currenttemp = 30;
+        currenttemp = 15;
         thermometer = GetComponent<Image>();
     }
 
