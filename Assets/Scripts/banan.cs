@@ -35,16 +35,12 @@ public class banan : MonoBehaviour
             }
         }
     }
-    void up1()
+    void up()
     {
-
+        transform.position += new Vector3(0, 0, 0.2f) * Time.deltaTime;
     }
-    void up2()
+    void dn()
     {
-
-    }
-    void dn1()
-    {
-
+        transform.position += new Vector3(0, 0, -0.2f) * Time.deltaTime;
     }
 }
