@@ -845,6 +845,8 @@ PlayableDirector:
     value: {fileID: 618947956834946645}
   - key: {fileID: 4350236903351813530, guid: 76959e8084ba9bf498dc446d9b92e0ff, type: 2}
     value: {fileID: 1160530751}
+  - key: {fileID: 537864682768557347, guid: 76959e8084ba9bf498dc446d9b92e0ff, type: 2}
+    value: {fileID: 595699763}
   m_ExposedReferences:
     m_References:
     - 94aec2b729f90364e9fe3d6571a7d492: {fileID: 1911909312}
@@ -1733,13 +1735,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595699764}
+  - component: {fileID: 595699765}
   m_Layer: 0
   m_Name: nextsceneplayerthing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &595699764
 Transform:
   m_ObjectHideFlags: 0
@@ -1755,6 +1758,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595699765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595699763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21914266dba638c4685166758d3f823a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &653371524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3846,7 +3861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -237, y: 198}
+  m_AnchoredPosition: {x: -276, y: 220}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375205373
@@ -3893,18 +3908,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1911909316}
+        m_TargetAssemblyTypeName: levelLoader, Assembly-CSharp
+        m_MethodName: GoToNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!114 &1375205374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5150,8 +5165,9 @@ GameObject:
   - component: {fileID: 1911909315}
   - component: {fileID: 1911909314}
   - component: {fileID: 1911909313}
+  - component: {fileID: 1911909316}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: skipbuttonmgr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5207,6 +5223,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911909316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911909312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ca8134eeb69b943bb1afd54f2d871a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNum: 2
 --- !u!1 &1953217301
 GameObject:
   m_ObjectHideFlags: 0
