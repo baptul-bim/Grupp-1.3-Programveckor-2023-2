@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Albin
 public class banan : MonoBehaviour
 {
     public Animator animator;
     healthPlayer health;
     bool moving1;
-    bool moving2;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,14 +46,6 @@ public class banan : MonoBehaviour
     void up1()
     {
         moving1 = true;
-    }
-    void up2()
-    {
-
-    }
-    void dn2()
-    {
-
     }
     void dn1()
     {

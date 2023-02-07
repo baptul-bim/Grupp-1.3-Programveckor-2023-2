@@ -99,13 +99,13 @@ public class healthPlayer : MonoBehaviour
         }
 
     }
-    private void Red()
+    private void Red() //när damage animationen kommer till en viss punkt händer "Red()"-Albin
     {
-        rend.material.color = red;
+        rend.material.color = red; //spelaren blir röd-Albin
     }
-    private void White()
+    private void White() //när damage animationen kommer till en viss punkt händer "White()"-Albin
     {
-        rend.material.color = white;
+        rend.material.color = white; //spelaren blir vanlig färg igen-Albin
     }
     IEnumerator BurnTimer()
     {
