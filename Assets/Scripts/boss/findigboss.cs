@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class findigboss : MonoBehaviour
 {
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (transform.position.x>gameObject.transform.position.x)
+        if (transform.position.x > player.transform.position.x)
         {
-
+            transform.position += transform.right * 2 * Time.deltaTime;
         }
     }
 }
