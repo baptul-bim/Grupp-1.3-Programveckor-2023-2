@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Albin
 public class log : MonoBehaviour
 {
     healthPlayer phealth;
@@ -13,13 +14,13 @@ public class log : MonoBehaviour
     {
         phealth = FindObjectOfType<healthPlayer>();
         boss = FindObjectOfType<boss>();
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speed; //åk fram
     }
 
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 3); //förstör stocken efter 3s
     }
   
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,10 +28,9 @@ public class log : MonoBehaviour
        
         if (collision.gameObject.tag=="Player")
         {
-            print("logkill");
-            Destroy(gameObject);
-            phealth.Damaged();
-            phealth.health -= 3;
+            Destroy(gameObject); 
+            phealth.Damaged(); //ta skada för att trigga damage animationen
+            phealth.health -= 3; //ta ytterligare 3 skada
         }
         if (collision.gameObject.tag == "object")
         {

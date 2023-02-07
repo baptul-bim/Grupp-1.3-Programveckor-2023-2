@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Albin
 public class themometer : MonoBehaviour
 {
     private Image thermometer;
@@ -20,10 +21,10 @@ public class themometer : MonoBehaviour
     void Update()
     {
         temptimer -= Time.deltaTime;
-        if (temptimer<=0)
+        if (temptimer<=0) //om timern går ner till 0
         {
-            currenttemp += 1;
-            temptimer = 2;
+            currenttemp += 1; //temperaturen går upp en grad
+            temptimer = 1.5f; //starta om timern
         }
         thermometer.fillAmount = currenttemp / maxtemp;
     }
