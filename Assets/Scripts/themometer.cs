@@ -24,7 +24,7 @@ public class themometer : MonoBehaviour
         if (temptimer<=0) //om timern går ner till 0
         {
             currenttemp += 1; //temperaturen går upp en grad
-            temptimer = 1.5f; //starta om timern
+            temptimer = 0.5f; //starta om timern
         }
         thermometer.fillAmount = currenttemp / maxtemp;
     }
