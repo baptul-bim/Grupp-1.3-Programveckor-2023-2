@@ -14,9 +14,10 @@ public class findigboss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > player.transform.position.x)
+        if (transform.position.x-5 > player.transform.position.x)
         {
             transform.position += transform.right * 2 * Time.deltaTime;
         }
     }
+
 }

@@ -59,11 +59,12 @@ public class healthPlayer : MonoBehaviour
             isDead = true;
             gameManager.gameOver();
         }
-        if (isDead==true)
+        if (isDead == true)
         {
-            GameObject.Find("Player").GetComponent<testmov>().enabled = false;
-            GameObject.Find("Player").GetComponent<Flip>().enabled = false;
-            GameObject.Find("Player").GetComponent<gun>().enabled = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<testmov>().enabled = false;//disable movement script
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Flip>().enabled = false;//disable flip script
+            GameObject.FindGameObjectWithTag("Player").GetComponent<gun>().enabled = false;//disable shooting script
+            White();
             animator.SetTrigger("death");
         }
 
