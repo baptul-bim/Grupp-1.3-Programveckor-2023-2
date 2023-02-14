@@ -21,7 +21,10 @@ public class walloffire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.right * (themometer.currenttemp * 0.05f) * Time.deltaTime; //åk åt höger i samma hastighet som temperaturen gånger 0,05
+        if (health.health>0) //åk bara om man lever
+        {
+            transform.position += transform.right * (themometer.currenttemp * 0.05f) * Time.deltaTime; //åk åt höger i samma hastighet som temperaturen gånger 0,05
+        }  
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
