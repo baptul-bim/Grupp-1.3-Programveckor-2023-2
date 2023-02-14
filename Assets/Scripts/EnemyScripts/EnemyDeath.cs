@@ -7,9 +7,8 @@ public class EnemyDeath : MonoBehaviour
     //blood splatter
     [SerializeField]
     ParticleSystem bloodParticles;
-
-    public AudioSource source;
-    public AudioClip clip;
+    [SerializeField]
+    GameObject screamObject;
 
     public int enemyHealth;
 
@@ -46,9 +45,10 @@ public class EnemyDeath : MonoBehaviour
         {
             Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
             Debug.Log("jag dog :(");
+            Instantiate(screamObject);
             Destroy(this.gameObject);
             themometer.currenttemp -= enemyMaxHealth * 2;
-            source.PlayOneShot(clip);
+            
         }
 
 

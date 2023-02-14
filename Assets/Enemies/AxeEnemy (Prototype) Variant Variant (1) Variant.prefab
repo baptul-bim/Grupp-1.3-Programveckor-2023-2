@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
+  screamObject: {fileID: 4591339684133289732, guid: 278136a61fad7f648b3258a44ee19d8c, type: 3}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies:

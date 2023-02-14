@@ -9,6 +9,9 @@ public class ChainsawEnemy : MonoBehaviour
     public int chainsawHealth = 5;
     int healthComparison;
 
+    [SerializeField]
+    GameObject ChainsawsoundObject;
+
     private Animator animator;
 
     [SerializeField]
@@ -73,6 +76,7 @@ public class ChainsawEnemy : MonoBehaviour
             {
                 print("Ska springa");
                 //här ska den revva upp motorsågen och kanske se arg ut.
+                Instantiate(ChainsawsoundObject);
                 StartCoroutine(Charge());
                // animator.Play("chainsaw-charge");
                
