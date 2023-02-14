@@ -7,15 +7,13 @@ public class walloffire : MonoBehaviour
 {
     themometer temp;
     healthPlayer health;
-    //public float currenttemp = 20f;
     public float maxtemp = 50f;
     public float temptimer = 2;
     // Start is called before the first frame update
     void Start()
     {
         temp = FindObjectOfType<themometer>();
-        health = GetComponent<healthPlayer>();
-        //speed = temp.currenttemp;
+        health = FindObjectOfType<healthPlayer>();
     }
 
     // Update is called once per frame
@@ -30,7 +28,7 @@ public class walloffire : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<healthPlayer>().health = 0; //om spelaren nuddar elden dör spelaren
+            health.health = 0; //om spelaren nuddar elden dör spelaren
         }
         
     }
