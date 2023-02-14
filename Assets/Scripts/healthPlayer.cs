@@ -58,14 +58,12 @@ public class healthPlayer : MonoBehaviour
         {
             isDead = true;
             gameManager.gameOver();
-            Debug.Log ("Dead");
         }
-
-        if(health <= 0)
+        if (isDead==true)
         {
-            testmov.moveSpeed = 0;
-            testmov.jumpforce = 0;
-            gun.cooldown = -999;
+            GameObject.Find("Player").GetComponent<testmov>().enabled = false;
+            GameObject.Find("Player").GetComponent<Flip>().enabled = false;
+            GameObject.Find("Player").GetComponent<gun>().enabled = false;
             animator.SetTrigger("death");
         }
 
