@@ -10,6 +10,8 @@ public class testmov : MonoBehaviour
     //raycast direction
     public Vector2 direction;
 
+    public Vector2 boxSize;
+
     public static float moveSpeed = 3;
     public float jumpforce;
     public float jump;
@@ -32,6 +34,8 @@ public class testmov : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3;
         health = FindObjectOfType<healthPlayer>();
+
+        boxSize = new Vector2(0.4f, 0.48f);
     }
 
     // Update is called once per frame
@@ -121,7 +125,8 @@ public class testmov : MonoBehaviour
 
     private bool IsGrounded()
     {
-        var groundCheck = Physics2D.Raycast(transform.position, Vector2.down, 0.5f, mask );
+        var groundCheck = Physics2D.BoxCast(transform.position, boxSize, 0f, Vector2.down, 0.25f, mask );
+        
         
         print("groundcheck: " + (groundCheck.collider != null && groundCheck.collider.CompareTag("Ground")));
         return groundCheck.collider != null && groundCheck.collider.CompareTag("Ground");

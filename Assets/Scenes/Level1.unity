@@ -2158,11 +2158,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.092
       objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.452
       objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2210,7 +2210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258690, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: m_Name
-      value: realmonke 1 1
+      value: realmonke 1 1 fake
       objectReference: {fileID: 0}
     - target: {fileID: 3388705428283258690, guid: f466d7ee493e157489661f4039938e0c, type: 3}
       propertyPath: m_IsActive
@@ -2874,6 +2874,34 @@ PrefabInstance:
       propertyPath: enemyPrefab.Array.data[2]
       value: 
       objectReference: {fileID: 9162208899604976250, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+    - target: {fileID: 5716107030798977227, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716107030798977227, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716107030798977229, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: jumpforce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716107030798977229, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: mask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: burning
+      value: 
+      objectReference: {fileID: 1444359385}
+    - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2019434113}
+    - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1848513427}
     - target: {fileID: 5716107030798977236, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: m_Name
       value: Last Monke
@@ -4070,6 +4098,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429899391}
   m_CullTransparentMesh: 1
+--- !u!198 &1444359385 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2769054180758515433, guid: e48abff894b4fd742988c306043e6825, type: 3}
+  m_PrefabInstance: {fileID: 959039168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1461791595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3388705428283258690, guid: f466d7ee493e157489661f4039938e0c, type: 3}
@@ -5097,7 +5130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1769265024
 Transform:
   m_ObjectHideFlags: 0

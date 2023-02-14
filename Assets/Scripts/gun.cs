@@ -62,6 +62,7 @@ public class gun : MonoBehaviour
             Instantiate(bulletprefab, firepoint[0].position, firepoint[0].rotation);
             Instantiate(bulletprefab, firepoint[1].position, firepoint[1].rotation);
             Instantiate(bulletprefab, firepoint[2].position, firepoint[2].rotation);
+            Debug.Log("skjuta hahaha");
         }
     }
 }
