@@ -9967,7 +9967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7290811019700048815, guid: 2bf8f835e1a74ad49a383f03e3d88383, type: 3}
-  screamObject: {fileID: 0}
+  screamObject: {fileID: 4591339684133289732, guid: 278136a61fad7f648b3258a44ee19d8c, type: 3}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies: []
