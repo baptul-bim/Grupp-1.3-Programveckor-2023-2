@@ -27,6 +27,8 @@ public class gameManagerScript : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+        pauseMenu.GameIsPaused = false;
     }
     
     public void mainMenu()
