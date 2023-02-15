@@ -16,5 +16,4 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
         Debug.Log("player gone hihihaha");
     }
-
 }

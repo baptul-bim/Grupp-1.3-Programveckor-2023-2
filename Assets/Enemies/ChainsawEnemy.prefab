@@ -180,9 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chainsawHealth: 3
+  ChainsawsoundObject: {fileID: 3648732159580871013, guid: 0e0b7384f71d26848b7582e2216d3ed0, type: 3}
   enemySpeed: 3
   jump: 10
-  playerTarget: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
+  playerTarget: {fileID: 5716107030798977218, guid: e48abff894b4fd742988c306043e6825, type: 3}
   direction: {x: -1, y: 0}
 --- !u!50 &5696412302534163323
 Rigidbody2D:
@@ -218,8 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
-  source: {fileID: 0}
-  clip: {fileID: 0}
+  screamObject: {fileID: 3648732159580871013, guid: 0e0b7384f71d26848b7582e2216d3ed0, type: 3}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies:

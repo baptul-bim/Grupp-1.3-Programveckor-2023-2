@@ -164,6 +164,9 @@ MonoBehaviour:
   - {fileID: 7583526397292595787}
   bulletprefab: {fileID: 8550599228004992429, guid: a7bdf22c6737e8e4e85ec3ddea64507c, type: 3}
   cooldown: 1
+  sourceAud: {fileID: 0}
+  shootAud: {fileID: 0}
+  reloadAud: {fileID: 0}
 --- !u!114 &3388705428283258714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   animator: {fileID: 0}
+  red: {r: 1, g: 0, b: 0, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
   health: 0
   maxHealth: 0
   onFire: 0
@@ -215,6 +220,9 @@ MonoBehaviour:
   jump: 0
   jumping: 0
   isfalling: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &3388705428283258711
 Animator:
   serializedVersion: 4
