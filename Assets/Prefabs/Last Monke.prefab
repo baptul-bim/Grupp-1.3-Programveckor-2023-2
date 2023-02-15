@@ -119,7 +119,7 @@ MonoBehaviour:
   maxHealth: 0
   onFire: 0
   gameManager: {fileID: 0}
-  burning: {fileID: 0}
+  burning: {fileID: 2769054180758515433}
 --- !u!114 &5716107030798977231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   - {fileID: 6606875478358254050, guid: 7522e5130d598e1499de4ef12d13c087, type: 3}
   - {fileID: 5696412302534163327, guid: 077992cdbffcb2f459a626b4ddf53c4f, type: 3}
   - {fileID: 9162208899604976250, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
+  direction: {x: 0, y: -3}
   axePrefab: {fileID: 6606875478358254050, guid: 7522e5130d598e1499de4ef12d13c087, type: 3}
   chainsawPrefab: {fileID: 5696412302534163327, guid: 077992cdbffcb2f459a626b4ddf53c4f, type: 3}
   flamethrowerPrefab: {fileID: 9162208899604976250, guid: d9344fd2e1476c34a84bb66a97a5b17a, type: 3}
