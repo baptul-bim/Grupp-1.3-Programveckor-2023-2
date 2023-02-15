@@ -9927,7 +9927,7 @@ MonoBehaviour:
   - {fileID: 1383862125832960089}
   flameHitbox: {fileID: 9162208899764489330}
   direction: {x: 0, y: 0}
-  playerTarget: {fileID: 3388705428283258688, guid: f466d7ee493e157489661f4039938e0c, type: 3}
+  playerTarget: {fileID: 5716107030798977218, guid: e48abff894b4fd742988c306043e6825, type: 3}
   enemySpeed: 4
   playerDistance: 0
   direction1: {x: -6, y: 0}
@@ -9967,8 +9967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7290811019700048815, guid: 2bf8f835e1a74ad49a383f03e3d88383, type: 3}
-  source: {fileID: 0}
-  clip: {fileID: 0}
+  screamObject: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies: []
@@ -10011,8 +10010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7727777153646245082, guid: ca2b50c946606d344944d1c90274b56f, type: 3}
-  source: {fileID: 0}
-  clip: {fileID: 0}
+  screamObject: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 0
   enemies:
