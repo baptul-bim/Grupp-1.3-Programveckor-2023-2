@@ -17,7 +17,7 @@ public class pauseMenu : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //Maja
     {
         if(Input.GetKeyDown(KeyCode.Escape) && gameOverUI.activeSelf == false)
         {
@@ -32,14 +32,14 @@ public class pauseMenu : MonoBehaviour
         }
     }
 
-    public void Resume()
+    public void Resume() //Maja
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    public void Pause()
+    public void Pause() //Maja
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
