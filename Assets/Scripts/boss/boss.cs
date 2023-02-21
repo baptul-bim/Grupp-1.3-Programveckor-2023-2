@@ -50,7 +50,7 @@ public class boss : MonoBehaviour
         linetimer -= Time.deltaTime;
         if (linetimer>0) //de första 4sekundrarna pratar bossen
         {
-            startline.text = "Hesitation is defeat, Monke";
+            startline.text = "DiE mOnKey, you will never win hihihaha";
         }
         else
         {
@@ -58,7 +58,7 @@ public class boss : MonoBehaviour
         }
         if (phealth.health<=0) // om spelaren dör pratar bossen
         {
-            playerdeathline.text = "Put these foolish ambitions to rest";
+            playerdeathline.text = "forwarder 750f will always win";
             move = 21; // så att den inte ska fortsätta attackera när spelaren dött
         }
         else
@@ -127,7 +127,7 @@ public class boss : MonoBehaviour
     }
     void deathline()
     {
-        bossdeathline.text = "Brave Monke, Thy strength befits a crown";
+        bossdeathline.text = "fuck i said i would never let a monkey kill me";
         bubbla = true;
     }
     void deathanim()
