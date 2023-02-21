@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class LevelLoop : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+
 
     public GameObject[] room;
+    public GameObject[] bossRoom;
     public int currentRoom;
 
     public Transform player1;
@@ -31,16 +34,22 @@ public class LevelLoop : MonoBehaviour
     {
         if (player1.position.x >= nextRoomPos)
         {
-            //enemyPointsSaver = EnemySpawner.enemyPoints;
-            int randRoom = Random.Range(0, 8);
-            currentRoom = randRoom;
-            nextRoomPos += 4.8f;
-            Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
-            roomAmount += 1;
-            player1.gameObject.GetComponent<EnemySpawner>().spawnEnemies();
-            //EnemySpawner.enemyPoints += enemyPointsSaver + 1;
+            if (roomAmount >= 20)
+            {
+                currentRoom = bossRoom;
+            }
+            else
+            {
+                //enemyPointsSaver = EnemySpawner.enemyPoints;
+                int randRoom = Random.Range(0, 8);
+                currentRoom = randRoom;
+                nextRoomPos += 4.8f;
+                Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
+                roomAmount += 1;
+                player1.gameObject.GetComponent<EnemySpawner>().spawnEnemies();
+                //EnemySpawner.enemyPoints += enemyPointsSaver + 1;
+            }
 
-            
 
         }
     }
