@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+    //spawnar fiender i nya "rum"
 
     public static float enemyPoints;
     float enemyPointsIncrease;
@@ -121,7 +123,7 @@ public class EnemySpawner : MonoBehaviour
         Debug.DrawRay(spawnPlace, direction);
 
 
-
+        //gör så att de inte spawnar i luften
         if (groundRay.collider != null && groundRay.transform.tag == ("Ground"))
         {
             fromGround = new Vector3(0f, groundRay.distance, 0f);

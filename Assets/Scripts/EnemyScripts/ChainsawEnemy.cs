@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ChainsawEnemy : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+    //Kod för 'Chainsaw' fiende
 
     public int chainsawHealth = 5;
     int healthComparison;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class testmov : MonoBehaviour
 {
+    //Maja
+
     public Animator animator;
     healthPlayer health;
 
@@ -75,7 +77,7 @@ public class testmov : MonoBehaviour
 
 
 
-    private void MovePlayer()
+    private void MovePlayer()     //Kod av Louie W. Stormdal [SU22b]
     {
         var horizontalInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
