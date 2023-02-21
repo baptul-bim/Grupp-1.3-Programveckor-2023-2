@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class cutscenemgr : MonoBehaviour
+public class tillbakabossen : MonoBehaviour
 {
-    //Clara
+    //tillbaka till bossen, Clara
     private void OnEnable()
     {
-        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        SceneManager.LoadScene("BossRoom", LoadSceneMode.Single);
     }
 }

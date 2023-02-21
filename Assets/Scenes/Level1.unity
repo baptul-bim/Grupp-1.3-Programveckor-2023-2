@@ -3378,7 +3378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716107030798977229, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: jumpforce
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5716107030798977229, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: mask.m_Bits
@@ -5633,7 +5633,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
