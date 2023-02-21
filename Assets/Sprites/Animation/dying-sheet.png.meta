@@ -108,9 +108,9 @@ TextureImporter:
       name: dying-sheet_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 55
+        width: 75
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -129,9 +129,9 @@ TextureImporter:
       name: dying-sheet_1
       rect:
         serializedVersion: 2
-        x: 82
+        x: 75
         y: 0
-        width: 53
+        width: 75
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,7 +153,7 @@ TextureImporter:
         x: 150
         y: 0
         width: 75
-        height: 24
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,6 +163,27 @@ TextureImporter:
       bones: []
       spriteID: f5749fb3afa0ee447a6fc914bf250b26
       internalID: 1724875505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 75
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e880eabbbe4c8e34087c35c85471a4f0
+      internalID: 152150560
       vertices: []
       indices: 
       edges: []
@@ -181,6 +202,7 @@ TextureImporter:
       dying-sheet_0: -2030696530
       dying-sheet_1: -1031307585
       dying-sheet_2: 1724875505
+      dying-sheet_3: 152150560
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
