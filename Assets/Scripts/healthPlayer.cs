@@ -35,7 +35,7 @@ public class healthPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 20;
+        maxHealth = 999;
         health = maxHealth;
         rend = GetComponent<Renderer>();
         testmov = FindObjectOfType<testmov>();
