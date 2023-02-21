@@ -64,32 +64,7 @@ public class testmov : MonoBehaviour
             isJumping = false;
         }
 
-        //raycast ground detection
-        //RaycastHit2D GroundHit = Physics2D.Raycast(this.gameObject.transform.position, direction);
 
-        /*
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= Vector3.right * moveSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-            isJumping = true;
-        }
-        if (isJumping == false)
-        {
-            jumping = 0;
-        }
-        if (isJumping == true)
-        {
-            jumping = 1;
-        }*/
 
 
 
@@ -98,16 +73,7 @@ public class testmov : MonoBehaviour
 
 
 
-    /*
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground")|| collision.gameObject.CompareTag("enemy"))
-        {
-            isJumping = false;
-            isfalling = false;
-        }
-    }
-    */
+
 
     private void MovePlayer()
     {

@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class DestructionZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Kod av Louie W. Stormdal [SU22b]
+    //bara en enkel script ifall en fiende skulle råka ramla igenom marken på något vis så ska den inte falla i all evighet utan förstörs när den rör en röd box.
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
