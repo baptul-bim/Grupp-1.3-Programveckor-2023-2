@@ -99,7 +99,7 @@ public class FlamethrowerEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         
-        //flippar fienden 
+        //flippar fienden mot spelaren
         if (playerTarget.position.x < transform.position.x && facingRight == true)
         {
             Flip();
