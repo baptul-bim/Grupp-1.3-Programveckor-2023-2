@@ -704,7 +704,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'lived a normal life until the humans started to destroy the earth.
+  m_text: 'lived a normal life until the humans started to destroy the earth
 
 '
   m_isRightToLeft: 0
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'he search for hours until he got the news his family was dead
+  m_text: 'he searched for hours until he found his family dead
 
 '
   m_isRightToLeft: 0
@@ -5953,8 +5953,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Humans started to burn and chopped down the rainforest of Borneo and destroyed
-    Guns home.
+  m_text: 'Humans started to burn and chop down the rainforest of Borneo and destroyed
+    Guns home
 
 '
   m_isRightToLeft: 0

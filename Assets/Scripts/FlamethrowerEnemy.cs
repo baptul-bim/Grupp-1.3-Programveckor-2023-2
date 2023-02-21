@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FlamethrowerEnemy : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+    //Koden för 'Flamethrower' fienden
 
     public int flamethrowerHealth = 7;
 
@@ -50,59 +52,29 @@ public class FlamethrowerEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //-2.4, -1.2
 
         Vector3 playerPos = playerTarget.position;
 
+        //letar efter spelaren
         RaycastHit2D flameRay = Physics2D.Raycast(this.gameObject.transform.position, playerPos - transform.position);
 
 
         Debug.DrawRay(this.gameObject.transform.position, playerPos - transform.position);
 
+        //ifall den ser nåt
         if (flameRay.collider != null)
         {
+            //ifall den ser spelaren och är tillräckligt nära
             if (flameRay.distance <= 6f && flameRay.transform.tag == ("Player") && flamesActive == false)
             {
                 Debug.Log(flameRay.transform.tag);
                 StartCoroutine(AttackDuration());
             }
 
-           //  animator.Play("flamethrower-standing");
-
         }
 
 
 
-        //Checks if the player is close enough to fire
-        /*if (Vector3.Distance(target.position, transform.position) > 5f)
-        {
-
-            //Checks if the players position relative to the enemy and moves towards them
-            if (target.position.x > transform.position.x)
-            {
-                transform.position += transform.right * enemySpeed * Time.deltaTime;
-
-            }
-            else if (target.position.x < transform.position.x)
-            {
-                transform.position -= transform.right * enemySpeed * Time.deltaTime;
-
-            }
-        }
-        else
-        {
-            timer = timer + Time.deltaTime;
-            if (timer >= 1 && flamesActive == false)
-            {
-                timer = 0;
-                flamesActive = true;
-                Flames.Play();
-
-
-
-            }
-
-        }*/
 
 
     }
@@ -126,6 +98,8 @@ public class FlamethrowerEnemy : MonoBehaviour
         animator.SetBool("flameattack", false);
 
         yield return new WaitForSeconds(1);
+        
+        //flippar fienden 
         if (playerTarget.position.x < transform.position.x && facingRight == true)
         {
             Flip();
@@ -140,6 +114,7 @@ public class FlamethrowerEnemy : MonoBehaviour
 
     void Flip()
     {
+        //flippar fienden
         Vector3 scale = transform.localScale;
         transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z);
         facingRight = !facingRight;

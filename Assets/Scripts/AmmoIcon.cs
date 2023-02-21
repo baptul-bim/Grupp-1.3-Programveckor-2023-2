@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AmmoIcon : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
 
     public Image bullets;
 
@@ -22,6 +23,7 @@ public class AmmoIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //ammo counter, baserat på hur många skott du har laddade, från 0 till 2. Kopplat till 'gun' script.
         bulletAmount = gun.bulletsLoaded;
         bullets.fillAmount = (bulletAmount / maxBullets);
         Debug.Log(bulletAmount / maxBullets);
