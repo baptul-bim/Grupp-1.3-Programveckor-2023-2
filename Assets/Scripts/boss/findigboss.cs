@@ -24,7 +24,7 @@ public class findigboss : MonoBehaviour
     }
     void cutscene()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("bosscutscene");
     }
 
 }
