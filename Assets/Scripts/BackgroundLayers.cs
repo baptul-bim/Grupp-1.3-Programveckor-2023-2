@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BackgroundLayers : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+    //Styr backgrundens parallaxing-funktioner.
 
     float length, startpos;
     public float parallaxFactor;
@@ -12,6 +14,9 @@ public class BackgroundLayers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //sätter bakgrundens startposition till apans position.
+
+
         startpos = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
@@ -19,6 +24,8 @@ public class BackgroundLayers : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        //bakgrundslager följer apan i olika hastighet och teleporterar fram eller bak när de är utanför kameran.
+
         float temp = cam.transform.position.x * (1 - parallaxFactor);
         float distance = cam.transform.position.x * parallaxFactor;
 
