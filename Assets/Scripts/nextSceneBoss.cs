@@ -16,11 +16,11 @@ public class nextSceneBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LevelLoop.roomAmount == 20) //Maja
-        {
-            SceneManager.LoadScene("BossRoom");
-            temp.temptimer = 99999;
-        }
+        //if (LevelLoop.roomAmount == 20) //Maja
+        //{
+            //SceneManager.LoadScene("BossRoom");
+            //temp.temptimer = 99999;
+        //}
 
     }
 }
