@@ -7,39 +7,37 @@ using UnityEngine.SceneManagement;
 //Albin
 public class boss : MonoBehaviour
 {
-    public Animator animator;
+    public Animator animator;//animator
 
-    public Transform firepoint;
-    public GameObject logprefab;
-    bosshealth bosshealth;
-    healthPlayer phealth;
+    public Transform firepoint;//där stockarna spawnar
+    public GameObject logprefab;//stock som ska spawnas
+    bosshealth bosshealth;//referera till bosshealth
+    healthPlayer phealth;//referera till healthPlayer
 
     [SerializeField]
-    TextMeshProUGUI bossname;
+    TextMeshProUGUI startline;//det bossen säger i början
     [SerializeField]
-    TextMeshProUGUI startline;
+    TextMeshProUGUI playerdeathline;//det bossen säger när spelaren dör
     [SerializeField]
-    TextMeshProUGUI playerdeathline;
-    [SerializeField]
-    TextMeshProUGUI bossdeathline;
-    public SpriteRenderer sprender;
+    TextMeshProUGUI bossdeathline;//det bossen säger när bossen dör
+    public SpriteRenderer sprender;//rendera bossens sprite
 
-    public float linetimer = 4;
-    public float movetimer;
-    public float move;
-    public float jumpforce;
-    bool bossdeath = false;
-    public bool bubbla = false;
-    Rigidbody2D rb;
+    public float linetimer = 4;//sekunder som bossen säger första meningen
+    public float movetimer;//timer på att bossen inte ska attackera i början
+    public float move;//bestämmer vilken attack
+    public float jumpforce;//kraft för att hoppa
+    bool bossdeath = false;//om bossen är död eller inte
+    public bool bubbla = false;//om pratbubblan finns eller inte
+    Rigidbody2D rb;//kalla rigidbodyn
 
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        sprender = gameObject.GetComponent<SpriteRenderer>();
-        phealth = FindObjectOfType<healthPlayer>();
-        rb = GetComponent<Rigidbody2D>();
-        bosshealth = FindObjectOfType<bosshealth>();
+        animator = GetComponent<Animator>();//kalla animator
+        sprender = gameObject.GetComponent<SpriteRenderer>();//kalla spriterendere
+        phealth = FindObjectOfType<healthPlayer>();//hitta healthPlayer
+        rb = GetComponent<Rigidbody2D>();//kalla rigidbody
+        bosshealth = FindObjectOfType<bosshealth>();//hitta bosshealth
         movetimer = 4; //för att den ska ha tid att prata innan den attackerar
         move = 21; //för att den inte ska göra någon attack
     }

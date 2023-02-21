@@ -38,7 +38,7 @@ public class LevelLoop : MonoBehaviour
         {
             if (roomAmount >= 20)
             {
-                //currentRoom = bossRoom;
+                currentRoom = bossRoom;
             }
             else
             {

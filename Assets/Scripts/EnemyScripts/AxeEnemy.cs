@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AxeEnemy : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+    //Kod för 'Axe' fiende
 
     [SerializeField]
     float enemySpeed;
@@ -35,6 +37,7 @@ public class AxeEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //hälsa och riktning
         facingRight = false;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = axeHealth;
@@ -49,6 +52,7 @@ public class AxeEnemy : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, direction);
 
+        //går framåt konstant
         if (facingRight == false)
         {
             transform.position -= transform.right * enemySpeed * Time.deltaTime;
@@ -61,6 +65,7 @@ public class AxeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
+            //byter riktning när den når en vägg
             if (hit.distance <= 0.16f && hit.transform.tag == ("Ground"))
             {
                 Debug.DrawRay(this.gameObject.transform.position, direction);
@@ -71,12 +76,14 @@ public class AxeEnemy : MonoBehaviour
 
 
             }
+            //så att den inte knuffar spelaren eller gör skada fler gånger
             else if (hit.distance <= 0.16f && hit.transform.tag == ("Player"))
             {
                 enemySpeed = 0;
 
 
             }
+            //springer snabbare om den "ser" spelaren
             else if (hit.transform.tag == ("Player"))
             {
                 enemySpeed = 2;
@@ -98,6 +105,7 @@ public class AxeEnemy : MonoBehaviour
 
     void Flip()
     {
+        //byter riktning
         Vector3 scale = transform.localScale;
         transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z);
         facingRight = !facingRight;
@@ -107,7 +115,8 @@ public class AxeEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        //skadar spelaren när den rör
+        if (collision.gameObject.tag == "Player" && axeattack == false)
         {
             collision.gameObject.GetComponent<healthPlayer>().Damaged();
             StartCoroutine(AttackCoolDown());
@@ -122,6 +131,7 @@ public class AxeEnemy : MonoBehaviour
 
     IEnumerator AttackCoolDown()
     {
+        //kan inte döda jättemycket
         axeattack = true;
         enemySpeed = 0;
 

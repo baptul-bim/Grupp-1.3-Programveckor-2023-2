@@ -2577,6 +2577,14 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1848513427}
+    - target: {fileID: 5716107030798977231, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: room.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716107030798977231, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: room.Array.data[8]
+      value: 
+      objectReference: {fileID: 6232669493559853084, guid: 879d806fe1c703b418e20b42f00391e9, type: 3}
     - target: {fileID: 5716107030798977236, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: m_Name
       value: Last Monke
