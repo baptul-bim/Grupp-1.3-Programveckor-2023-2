@@ -8,7 +8,9 @@ public class LevelLoop : MonoBehaviour
 
 
     public GameObject[] room;
-    public GameObject[] bossRoom;
+
+    public int bossRoom = 8;
+
     public int currentRoom;
 
     public Transform player1;
@@ -36,7 +38,7 @@ public class LevelLoop : MonoBehaviour
         {
             if (roomAmount >= 20)
             {
-                currentRoom = bossRoom;
+                //currentRoom = bossRoom;
             }
             else
             {
