@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelLoop : MonoBehaviour
 {
     //Kod av Louie W. Stormdal [SU22b]
-
+    //Spawnar nya "rum" när du går tillräckligt nära kanten av nuvarande "rum"
 
     public GameObject[] room;
 
@@ -42,16 +42,14 @@ public class LevelLoop : MonoBehaviour
             }
             else
             {
-                //enemyPointsSaver = EnemySpawner.enemyPoints;
                 int randRoom = Random.Range(0, 8);
                 currentRoom = randRoom;
-                nextRoomPos += 4.8f;
-                Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
-                roomAmount += 1;
-                player1.gameObject.GetComponent<EnemySpawner>().spawnEnemies();
-                //EnemySpawner.enemyPoints += enemyPointsSaver + 1;
             }
 
+            nextRoomPos += 4.8f;
+            Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
+            roomAmount += 1;
+            player1.gameObject.GetComponent<EnemySpawner>().spawnEnemies();
 
         }
     }
