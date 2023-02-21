@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class backtomenu : MonoBehaviour
 {
-    //clara
+    //clara till clara
     private void OnEnable()
     {
         SceneManager.LoadScene("clara", LoadSceneMode.Single);
