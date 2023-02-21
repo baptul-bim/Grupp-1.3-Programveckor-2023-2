@@ -47,6 +47,7 @@ public class healthPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Maja Sjöberg Claesson SU22b
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -80,6 +81,7 @@ public class healthPlayer : MonoBehaviour
 
     public void Damaged(/*float damagePoints*/)
     {
+        //Maja Sjöberg Claesson SU22b
         if (health > 0)
         {
             health -= 1;
