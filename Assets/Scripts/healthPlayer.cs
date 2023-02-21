@@ -47,7 +47,7 @@ public class healthPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Maja Sjöberg Claesson SU22b
+        //Maja, om health är 0, så dör man
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -81,7 +81,7 @@ public class healthPlayer : MonoBehaviour
 
     public void Damaged(/*float damagePoints*/)
     {
-        //Maja Sjöberg Claesson SU22b
+        //Maja, om health är mer än 0, så tar man damage
         if (health > 0)
         {
             health -= 1;

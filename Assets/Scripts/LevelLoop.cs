@@ -8,7 +8,9 @@ public class LevelLoop : MonoBehaviour
 
 
     public GameObject[] room;
-    public GameObject[] bossRoom;
+
+    public int bossRoom = 8;
+
     public int currentRoom;
 
     public Transform player1;

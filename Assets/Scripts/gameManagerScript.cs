@@ -19,19 +19,19 @@ public class gameManagerScript : MonoBehaviour
        
     }
 
-    public void gameOver() //Maja
+    public void gameOver() //Maja, game over screen kommer upp på skärm
     {
         gameOverUI.SetActive(true);
     }
 
-    public void restart() //Maja
+    public void restart() //Maja, scenen restartar
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
         pauseMenu.GameIsPaused = false;
     }
     
-    public void mainMenu() //Maja
+    public void mainMenu() //Maja, går tillbaka till mainmenu scenen
     {
         SceneManager.LoadScene("clara");
     }

@@ -17,7 +17,7 @@ public class pauseMenu : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() //Maja
+    void Update() //Maja, när man trycker på escape, så pausas spelet
     {
         if(Input.GetKeyDown(KeyCode.Escape) && gameOverUI.activeSelf == false)
         {
@@ -32,14 +32,14 @@ public class pauseMenu : MonoBehaviour
         }
     }
 
-    public void Resume() //Maja
+    public void Resume() //Maja, slutar pausa, kan spela
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    public void Pause() //Maja
+    public void Pause() //Maja, pausar spelet
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
