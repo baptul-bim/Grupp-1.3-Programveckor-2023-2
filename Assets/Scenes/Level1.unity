@@ -3385,6 +3385,10 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 1444359390}
+    - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: burning
       value: 
       objectReference: {fileID: 1444359385}
@@ -4741,6 +4745,11 @@ CanvasRenderer:
 --- !u!198 &1444359385 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2769054180758515433, guid: e48abff894b4fd742988c306043e6825, type: 3}
+  m_PrefabInstance: {fileID: 959039168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1444359390 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6941358386877859548, guid: e48abff894b4fd742988c306043e6825, type: 3}
   m_PrefabInstance: {fileID: 959039168}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449790485
