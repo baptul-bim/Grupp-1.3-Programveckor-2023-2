@@ -3378,12 +3378,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716107030798977229, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: jumpforce
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5716107030798977229, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: mask.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 1444359390}
     - target: {fileID: 5716107030798977230, guid: e48abff894b4fd742988c306043e6825, type: 3}
       propertyPath: burning
       value: 
@@ -4743,6 +4747,11 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2769054180758515433, guid: e48abff894b4fd742988c306043e6825, type: 3}
   m_PrefabInstance: {fileID: 959039168}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1444359390 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6941358386877859548, guid: e48abff894b4fd742988c306043e6825, type: 3}
+  m_PrefabInstance: {fileID: 959039168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449790485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,7 +5633,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

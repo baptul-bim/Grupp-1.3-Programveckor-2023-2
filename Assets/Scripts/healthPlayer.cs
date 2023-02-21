@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class healthPlayer : MonoBehaviour
 {
-    private Renderer rend;
+    public Renderer rend;
     public Image healthBar;
     public Animator animator;
     gun gun;
@@ -59,12 +59,12 @@ public class healthPlayer : MonoBehaviour
             isDead = true;
             gameManager.gameOver();
         }
-        if (isDead == true)
+        if (isDead == true)//-Albin
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<testmov>().enabled = false;//disable movement script
             GameObject.FindGameObjectWithTag("Player").GetComponent<Flip>().enabled = false;//disable flip script
             GameObject.FindGameObjectWithTag("Player").GetComponent<gun>().enabled = false;//disable shooting script
-            White();
+            //White();
             animator.SetTrigger("death");
         }
 
