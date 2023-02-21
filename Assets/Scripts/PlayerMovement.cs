@@ -12,12 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
 
     public Animator animator;
-
+    //Maja
     public float moveSpeed = 5;
     public float jump;
     public float jumping;
 
-    
     private Rigidbody2D rb;
     private bool isJumping;
 
@@ -43,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //Maja
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -65,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
            // transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
 
-        if(Input.GetButton("Jump") && !isJumping)
+        if(Input.GetButton("Jump") && !isJumping) //Maja
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
@@ -104,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
       }
      
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other) //Maja
     {
         if (other.gameObject.CompareTag("Ground"))
         {

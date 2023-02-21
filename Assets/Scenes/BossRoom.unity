@@ -2571,9 +2571,6 @@ PrefabInstance:
     - {fileID: 5716107030798977225, guid: e48abff894b4fd742988c306043e6825, type: 3}
     - {fileID: 5716107030798977224, guid: e48abff894b4fd742988c306043e6825, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e48abff894b4fd742988c306043e6825, type: 3}
-<<<<<<< HEAD
-=======
-=======
 --- !u!1 &935344638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,8 +2916,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
->>>>>>> c987ed82a4bc919bd58fddf907d377c1467013d2
->>>>>>> 4695765fb484d3f6be980f57ed5b079f4f83e54c
 --- !u!1001 &957920723
 PrefabInstance:
   m_ObjectHideFlags: 0
