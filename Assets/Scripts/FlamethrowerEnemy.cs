@@ -95,7 +95,7 @@ public class FlamethrowerEnemy : MonoBehaviour
         flamesActive = false;
         //idle igen.
         // animator.Play("flamethrower-standing");
-        animator.SetBool("flameattack", false);
+        animator.SetBool("flameattack", false);//clara
 
         yield return new WaitForSeconds(1);
         
