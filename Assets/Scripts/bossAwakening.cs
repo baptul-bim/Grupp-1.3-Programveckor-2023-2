@@ -27,7 +27,7 @@ public class bossAwakening : MonoBehaviour
 
             foreach (GameObject enemies in currentEnemies)
             {
-                EnemyDeath killAll = GameObject.FindGameObjectWithTag("enemy").GetComponent<EnemyDeath>();
+                EnemyDeath killAll = GameObject.FindWithTag("enemy").GetComponent<EnemyDeath>();
                 killAll.enemyHealth -= 99;
             }
         }
