@@ -8,24 +8,31 @@ public class bossAwakening : MonoBehaviour
 
     public Transform playerPos;
 
-    
-
+    bool cameraMoved;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraMoved = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerPos.position.x >= 100.8)
+        if (transform.position.x - 5 < playerPos.transform.position.x)
         {
+
+
             GameObject playerObj = GameObject.FindWithTag("Player");
             playerObj.GetComponent<testmov>().enabled = false;
-            GameObject[] currentEnemies;    
-            currentEnemies = GameObject.FindGameObjectsWithTag("enemy");
+
+            
+
+
+            GameObject[] currentEnemies = GameObject.FindGameObjectsWithTag("enemy");
+
+            StartCoroutine(Wait());
 
             foreach (GameObject enemies in currentEnemies)
             {
@@ -33,5 +40,24 @@ public class bossAwakening : MonoBehaviour
                 killAll.enemyHealth -= 99;
             }
         }
+    }
+
+
+
+    IEnumerator Wait()
+    {
+        if (cameraMoved == false)
+        {
+            yield return new WaitForSecondsRealtime(1);
+
+            float cameraSpeed = 1 * Time.deltaTime;
+
+            GameObject playerCamera = GameObject.FindWithTag("MainCamera");
+            playerCamera.GetComponent<PlayerCamera>().enabled = false;
+            playerCamera.transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), cameraSpeed);
+
+            cameraMoved = true;
+        }
+
     }
 }
