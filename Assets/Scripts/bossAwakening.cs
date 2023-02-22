@@ -20,11 +20,11 @@ public class bossAwakening : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerPos.position.x >= 100.8f)
+        if (playerPos.position.x >= 100.8)
         {
             GameObject playerObj = GameObject.FindWithTag("Player");
             playerObj.GetComponent<testmov>().enabled = false;
-            GameObject[] currentEnemies;
+            GameObject[] currentEnemies;    
             currentEnemies = GameObject.FindGameObjectsWithTag("enemy");
 
             foreach (GameObject enemies in currentEnemies)
