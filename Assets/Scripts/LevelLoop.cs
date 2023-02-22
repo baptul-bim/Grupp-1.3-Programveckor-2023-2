@@ -29,6 +29,7 @@ public class LevelLoop : MonoBehaviour
     {
         nextRoomPos = 0;
         roomAmount = 1;
+        GameObject player1 = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -40,6 +41,14 @@ public class LevelLoop : MonoBehaviour
             if (roomAmount >= 20)
             {
                 currentRoom = bossRoom;
+
+                //slutar spawna nya rum
+                player1.GetComponent<LevelLoop>().enabled = false;
+            }
+            //fiender slutar spawna innan bossrummet
+            if (roomAmount >= 19)
+            {
+                player1.GetComponent<EnemySpawner>().enabled = false;
             }
             // vanlig rum-randomization
             else
@@ -48,6 +57,7 @@ public class LevelLoop : MonoBehaviour
                 currentRoom = randRoom;
             }
 
+            // så att nya rum spawnar efter de gamla
             nextRoomPos += 4.8f;
             Instantiate(room[currentRoom], new Vector3((nextRoomPos), 0, 0), transform.rotation);
             roomAmount += 1;
