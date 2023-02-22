@@ -66,7 +66,7 @@ public class boss : MonoBehaviour
         #endregion
         animator.SetBool("death", bossdeath == true);//om bossen dör spelas death animation
         movetimer -= Time.deltaTime;
-        if (movetimer>0&&movetimer<0.1)
+        if (movetimer>0&&movetimer<0.1)//när movetimer är slut, gör en attack
         {
             attack();
         }
@@ -89,7 +89,7 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            phealth.health -= 10; //om spelaren nuddar bossen dör spelaren
+            phealth.health -= 20; //om spelaren nuddar bossen dör spelaren
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

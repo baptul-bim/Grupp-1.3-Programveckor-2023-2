@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
+    //Kod av Louie W. Stormdal [SU22b]
+    //kontrollerar den varierade hälsan av fiender
+
     //blood splatter
     [SerializeField]
     ParticleSystem bloodParticles;
