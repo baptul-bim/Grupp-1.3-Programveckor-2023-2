@@ -30,7 +30,7 @@ public class log : MonoBehaviour
         {
             Destroy(gameObject); 
             phealth.Damaged(); //ta skada för att trigga damage animationen
-            phealth.health -= 3; //ta ytterligare 3 skada
+            phealth.health -= 6; //ta ytterligare 3 skada
         }
         if (collision.gameObject.tag == "object")
         {
