@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//Albin
 public class findigboss : MonoBehaviour
 {
     public Animator animator;
@@ -17,14 +17,14 @@ public class findigboss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x-5 < player.transform.position.x)
+        if (transform.position.x-5 < player.transform.position.x)//om spelaren är inom visst avstånd till bossen vaknar den
         {
             animator.SetTrigger("vakna");
         }
     }
     void cutscene()
     {
-        SceneManager.LoadScene("bosscutscene");
+        SceneManager.LoadScene("bosscutscene", LoadSceneMode.Single);//ladda bosscutscenen
     }
 
 }
