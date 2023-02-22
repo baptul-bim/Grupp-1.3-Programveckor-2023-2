@@ -7,9 +7,9 @@ public class bossAwakening : MonoBehaviour
     //Louie W. Stormdal [SU22b]
 
     public Transform playerPos;
-    GameObject playerObj = GameObject.FindWithTag("Player");
+
     
-    GameObject[] currentEnemies;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,9 @@ public class bossAwakening : MonoBehaviour
     {
         if (playerPos.position.x >= 100.8f)
         {
+            GameObject playerObj = GameObject.FindWithTag("Player");
             playerObj.GetComponent<testmov>().enabled = false;
+            GameObject[] currentEnemies;
             currentEnemies = GameObject.FindGameObjectsWithTag("enemy");
 
             foreach (GameObject enemies in currentEnemies)
