@@ -8,7 +8,7 @@ public class EnemyDeath : MonoBehaviour
     [SerializeField]
     ParticleSystem bloodParticles;
     [SerializeField]
-    GameObject screamObject;
+    GameObject screamObject;// ljud där sitter det clara
 
     public int enemyHealth;
 
@@ -21,7 +21,7 @@ public class EnemyDeath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();//clara
         enemyMaxHealth = enemyHealth;
         //Physics2D.IgnoreCollision(enemies[3].GetComponent<Collider2D>(), GetComponent<Collider2D>());
 
@@ -45,7 +45,7 @@ public class EnemyDeath : MonoBehaviour
         {
             Instantiate(bloodParticles, gameObject.transform.position, transform.rotation);
             Debug.Log("jag dog :(");
-            Instantiate(screamObject);
+            Instantiate(screamObject);//clara, ljudobjektet spanar 
             Destroy(this.gameObject);
             themometer.currenttemp -= enemyMaxHealth * 2;
             

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class cutscenemgr : MonoBehaviour
 {
-    //Clara
+    //Clara går till level1
     private void OnEnable()
     {
         SceneManager.LoadScene("Level1", LoadSceneMode.Single);

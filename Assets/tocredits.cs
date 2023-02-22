@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class tocredits : MonoBehaviour
 {
-    //clara
+    //clara till credits 
     private void OnEnable()
     {
         SceneManager.LoadScene("Credits", LoadSceneMode.Single);
