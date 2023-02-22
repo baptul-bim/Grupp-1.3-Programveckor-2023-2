@@ -12,9 +12,9 @@ public class ChainsawEnemy : MonoBehaviour
     int healthComparison;
 
     [SerializeField]
-    GameObject ChainsawsoundObject;
+    GameObject ChainsawsoundObject;//clara, där ljudet sitter
 
-    private Animator animator;
+    private Animator animator;//clara
 
     [SerializeField]
     float enemySpeed;
@@ -46,7 +46,7 @@ public class ChainsawEnemy : MonoBehaviour
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyDeath healthChanger = this.GetComponent<EnemyDeath>();
         healthChanger.enemyHealth = chainsawHealth;
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();//clara
         //healthComparison = healthChanger.enemyHealth;
 
 
@@ -78,7 +78,7 @@ public class ChainsawEnemy : MonoBehaviour
             {
                 print("Ska springa");
                 //här ska den revva upp motorsågen och kanske se arg ut.
-                Instantiate(ChainsawsoundObject);
+                Instantiate(ChainsawsoundObject);//clara, ljud till motorsåg
                 StartCoroutine(Charge());
                // animator.Play("chainsaw-charge");
                
@@ -98,7 +98,7 @@ public class ChainsawEnemy : MonoBehaviour
             Debug.DrawRay(enemyPos, direction, Color.green);
 
             timer += Time.deltaTime;
-            animator.Play("chainsaw-run");
+            animator.Play("chainsaw-run");//clara
 
             if (facingRight == false)
             {
@@ -114,12 +114,12 @@ public class ChainsawEnemy : MonoBehaviour
             if (timer >= 3)
             {
                 enemySpeed = 0;
-                animator.Play("chainsaw-stop");
+                animator.Play("chainsaw-stop");//clara
                 Flip();
                 StartCoroutine(Charge());
                 timer = 0;
             }
-            animator.Play("Chainsaw-run");
+            animator.Play("Chainsaw-run");//clara
 
             //this.GameObject.GetComponent<Animator>().Play("chainsaw-run");
 
@@ -194,7 +194,7 @@ public class ChainsawEnemy : MonoBehaviour
         //här ska charge animation vara.
     {
         // animator.Play("chainsaw-charge"); 
-        animator.SetBool("attackchainsaw", true);
+        animator.SetBool("attackchainsaw", true);//clara
         print("börjar");
         enemySpeed = 0;
         yield return new WaitForSeconds(1);

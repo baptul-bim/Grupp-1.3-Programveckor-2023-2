@@ -36,10 +36,12 @@ public class LevelLoop : MonoBehaviour
     {
         if (player1.position.x >= nextRoomPos)
         {
+            //spawnar ett speciellt "bossrum" som kommer innan du byter scen till bossen
             if (roomAmount >= 20)
             {
                 currentRoom = bossRoom;
             }
+            // vanlig rum-randomization
             else
             {
                 int randRoom = Random.Range(0, 8);
