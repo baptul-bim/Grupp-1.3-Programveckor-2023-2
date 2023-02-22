@@ -4391,6 +4391,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 779079782155312700, guid: f9ba28c91041d3043a040a841f222493, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 779079782878830193, guid: f9ba28c91041d3043a040a841f222493, type: 3}
       propertyPath: m_Name
       value: healthCanvas
